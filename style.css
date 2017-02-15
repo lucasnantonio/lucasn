@@ -15,7 +15,7 @@ section{
   position:absolute;
   bottom: 10vh;
   left: 10vh;
-  max-width: 35rem;
+  max-width: 28rem;
   line-height: 2.2em;
   font-size: 1.1rem;
   vertical-align: bottom;
@@ -32,7 +32,7 @@ section{
     margin: 10vw;
     max-width: 35rem;
     line-height: 2.2em;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     /*vertical-align: bottom;*/
     /*background-color: red;*/
     /*color: white;*/
