@@ -24,7 +24,7 @@ section{
 
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 750px){
   section{
     position:relative;
     bottom: 0vh;
