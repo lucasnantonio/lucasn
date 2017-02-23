@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="575px" height="502px" viewBox="0 0 575 502" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <pattern id="pattern-1" width="17.2794118" height="17.2794118" x="184.349283" y="114.257889" patternUnits="userSpaceOnUse">
+            <use xlink:href="#image-2" transform="scale(0.359987745,0.359987745)"></use>
+        </pattern>
+        <image id="image-2" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAV9JREFUaAXt2O0NgjAQBmBrt4DoDiawEHEQB1F3MK7BHKxR+2oKQfnseXCX0B/SEr3zucZIz+R57nZ+OOfuZVmeMcWaOEyWZVdjTBHicMW3aZpekMQnOyVJcqiq6hmSUq6Ig3iIyxnf+iRH7iSc8e1SleJCWGyvZsQboBlRA7QiWgCNiB+ANkQnQBOiF6AFMQjQgBgFSEdMAkhGTAZIRcwCSETMBkhDRAEkIaIBUhAkgAQEGbA2AgCDL0Edax2KrO8e3JCcCsDn10CgK/HQ2I0IZ+w9KucXBfo4mGJNHA79JfSBQhzO+FtfKFS567rEb2LrC3VV/vse507Uf2ScSQDiil8DOJOEHeFAtAAaET8AbYhOgCZEL0ALYhCgATEKkI6YBJCMmAyQipgFkIiYDZCGiAJIQkQDpCBIAAkIMmBtBAD/OMizPe+jQBh9j+JbX+hTn+a1r1K437wrfvYd/wV+UgblD/bGFgAAAABJRU5ErkJggg=="></image>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(0.000000, -35.000000)">
+            <path d="M257.052213,270.366268 C368.613732,270.366268 404,274.494593 404,196.070159 C404,117.645724 323.613119,45 212.051599,45 C100.49008,45 0,117.645724 0,196.070159 C0,274.494593 145.490693,270.366268 257.052213,270.366268 Z" id="Oval" fill="#E3F6FC"></path>
+            <path d="M295.052213,536.366268 C406.613732,536.366268 451.968858,328.997907 451.968858,250.573473 C451.968858,172.149038 320.049456,218.675338 208.487937,218.675338 C96.9264174,218.675338 38,383.645724 38,462.070159 C38,540.494593 183.490693,536.366268 295.052213,536.366268 Z" id="Oval" fill="#FF5959"></path>
+            <path d="M458.680935,273.247653 C570.242455,273.247653 605.628723,277.375979 605.628723,198.951544 C605.628723,120.52711 424.190855,132.144115 312.629336,132.144115 C201.067816,132.144115 201.628723,120.52711 201.628723,198.951544 C201.628723,277.375979 347.119416,273.247653 458.680935,273.247653 Z" id="Oval" fill="url(#pattern-1)" transform="translate(403.628709, 202.411206) rotate(129.000000) translate(-403.628709, -202.411206) "></path>
+        </g>
+    </g>
+</svg>
