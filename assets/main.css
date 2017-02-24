@@ -1,6 +1,7 @@
 @font-face : {
-  font-family: Gen;
-  src: url("http://lucasn.com/assets/Gen-Light.otf"); }
+  font-family: "Gen";
+  src: url("http://www.lucasn.com/assets/Gen-Light.otf"); }
+
 .b0 {
   bottom: 0; }
 
