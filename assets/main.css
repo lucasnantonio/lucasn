@@ -1,7 +1,7 @@
 @font-face : {
   font-family: "Gen";
-   src: url('../assets/fonts/gen-light-webfont.woff2') format('woff2'),
-        url('../assets/fonts/gen-light-webfont.woff') format('woff'); }
+   src: url('gen-light-webfont.woff2') format('woff2'),
+        url('gen-light-webfont.woff') format('woff'); }
 
 .b0 {
   bottom: 0; }
