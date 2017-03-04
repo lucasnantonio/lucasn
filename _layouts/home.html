@@ -2,24 +2,34 @@
 layout: default
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+<!-- #first content -->
+  <div class="vh-100 vw-100">
+    <div class="left-wrapper pa5 w50-ns">
+      <h1 class='f5 absolute t0 vt v-top'>Lucas Neumann —</h1>
+      <div class="absolute measure-wide-ns b0 mb5 mr5">
+          <p>Product designer at <a href="http://www.nubank.com.br" target='empty'>Nubank</a> & co-founder of <a href="http://www.projetofeito.com" target='empty'>Feito</a>. </p>
+          <p> Previously, I’ve contributed to product design and user research at <a href="http://www.kano.me" target='empty'>Kano Computing</a>,  <a href="http://www.nossas.org" target='empty'>Nossas</a>, <a href="http://www.insitum.com" target='empty'>Insitum</a>, and <a href="http://www.futurebrand.com" target='empty'> Futurebrand</a>. Current obsessions: behaviour sciences and La La Land. </p>
+          <footer class="bt b--near-white bt-thin pt4 mt4 f6">
+            <a href="https://dribbble.com/lucasnantonio">Dribbble</a>   /   <a href="https://www.linkedin.com/in/lucasneumann/">Linkedin</a>
+          </footer>
+      </div>
+    </div>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<!-- {{ content }} -->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+<!-- <ul class="post-list">
+  {% for post in site.posts %}
+    <li class='vh-100 relative pa5 ma5 mb0' style="
+      background-color: {{post.color}};
+      background-image: url({{site.url}}/assets/img/{{post.hero}});">
+      <div class="absolute b0 measure pb5">
+      <h3 class ="f4">
+        <a class="post-link white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+      <p class="text-color-white">{{ post.summary }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul> -->
