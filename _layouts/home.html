@@ -22,8 +22,7 @@ layout: default
 <ul class="post-list">
   {% for post in site.posts %}
     <li class='vh-100 pa5 relative mb0' style="
-      background-color: {{post.color}};
-      background-image: url({{site.url}}/assets/img/{{post.hero}});">
+      background-color: {{post.color}};">
       <div class="absolute b0 measure pb5">
       <h3 class ="f4">
         <a class="post-link white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
