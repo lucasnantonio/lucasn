@@ -4,31 +4,66 @@ layout: default
 
 
 <!-- #first content -->
-  <div class="vh-100 vw-100">
-    <div class="left-wrapper pa5 w50-ns">
-      <h1 class='f5 absolute t0 vt v-top'>Lucas Neumann —</h1>
-      <div class="absolute measure-wide-ns b0 mb5 mr5">
-          <p>Product designer at <a href="http://www.nubank.com.br" target='empty'>Nubank</a> & co-founder of <a href="http://www.projetofeito.com" target='empty'>Feito</a>. </p>
-          <p> Previously, I’ve contributed to product design and user research at <a href="http://www.kano.me" target='empty'>Kano Computing</a>,  <a href="http://www.nossas.org" target='empty'>Nossas</a>, <a href="http://www.insitum.com" target='empty'>Insitum</a>, and <a href="http://www.futurebrand.com" target='empty'> Futurebrand</a>. Current obsessions: behaviour sciences and La La Land. </p>
-          <footer class="bt b--near-white bt-thin pt4 mt4 f6">
-            <a href="https://dribbble.com/lucasnantonio">Dribbble</a>   /   <a href="https://www.linkedin.com/in/lucasneumann/">Linkedin</a>
-          </footer>
-      </div>
-    </div>
-  </div>
+  <section class="panel vh-100 w-100">
+			<div class="w-80 h-100 relative center">
+				<div class="absolute bottom-0 mb5 measure">
+					<p class="wow fadeInUp pb4 wow fadeIn">Hello!</p>
+					<h1 class='wow fadeInUp f2 mb4 lh-title'>Lucas Neumann —<br> designer at Nubank & <nobr>co-founder</nobr> of Feito. </h1>
+	        <p class="wow fadeInUp bt b--near-white bt-thin pt4 mt4">
+	          <a href="https://dribbble.com/lucasnantonio">About me</a>   /    <a href="https://dribbble.com/lucasnantonio">Dribbble</a>   /   <a href="https://www.linkedin.com/in/lucasneumann/">Linkedin</a>
+	        </p>
+				</div>
+				<div class="absolute bottom-0 right-0 mb5 wow fadeInUp">
+					<svg width="29px" height="74px" viewBox="0 0 29 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+									<g id="Desktop-Landscape" transform="translate(-1178.000000, -670.000000)" stroke="#8D3DC8">
+											<g id="Group" transform="translate(1178.000000, 671.000000)">
+													<path d="M15,0.285714286 L15,71.6868519" id="Line"></path>
+													<path d="M28.8660743,57.1062281 L14.2884615,71.6838408" id="Line"></path>
+													<path d="M0.0977570737,57.0700594 L14.7115385,71.6838408" id="Line"></path>
+													<path d="M15,0.285714286 L15,71.6868519" id="Line"></path>
+											</g>
+									</g>
+							</g>
+					</svg>
+				</div>
+			</div>
+  </section>
 
-<!-- {{ content }} -->
 
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li class='vh-100 pa5 relative mb0' style="
+
+	<section class='panel vh-100 w-100' style="background-color: #873bbf;">
+		<div class="w-80 h-100 relative center">
+			<div class="absolute bottom-0 mb5 measure">
+				<h1 class ="wow fadeInUp f2 mb4 white lh-title "> Currently working as a product designer at Nubank.</h3>
+				<p class="white measure wow fadeInUp"> Since April 2016, I’ve been helping Nubank, the first Sequoia Capital venture in Latin America, realise it’s goal: fight complexity to empower people. </p>
+			</div>
+			<img src="images/nubank-hero.png" class="wow fadeIn absolute right-0 bottom-0" alt="">
+
+		</div>
+	</section>
+
+	<section class='panel vh-100 w-100' style="background-color: #ffefe5;">
+		<div class="w-80 h-100 relative center">
+			<div class="absolute bottom-0 mb5 measure">
+				<h1 class ="wow fadeInUp f2 mb4 black lh-title"> Also running Feito, an online shop for good design. </h3>
+				<p class="black wow fadeInUp">
+					Since April 2016, I’ve been helping Nubank, the first Sequoia Capital venture in Latin America, realise it’s goal: fight complexity to empower people.
+			</p>
+			</div>
+		</div>
+	</section>
+
+<!-- <ul class="post-list"> -->
+  <!-- {% for post in site.posts %}
+    <section class='panel vh-100 pa5 relative mb0' style="
       background-color: {{post.color}};">
       <div class="absolute b0 measure pb5">
       <h3 class ="f4">
         <a class="post-link white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       </h3>
-      <p class="text-color-white">{{ post.summary }}</p>
+      <p class="text-color-white white">{{ post.summary }}</p>
       </div>
-    </li>
-  {% endfor %}
-</ul>
+    </section>
+  {% endfor %} -->
+<!-- </ul> -->
