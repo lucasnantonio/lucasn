@@ -94,7 +94,7 @@ a {
   color: $brand-color;
   text-decoration: none;
 	padding-bottom: .1rem;
-	border-bottom: 1px solid $light-gray;
+	border-bottom: 1px solid rgba(0,0,0,.1);
 
   &:visited {
 

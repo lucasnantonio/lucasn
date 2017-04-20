@@ -3,6 +3,7 @@
     position: relative;
     padding-bottom: 3px;
 }
+
 .sliding-u-l-r-l:before {
     content: '';
     display: block;
@@ -25,6 +26,7 @@
     background: black;
     transition: width .5s ease;
 }
+
 .sliding-u-l-r-l--white:after {
     content: '';
     display: block;
@@ -36,16 +38,19 @@
     background: white;
     transition: width .5s ease;
 }
+
 .sliding-u-l-r-l:hover:before {
     width: 100%;
     background: black;
     transition: width .5s ease;
 }
+
 .sliding-u-l-r-l--white:hover:before {
     width: 100%;
     background: white;
     transition: width .5s ease;
 }
+
 .sliding-u-l-r-l:hover:after {
     width: 100%;
     background: transparent;
