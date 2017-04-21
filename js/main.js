@@ -1,27 +1,4 @@
-// $(function () { // wait for document ready
-// 	// init
-// 	var controller = new ScrollMagic.Controller({
-// 		globalSceneOptions: {
-// 			triggerHook: 'onLeave'
-// 		}
-// 	});
-//
-// 	// get all slides
-// 	var slides = document.querySelectorAll("section.panel");
-// 	console.log(slides)
-// 	// create scene for every slide
-// 	for (var i=0; i<slides.length; i++) {
-// 		new ScrollMagic.Scene({
-// 				triggerElement: slides[i]
-// 			})
-// 			.setPin(slides[i])
-// 			// .addIndicators() // add indicators (requires plugin)
-// 			.addTo(controller);
-// 	}
-// });
 
-
-// new WOW().init();
 
 // CREATE ANIMATECSS FUNCTION
 $.fn.extend({
@@ -43,6 +20,7 @@ $(document).on('click', 'a', function(event){
 });
 
 $( document ).ready(function() {
+	var rellax = new Rellax('.rellax');
 	// HIDE ALL ANIMATED ELEMENTS
 	$('.animated').css('opacity', '0')
 
@@ -85,9 +63,9 @@ $( document ).ready(function() {
 		})
 
 // ARROW
-	$( '#homeArrow').hover(
+	$( '#homeArrow').mouseenter(
 		function(e) {
-			$(this).animateCss('rubberBand');
+			$(this).animateCss('shakeUp');
 		}
 	);
 

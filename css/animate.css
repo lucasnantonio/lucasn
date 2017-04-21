@@ -280,6 +280,47 @@
   animation-name: shake;
 }
 
+@-webkit-keyframes shakeUp {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 70% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%, 100% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+@keyframes shakeUp {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  20%, 60% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  40%, 80% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+.shakeUp {
+  -webkit-animation-name: shakeUp;
+  animation-name: shakeUp;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
 @-webkit-keyframes headShake {
   0% {
     -webkit-transform: translateX(0);
