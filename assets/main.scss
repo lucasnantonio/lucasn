@@ -15,9 +15,10 @@
 }
 
 // Our variables
-$base-font-family: "GenLight", Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
-$base-font-weight: 400;
+$base-font-family: "Chivo", Helvetica, Arial, sans-serif;
+$title-font-family: "Vollkorn", serif;
+$base-font-size:   16px;
+$base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
 
@@ -44,6 +45,13 @@ $on-laptop:        800px;
 
 
 // CUSTOM
+h1, h2, h3{
+	font-family: $title-font-family;
+	letter-spacing: -0.04rem;
+}
+
 .b0{
 	bottom: 0;
 }
+
+// .wow { visibility: hidden; }
