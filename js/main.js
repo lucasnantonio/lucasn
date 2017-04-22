@@ -16,10 +16,11 @@ $(document).on('click', 'a', function(event){
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+    }, 600);
 });
 
 $( document ).ready(function() {
+
 	var rellax = new Rellax('.rellax');
 	// HIDE ALL ANIMATED ELEMENTS
 	$('.animated').css('opacity', '0')
