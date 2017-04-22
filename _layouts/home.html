@@ -11,6 +11,7 @@ layout: default
 				<div class="absolute bottom-0 mb5">
 					<p class="mb4">Hello!</p>
 					<h1 class='f1-ns f3 lh-title mb4 mw6'>Lucas Neumann —<br> designer at Nubank & <nobr>co-founder</nobr> of Feito. </h1>
+					<p class="f-copy-ns pv3 measure-narrow f7">Current obsessions: behaviour sciences, budgetting, and La La Land.</p>
 					<p class="f-copy-ns f7">
 						<!-- <a class="sliding-u-l-r-l" href="https://dribbble.com/lucasnantonio">About me</a>   /     -->
 						<a class="sliding-u-l-r-l" target="_blank" href="https://dribbble.com/lucasnantonio">Dribbble</a>   /
@@ -32,21 +33,26 @@ layout: default
 		<div class="w-80 mw9 center relative h-100 cf">
 			<!-- LEFT -->
 			<div class="fl relative h-100 w-60-ns w-100 ">
-				<div class="absolute-ns bottom-0-ns mb5-ns mt5 pr5-ns">
+				<div class="absolute-ns bottom-0-ns mb6-ns mt5 pr5-ns">
 					<img src="images/nucard@2x.png" class="animated animated-sectionTwo dn-ns" data-rellax-speed="2" data-rellax-percentage="0.5"  alt="">
+					<p class='mb4 white-50 mt4'>Today —</p>
 					<h1 class ="white f1-ns f3 lh-title mb4 mw6 mt0-ns mt4">
-						Currently working as a product designer at Nubank.
+						 Working as a product designer at Nubank.
 					</h1>
-					<p class="white-50 mb4 measure lh-copy">
-						Nubank is the first Sequoia Capital backed company in Latin America. Since 2016, I've been helping them realise their goal: fight complexity and empower people to regain control over their financial lives.
+					<p class="white-50 mb5 measure lh-copy">
+						Nubank is the first Sequoia Capital backed company in Latin America. Since 2016, I've been helping them fight banking complexity and empower people to regain control over their financial lives.
 					</p>
-					<a class="white sliding-u-l-r-l sliding-u-l-r-l--white" href="http://www.nubank.com.br">Get your card</a>
+					<a style="border-bottom: none" class="" target='_blank' href="http://www.nubank.com.br">
+						<button type="button" name="button" class="button-white slideRight-white">
+							Let's empower people
+						</button>
+					</a>
 					</div>
 			</div>
 
 			<!-- RIGHT -->
 			<div class="fl relative h-100-ns w-40-ns w-100">
-					<img src="images/nubank-hero.png" class="animated animated-sectionTwo grow absolute bottom-0 w-70 mw6 left-0 db-ns dn" alt="">
+					<img src="images/nubank-hero.png" class="animated animated-sectionTwo grow absolute bottom-0 w-80 mw6 left-0 db-ns dn" alt="">
 					<img src="images/nucard@2x.png" class="animated animated-sectionTwo grow absolute bottom-0-ns bottom-0 w-70 right-0 mb5 db-ns dn" data-rellax-speed="2" data-rellax-percentage="0.5"  alt="">
 			</div>
 
@@ -58,16 +64,23 @@ layout: default
 
 			<!-- LEFT -->
 			<div class="fl relative h-100 w-60-ns w-100">
-			<div class="absolute-ns bottom-0-ns mb5-ns mt5 pr5-ns">
+			<div class="absolute-ns bottom-0-ns mb6-ns mt5 pr5-ns">
 				<img src="images/noni.png" style="mix-blend-mode: multiply" class="animated w-80 animated-sectionThree dn-ns" alt="">
 				<div data-rellax-speed="2" class="animated grow animated-sectionThree absolute w-30 right-0 mr3 top-0 mt5 dn-ns">
 					{% include feito.svg %}
 				</div>
-				<h1 class ="f1-ns f3 lh-title mb4 mw6 mt0-ns mt4"> I also help run Feito, an online shop for good, honest design. </h3>
-				<p class="mb4 measure lh-copy">
+				<p class='mb4 mt4'>On the side —</p>
+				<h1 class ="f1-ns f3 lh-title mb4 mw6 mt0-ns mt4"> Co-running <em>feito</em>, an online shop for good, honest design. </h3>
+				<p class="mb5-ns mb4 measure lh-copy">
 					Feito is a homeware brand that helps young designers connect with local suppliers to produce simple, useful objects with maximum price transparency.
 			</p>
-			<a class=" sliding-u-l-r-l" target='_blank' href="http://www.projetofeito.com">Shop good design</a>
+
+			<a style="border-bottom: none" class="" target='_blank' href="http://www.projetofeito.com">
+				<button type="button" name="button" class="button-black slideRight-black">
+					I want good design
+				</button>
+			</a>
+
 			</div>
 		</div>
 
@@ -83,10 +96,35 @@ layout: default
 		</div>
 	</section>
 
+
+<!-- ABOUT ME -->
+<section id="about">
+	<div class="w-80 mw9 center relative pv6 cf">
+		<div class="fl w-third-ns ph2 w-100">
+			{% include about-work.html %}
+		</div>
+		<div class="fl w-third-ns ph2 w-100">
+			{% include about-press.html %}
+		</div>
+		<div class="fl w-third-ns ph2 w-100">
+			{% include about-about.html %}
+			<div id='profile-front' class="relative w4 h4">
+				<img  src="images/lucas.jpg" style="mix-blend-mode:multiply; border-radius: 50%; " class='w-100 absolute bottom-0 right-0' alt="">
+				<div id='profile-back' class="animated bg-black white w-100 h-100 i f5 tc absolute v-mid lh-title " style="border-radius: 50%; padding-top:2.8rem; font-family:'Vollkorn'; ">
+					Thanks for <br> reading!
+				</div>
+			</div>
+
+		</div>
+</div>
+</section>
+
+
+
 <!-- <ul class="post-list"> -->
   <!-- {% for post in site.posts %}
     <section class='panel vh-100 pa5 relative mb0' style="
-      background-color: {{post.color}};">
+      background-cocurlor: {{post.color}};">
       <div class="absolute b0 measure pb5">
       <h3 class ="f4">
         <a class="post-link white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>

@@ -1,5 +1,3 @@
-
-
 // CREATE ANIMATECSS FUNCTION
 $.fn.extend({
     animateCss: function (animationName) {
@@ -21,7 +19,6 @@ $(document).on('click', 'a', function(event){
 
 $( document ).ready(function() {
 
-	var rellax = new Rellax('.rellax');
 	// HIDE ALL ANIMATED ELEMENTS
 	$('.animated').css('opacity', '0')
 
@@ -70,4 +67,18 @@ $( document ).ready(function() {
 		}
 	);
 
+// Profile bubble
+// $( '#profile-front').css('')
+$( '#profile-front').mouseenter(
+	function(e) {
+		$('#profile-back').css('opacity', '1')
+		$('#profile-back').animateCss('zoomIn');
+	}
+);
+$( '#profile-front').mouseleave(
+	function(e) {
+		$('#profile-back').animateCss('zoomOut');
+		$('#profile-back').css('opacity', '0')
+	}
+);
 });
