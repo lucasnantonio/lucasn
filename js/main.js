@@ -9,9 +9,6 @@ $.fn.extend({
 });
 
 
-
-
-
 $( document ).ready(function() {
 	// SMOOTH SCROLLING
 	var hashTagActive = "";

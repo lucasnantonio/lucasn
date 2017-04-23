@@ -4,16 +4,16 @@ layout: default
 
 
 <!-- #first content -->
-  <section id="sectionOne" class="vh-100 overflow-hidden">
+  <section id="sectionOne" class="vh-100 overflow-hidden bg-white">
 
 		<div class="w-80 mw9 center cf relative h-100">
 			<div class="relative fl h-100 w-80">
 				<div class="absolute bottom-0 mb5">
 					<p class="animated animated-sectionOne mb4">Hello!</p>
-					<h1 class='animated animated-sectionOne f1-ns f3 lh-title mb4 mw6'>Lucas Neumann —<br> designer at Nubank & <nobr>co-founder</nobr> of Feito. </h1>
-					<p class="animated animated-sectionOne f-copy-ns pv3 measure-narrow f7">Current obsessions: behaviour sciences, budgetting, and La La Land.</p>
+					<h1 class='animated animated-sectionOne f1-ns f3 lh-title mb2 mw6'>Lucas Neumann —<br> designer at Nubank & <nobr>co-founder</nobr> of Feito. </h1>
+					<p class="animated animated-sectionOne f-copy-ns lh-copy mb4 pv3 measure-narrow f7">Current obsessions: behaviour sciences, budgetting, and La La Land.</p>
 					<p class="animated animated-sectionOne f-copy-ns f7">
-						<a class="sliding-u-l-r-l" href="#about">About me</a>   /
+						<a class="scroll sliding-u-l-r-l" href="#about">About me</a>   /
 						<a class="sliding-u-l-r-l" target="_blank" href="https://dribbble.com/lucasnantonio">Dribbble</a>   /
 						<a class="sliding-u-l-r-l" target="_blank" href="https://www.linkedin.com/in/lucasneumann/">Linkedin</a>
 					</p>
@@ -27,19 +27,17 @@ layout: default
 
   </section>
 
-
-
-	<section id="sectionTwo" class='vh-100-ns pa0-ns pb5 overflow-hidden' style="background-color: #873bbf;">
+	<section id="sectionTwo" class='vh-100-ns pa0-ns pb5 overflow-hidden' style='background-color: #873bbf' >
 		<div class="w-80 mw9 center relative h-100 cf">
 			<!-- LEFT -->
 			<div class="fl relative h-100 w-60-ns w-100 ">
 				<div class="absolute-ns bottom-0-ns mb6-ns mt5 pr5-ns">
 					<img src="images/nucard@2x.png" class="animated animated-sectionTwo dn-ns" data-rellax-speed="2" data-rellax-percentage="0.5"  alt="">
-					<p class='mb4 white-50 mt4'>Today —</p>
+					<p class='mb4 white-50 mt4 white-40'>Today —</p>
 					<h1 class ="white f1-ns f3 lh-title mb4 mw6 mt0-ns mt4">
 						 Working as a product designer at Nubank.
 					</h1>
-					<p class="white-50 mb5 measure lh-copy">
+					<p class="white-50 mb5 measure lh-copy white-40">
 						Nubank is the first Sequoia Capital backed company in Brazil. Since 2016, I've been helping them fight banking complexity and empower people to regain control over their financial lives.
 					</p>
 					<a style="border-bottom: none" class="" target='_blank' href="http://www.nubank.com.br">
@@ -59,8 +57,8 @@ layout: default
 		</div>
 	</section>
 
-	<section id="sectionThree" class='vh-100-ns pa0-ns pb5 overflow-hidden' style="background-color: #ffefe5;">
-		<div class="w-80 mw9 center relative h-100 cf">
+	<section id="sectionThree" class='vh-100-ns pa0-ns pb5 overflow-hidden bg-near-white'>
+		<div class="w-80 mw9 center relative h-100 cf ">
 
 			<!-- LEFT -->
 			<div class="fl relative h-100 w-60-ns w-100">
@@ -96,9 +94,11 @@ layout: default
 		</div>
 	</section>
 
+<!-- PROJECTS -->
+{% include projects.html %}
 
 <!-- ABOUT ME -->
-<section id="about">
+<section id="about" class="bg-white">
 	<div class="w-80 mw9 center relative pv6 cf">
 		<div class="fl w-third-ns ph2 w-100">
 			{% include about-work.html %}
@@ -118,19 +118,3 @@ layout: default
 		</div>
 </div>
 </section>
-
-
-
-<!-- <ul class="post-list"> -->
-  <!-- {% for post in site.posts %}
-    <section class='panel vh-100 pa5 relative mb0' style="
-      background-cocurlor: {{post.color}};">
-      <div class="absolute b0 measure pb5">
-      <h3 class ="f4">
-        <a class="post-link white" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h3>
-      <p class="text-color-white white">{{ post.summary }}</p>
-      </div>
-    </section>
-  {% endfor %} -->
-<!-- </ul> -->

@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Mapa Daqui"
+title:  "Retrolley"
 date:   2017-03-02 17:13:36 -0300
 tags: [identity, illustration; UX; UI;  civic engagement, code]
 color: red
 hero: mapadaqui-hero.png
-summary: A collaborative, open-source wayfinding system for public spaces.
+summary: A recycling garbage system for commercial airlines 
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
