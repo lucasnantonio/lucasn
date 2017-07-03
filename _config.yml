@@ -16,7 +16,7 @@
 title: Lucas Neumann
 email: lucasneumann.fau@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Lucas Neumann, juggling research, product design and some code @ Nubank Brasil. Co-founder @ projetofeito.
+  Lucas Neumann. I juggle research, product design and some code @ Nubank Brasil. Co-founder @ projetofeito.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lucasnantonio
