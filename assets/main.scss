@@ -5,19 +5,25 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'GenLight';
-    src: url('{{site.url}}/assets/fonts/GenLight.eot');
-    src: url('{{site.url}}/assets/fonts/GenLight.eot') format('embedded-opentype'),
-         url('{{site.url}}/assets/fonts/GenLight.woff2') format('woff2'),
-         url('{{site.url}}/assets/fonts/GenLight.woff') format('woff'),
-         url('{{site.url}}/assets/fonts/GenLight.ttf') format('truetype'),
-         url('{{site.url}}/assets/fonts/GenLight.svg#GenLight') format('svg');
+    // font-family: 'GenLight';
+    // src: url('{{site.url}}/assets/fonts/GenLight.eot');
+    // src: url('{{site.url}}/assets/fonts/GenLight.eot') format('embedded-opentype'),
+    //      url('{{site.url}}/assets/fonts/GenLight.woff2') format('woff2'),
+    //      url('{{site.url}}/assets/fonts/GenLight.woff') format('woff'),
+    //      url('{{site.url}}/assets/fonts/GenLight.ttf') format('truetype'),
+    //      url('{{site.url}}/assets/fonts/GenLight.svg#GenLight') format('svg');
+
+    font-family: Blanco;
+    src:url("{{site.url}}/fonts/blanco/BlancoTrial-Regular.otf");
+    // font-family: 'Blanco-Medium';
+    // src: url("{{site.url}}/fonts/blanco/BlancoTrial-Medium.otf");
 }
 
+
 // Our variables
-$base-font-family: "Chivo", Helvetica, Arial, sans-serif;
+$base-font-family: "Blanco", Helvetica, Arial, sans-serif;
 $title-font-family: "Vollkorn", serif;
-$base-font-size:   16px;
+$base-font-size:   14px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;

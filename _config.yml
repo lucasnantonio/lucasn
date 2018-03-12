@@ -10,17 +10,22 @@ collections:
     output: true
 email: lucasneumann.fau@gmail.com
 description: 'Lucas Neumann. I juggle research, product design and some code @ Nubank
-  Brasil. Co-founder @ projetofeito.
-
-'
+  Brasil. Co-founder @ projetofeito.'
 baseurl: ''
 url: ''
 twitter_username: lucasnantonio
 github_username: lucasnantonio
 google_analytics: UA-72558910-1
 markdown: kramdown
+assets:
+  sources:
+    - fonts
 gems:
 - jekyll-feed
+- jekyll-assets
 exclude:
 - Gemfile
 - Gemfile.lock
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
