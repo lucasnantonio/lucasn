@@ -27,10 +27,10 @@
 //   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
 // }
 //
-// @font-face{
-//   font-family: GenLight;
-//     src:url("{{site.url}}/fonts/Gen-Light.otf");
-// }
+@font-face{
+  font-family: GenLight;
+    src:url("{{site.url}}/fonts/Gen-Light.otf");
+}
 
 @font-face {
     font-family: Calibre;
@@ -115,9 +115,28 @@
   src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
 }
 
+@font-face{
+  font-family: Relative;
+  src: url("{{site.url}}/fonts/relative/relativetrial-book.otf");
+}
+
+@font-face{
+  font-family: Visuelt;
+  src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
+}
+
+@font-face{
+  font-family: Mabry;
+  src: url("{{site.url}}/fonts/MabryTrial-Regular.otf");
+}
 
 // Our variables
-$base-font-family: "Post", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+// $base-font-family: "Mabry", Helvetica, Arial, sans-serif;
+$base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+// $base-font-family: "Untitled", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
 $base-font-size:   10px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
@@ -151,12 +170,12 @@ body{
 
 // CUSTOM
 h1{
-	font-family: Post-Bold;
+	// font-family: Post-Bold;
 	// letter-spacing: -0.04rem;
 }
 
 h2, h3{
-  font-family: Post-Medium;
+  // font-family: Post-Medium;
 	// letter-spacing: -0.04rem;
 }
 
