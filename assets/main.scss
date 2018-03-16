@@ -4,40 +4,121 @@
 @import "tachyons";
 @charset "utf-8";
 
+// @font-face{
+//   font-family: GenLight;
+//     src:url("{{site.url}}/fonts/Gen-Light.otf");
+// }
+
+// @font-face {
+//     font-family: Blanco;
+//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Regular.otf");
+// }
+// @font-face {
+//     font-family: Blanco-Italic;
+//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Italic.otf");
+// }
+// @font-face{
+//   font-family: Blanco-Medium;
+//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Medium.otf");
+// }
+//
+// @font-face{
+//   font-family: Blanco-Bold;
+//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
+// }
+//
+// @font-face{
+//   font-family: GenLight;
+//     src:url("{{site.url}}/fonts/Gen-Light.otf");
+// }
+
+@font-face {
+    font-family: Calibre;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Regular.otf");
+}
+@font-face {
+    font-family: Calibre-Italic;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Italic.otf");
+}
 @font-face{
-  font-family: GenLight;
-    src:url("{{site.url}}/fonts/Gen-Light.otf");
+  font-family: Calibre-Medium;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Medium.otf");
+}
+
+@font-face{
+  font-family: Calibre-Bold;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Bold.otf");
 }
 
 @font-face {
-    font-family: Blanco;
-    src:url("{{site.url}}/fonts/blanco/BlancoTrial-Regular.otf");
+    font-family: Founders;
+    src:url("{{site.url}}/fonts/founders/FoundersGroteskTest-Regular.otf");
 }
 @font-face {
-    font-family: Blanco-Italic;
-    src:url("{{site.url}}/fonts/blanco/BlancoTrial-Italic.otf");
+    font-family: Founders-Italic;
+    src:url("{{site.url}}/fonts/founders/CalibreTest-Italic.otf");
 }
 @font-face{
-  font-family: Blanco-Medium;
-  src: url("{{site.url}}/fonts/blanco/BlancoTrial-Medium.otf");
+  font-family: Founders-Medium;
+  src: url("{{site.url}}/fonts/founders/CalibreTest-Medium.otf");
 }
 
 @font-face{
-  font-family: Blanco-Bold;
-  src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
+  font-family: Founders-Bold;
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskCondTest-Bold.otf");
 }
+
+@font-face {
+    font-family: Untitled-Serif;
+    src:url("{{site.url}}/fonts/untitled/UntitledSerifTest-Regular.otf");
+}
+@font-face {
+    font-family: Untitled-Sans;
+    src:url("{{site.url}}/fonts/untitled/UntitledSansTest-Regular.otf");
+}
+
+@font-face{
+  font-family: Untitled-Serif-Medium;
+  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Medium.otf");
+}
+
+@font-face{
+  font-family: Untitled-Sans-Medium;
+  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Medium.otf");
+}
+
+@font-face{
+  font-family: Untitled-Sans-Bold;
+  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Bold.otf");
+}
+
+@font-face{
+  font-family: Untitled-Serif-Bold;
+  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Bold.otf");
+}
+
+@font-face {
+    font-family: Post;
+    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Book.otf");
+}
+@font-face {
+    font-family: Post-Italic;
+    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Italic.otf");
+}
+@font-face{
+  font-family: Post-Medium;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Medium.otf");
+}
+
+@font-face{
+  font-family: Post-Bold;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
+}
+
 
 // Our variables
-$base-font-family: "Blanco", Helvetica, Arial, sans-serif;
-
-$serif: "Blanco", Helvetica, Arial, sans-serif;
-$serif-italic: "Blanco-Italic", Helvetica, Arial, sans-serif;
-$serif-medium: "Blanco-Medium", Helvetica, Arial, sans-serif;
-$serif-bold: "Blanco-Bold", Helvetica, Arial, sans-serif;
-
-$sans: "GenLight", sans-serif;
-
-$base-font-size:   18px;
+$base-font-family: "Post", Helvetica, Arial, sans-serif;
+$base-font-size:   10px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -46,7 +127,6 @@ $spacing-unit:     0px;
 
 $text-color:       #141622;
 $background-color: #fff;
-// $background-color: #f8f7f3;
 $brand-color:      #222;
 
 $grey-color:       #828282;
@@ -64,33 +144,38 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
+body{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
 
 // CUSTOM
-h1, h2, h3{
-	// font-family: $serif;
-	letter-spacing: -0.04rem;
+h1{
+	font-family: Post-Bold;
+	// letter-spacing: -0.04rem;
 }
+
+h2, h3{
+  font-family: Post-Medium;
+	// letter-spacing: -0.04rem;
+}
+
+// .sans{
+//   font-family: Untitled-Sans;
+// }
+//
+// .sans-medium{
+//   font-family: Untitled-Sans-Medium;
+// }
+//
+// .sans-bold{
+//   font-family: Untitled-Sans-Bold;
+// }
+//
+// .serif{
+//   font-family: Untitled-Serif
+// }
 
 .b0{
 	bottom: 0;
-}
-
-p strong {
-  font-family: "Blanco-Bold"
-}
-
-.sans{
-  font-family: $sans;
-}
-.serif{
-  font-family: $serif;
-}
-.serif-italic{
-  font-family: $serif-italic;
-}
-.serif-medium{
-  font-family: $serif-medium;
-}
-.serif-bold{
-  font-family: $serif-bold;
 }
