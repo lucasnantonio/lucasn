@@ -131,13 +131,14 @@
 }
 
 // Our variables
-$base-font-family: "Relative", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
 // $base-font-family: "Mabry", Helvetica, Arial, sans-serif;
 // $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
 // $base-font-family: "Untitled", Helvetica, Arial, sans-serif;
+$base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
 // $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
 // $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
-$base-font-size:   10px;
+$base-font-size:   13px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -162,6 +163,10 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+html{
+  font-size: $base-font-size;
+}
 
 body{
   font-family: $base-font-family;
