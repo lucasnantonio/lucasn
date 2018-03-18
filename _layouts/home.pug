@@ -6,86 +6,89 @@ layout: default
 
 .fixed-ns.vh-100.flex-ns.dib-ns.dn
   #menu-button.self-center.pl5.f2.black-10
-    img.w3(src='images/diamond.svg' alt='menu')
+    include diamond.svg
+    //- img.w3(src='images/diamond.svg' alt='menu')
+    
 
-#menu-container.fixed.vh-100.w-25.js-hidden-left.flex.justify-center
+#menu-container.fixed.z-max.vh-100.w-25.js-hidden-left.flex.justify-center
   .self-center
     ul.lh-copy.list.ol-0
       li
-        a.f2.black-20.bn(href="#title-lucas") Top
+        a.f2.bn.mono(href="#title-lucas") Top
       li
-        a.f2.black-20.bn(href="#title-articles") Articles
+        a.f2.bn.mono(href="#title-articles") Articles
       li
-        a.f2.black-20.bn(href="#title-projects") Projects
+        a.f2.bn.mono(href="#title-projects") Projects
       li
-        a.f2.black-20.bn(href="#title-about") About
+        a.f2.bn.mono(href="#title-about") About
       li
-        a.f2.black-20.bn(href="#title-contact") Contact
+        a.f2.bn.mono(href="#title-contact") Contact
         
-header#title-lucas.flex.flex-column.justify-center.h4
-  h1.f2.center.tc.black-20 Lucas Neumann
+#content-wrapper        
+  header#title-lucas.flex.flex-column.justify-center.h4
+    h1.f2.center.tc.black-20.mono Lucas Neumann
 
-.vh-section.flex.flex-column.ph0-ns.ph5.tl-ns.tc
-  section.h-100.flex.flex-column.justify-center
-    h2.measure-narrow.f2.center
-      | Generalist product designer at 
-      a.bb.bw2.b--black-20(href="http://www.nubank.com.br" target="_blank") Nubank
-      | , Sao Paulo, where in the last 
-      span#months  
-      |  months I’ve been helping incredible folks 
-      span.light-purple {
-      span#skills.purple research
-      span.light-purple }
-      |  financial services that give power back to the people.
+  .vh-section.flex.flex-column.ph0-ns.ph5.tl-ns.tc
+    section.h-100.flex.flex-column.justify-center
+      h2.measure-narrow.f2.center
+        | Generalist product designer at 
+        a.bb.bw2.b--black-20(href="http://www.nubank.com.br" target="_blank") Nubank
+        | , Sao Paulo, where for the last 
+        span#months  
+        |  months I’ve been helping our teams 
+        span.light-purple.bg-near-white {
+        span#skills.bg-near-white research
+        span.light-purple.bg-near-white }
+        |  financial services that give power back to the people.
 
-header#title-articles.flex.flex-column.justify-center.h4
-  a.bn(href="#title-articles")
-    h1.f2.center.tc.black-20 Articles
-.vh-section.flex.flex-column
-  section.h-100.flex.flex-column.justify-center
-    .measure.f2.center#articleList
-      .bt.bw2.b--light-green.pv3
-        a(href='https://nubank.design/nuconta-part-ii-685b446addc6')
-          p How we designed our Bank Account — NuConta Part II
-      .bt.bw2.b--light-green.pv3
-        a(href='https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d')
-          p First steps for better UX research
-      .bt.bw2.b--light-green.pv3
-        a(href='https://nubank.design/design-principles-at-nubank-d14317715bb1')
-          p Design Principles at Nubank
-      .bt.bb.bw2.b--light-green.pv3
-        a(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
-          p What it feels like to become a designer
+  header#title-articles.flex.flex-column.justify-center.h4
+    a.bn(href="#title-articles")
+      h1.f2.center.tc.black-20.mono Articles
+  .vh-section.flex.flex-column
+    section.h-100.flex.flex-column.justify-center
+      .measure.f2.center#articleList
+        .bt.bw2.b--light-green.pv3
+          a(href='https://nubank.design/nuconta-part-ii-685b446addc6')
+            p How we designed our Bank Account — NuConta Part II
+        .bt.bw2.b--light-green.pv3
+          a(href='https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d')
+            p First steps for better UX research
+        .bt.bw2.b--light-green.pv3
+          a(href='https://nubank.design/design-principles-at-nubank-d14317715bb1')
+            p Design Principles at Nubank
+        .bt.bb.bw2.b--light-green.pv3
+          a(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
+            p What it feels like to become a designer
 
-header#title-projects.flex.flex-column.justify-center.h4
-  a.bn(href="#title-projects")
-    h1.f2.center.tc.black-20 Projects
-    
-.vh-section.bg-white.flex.flex-column
-  section.h-100.flex.flex-column.justify-center
-    h2.measure-narrow.f2.center
-      | Soon!
+  header#title-projects.flex.flex-column.justify-center.h4
+    a.bn(href="#title-projects")
+      h1.f2.center.tc.black-20.mono Projects
+      
+  .vh-section.bg-white.flex.flex-column
+    section.h-100.flex.flex-column.justify-center
+      h2.measure-narrow.f2.center
+        | Soon!
 
-header#title-about.flex.flex-column.justify-center.h4
-  a.bn(href="#title-about")
-    h1.f2.center.tc.black-20 About
+  header#title-about.flex.flex-column.justify-center.h4
+    a.bn(href="#title-about")
+      h1.f2.center.tc.black-20.mono About
 
-.vh-section.bg-white.flex.flex-column
-  section.h-100.flex.flex-column.justify-center
-    h2.measure-narrow.f2.center
-      | Soon!
-
-
-header#title-contact.flex.flex-column.justify-center.h4
-  a.bn(href="#title-contact")
-    h1.f2.center.tc.black-20 Contact
-
-.vh-section.bg-white.flex.flex-column
-  section.h-100.flex.flex-column.justify-center
-    h2.measure-narrow.f2.center
-      | Soon!
+  .vh-section.bg-white.flex.flex-column
+    section.h-100.flex.flex-column.justify-center
+      h2.measure-narrow.f2.center
+        | Soon!
 
 
-header.flex.flex-column.justify-center.h4
-  .bn
-    h1.f1.center.tc 👋
+  header#title-contact.flex.flex-column.justify-center.h4
+    a.bn(href="#title-contact")
+      h1.f2.center.tc.black-20.mono Contact
+
+  .vh-section.bg-white.flex.flex-column
+    section.h-100.flex.flex-column.justify-center
+      h2.measure-narrow.f2.center
+        | Soon!
+
+
+  header.flex.flex-column.justify-center.h4
+    .bn
+      h1.f1.center.tc 👋

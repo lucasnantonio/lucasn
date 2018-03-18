@@ -10,6 +10,7 @@ let skillDiv;
 let hiredMonths;
 let menuBtn;
 let menuContainer;
+let sections;
 let skillList = [
   'research',
   'explore',
@@ -33,6 +34,7 @@ let getDivs = function () {
   hiredMonths = document.getElementById('months');
   menuBtn = document.getElementById('menu-button');
   menuContainer = document.getElementById('menu-container');
+  contentWrapper = document.getElementById('content-wrapper');
 }
 
 let i = 0;
@@ -58,12 +60,17 @@ let getMonths = function(){
 
 let animateMenuEnter = function (){
   menuContainer.classList.remove('js-hidden-left');
+  contentWrapper.style.opacity = .1;
+  console.log('enter');
   menuBtn.removeEventListener('mouseover',animateMenuEnter);
 }
 
 let animateMenuLeave = function (){
   menuContainer.classList.add('js-hidden-left');
+  contentWrapper.style.opacity = 1;
+  console.log('leave');
   menuBtn.addEventListener('mouseover',animateMenuEnter);
+
 }
 
 let menuSetup = function(){
