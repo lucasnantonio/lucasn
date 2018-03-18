@@ -40,5 +40,5 @@ let getMonths = function(){
   let months = (today.getFullYear() - hiredDate.getFullYear())*12
   months-= hiredDate.getMonth() + 1;
   months+= today.getMonth() +1;
-  hiredMonths.innerHTML = months <= 0 ? 0 : months;
+  hiredMonths.innerHTML = (months <= 0 ? 0 : months);
 }
