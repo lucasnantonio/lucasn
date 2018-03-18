@@ -70,10 +70,10 @@ let animateMenuLeave = function (){
   contentWrapper.style.opacity = 1;
   console.log('leave');
   menuBtn.addEventListener('mouseover',animateMenuEnter);
-
 }
 
 let menuSetup = function(){
   menuBtn.addEventListener('mouseover',animateMenuEnter);
   menuContainer.addEventListener('mouseleave',animateMenuLeave);
+  menuContainer.addEventListener('click',animateMenuLeave);
 }
