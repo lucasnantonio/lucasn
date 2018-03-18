@@ -60,12 +60,12 @@
 }
 @font-face{
   font-family: Founders-Medium;
-  src: url("{{site.url}}/fonts/founders/CalibreTest-Medium.otf");
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Medium.otf");
 }
 
 @font-face{
   font-family: Founders-Bold;
-  src: url("{{site.url}}/fonts/founders/FoundersGroteskCondTest-Bold.otf");
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Bold.otf");
 }
 
 @font-face {
@@ -121,23 +121,53 @@
 }
 
 @font-face{
+  font-family: Relative-Bold;
+  src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
+}
+
+@font-face{
   font-family: Visuelt;
   src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
 }
 
 @font-face{
+  font-family: Visuelt-Bold;
+  src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
+}
+@font-face{
   font-family: Mabry;
   src: url("{{site.url}}/fonts/MabryTrial-Regular.otf");
 }
+@font-face{
+  font-family: Mabry-Medium;
+  src: url("{{site.url}}/fonts/MabryTrial-Medium.otf");
+}
+@font-face{
+  font-family: Mabry-Bold;
+  src: url("{{site.url}}/fonts/MabryTrial-Bold.otf");
+}
 
 // Our variables
-// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+
 // $base-font-family: "Mabry", Helvetica, Arial, sans-serif;
+// $base-font-family: "Mabry-Medium", Helvetica, Arial, sans-serif;
+$base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
+
+// $base-font-family: "Post-Bold", Helvetica, Arial, sans-serif;
+
 // $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
+
 // $base-font-family: "Untitled", Helvetica, Arial, sans-serif;
-$base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
+// $base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
+
 // $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
+
 // $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
+
 $base-font-size:   13px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
@@ -145,7 +175,7 @@ $base-line-height: 1.6;
 
 $spacing-unit:     0px;
 
-$text-color:       #141622;
+$text-color:       #222;
 $background-color: #fff;
 $brand-color:      #222;
 

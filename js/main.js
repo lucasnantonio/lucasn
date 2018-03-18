@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   getSkillDiv();
   getMonthsDiv();
-
   setInterval(changeSkill, 2000);
   getMonths();
+  var scroll = new SmoothScroll('a[href*="#"]')
 });
 
 let skillDiv;
@@ -17,7 +17,7 @@ let skillList = [
   'prototype',
   'test',
   'ship',
-  'write copy to',
+  'write',
 ]
 
 let getSkillDiv = function () {
