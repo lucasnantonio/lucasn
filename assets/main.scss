@@ -268,7 +268,10 @@ padding-bottom:3rem;
 
 #menu-container{
   transition: all .3s;
+  & ul li a:hover{
+    color: $text-color;
+  }
 }
 .js-hidden-left{
-  margin-left:-30rem;
+  margin-left:-100rem;
 }

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 2000);
   getMonths();
-  menuAnimation();
+  menuSetup();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
 
@@ -18,10 +18,14 @@ let skillList = [
   'define',
   'prototype',
   'test',
+  'diagram',
   'ship',
   'write',
   'whiteboard',
-  'sketch'
+  'sketch',
+  'inform',
+  'understand',
+  'visualise',
 ]
 
 let getDivs = function () {
@@ -52,11 +56,17 @@ let getMonths = function(){
   hiredMonths.innerHTML = (months <= 0 ? 0 : months);
 }
 
-let animateMenu = function (){
-  menuContainer.classList.toggle('js-hidden-left');
+let animateMenuEnter = function (){
+  menuContainer.classList.remove('js-hidden-left');
+  menuBtn.removeEventListener('mouseover',animateMenuEnter);
 }
 
-let menuAnimation = function(){
-  menuBtn.addEventListener('mouseover',animateMenu);
-  menuContainer.addEventListener('mouseout',animateMenu);
+let animateMenuLeave = function (){
+  menuContainer.classList.add('js-hidden-left');
+  menuBtn.addEventListener('mouseover',animateMenuEnter);
+}
+
+let menuSetup = function(){
+  menuBtn.addEventListener('mouseover',animateMenuEnter);
+  menuContainer.addEventListener('mouseleave',animateMenuLeave);
 }

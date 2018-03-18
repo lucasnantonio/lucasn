@@ -3,11 +3,25 @@ layout: default
 ---
 
 
-#menu-container.fixed.vh-100.w-20.bg-near-white.js-hidden-left
-  | MENU
-.fixed.vh-100.flex.dib-ns.dn
-  #menu-button.self-center menu
 
+.fixed-ns.vh-100.flex-ns.dib-ns.dn
+  #menu-button.self-center.pl5.f2.black-10
+    img.w3(src='images/diamond.svg' alt='menu')
+
+#menu-container.fixed.vh-100.w-25.js-hidden-left.flex.justify-center
+  .self-center
+    ul.lh-copy.list.ol-0
+      li
+        a.f2.black-20.bn(href="#title-lucas") Top
+      li
+        a.f2.black-20.bn(href="#title-articles") Articles
+      li
+        a.f2.black-20.bn(href="#title-projects") Projects
+      li
+        a.f2.black-20.bn(href="#title-about") About
+      li
+        a.f2.black-20.bn(href="#title-contact") Contact
+        
 header#title-lucas.flex.flex-column.justify-center.h4
   h1.f2.center.tc.black-20 Lucas Neumann
 
@@ -53,5 +67,25 @@ header#title-projects.flex.flex-column.justify-center.h4
       | Soon!
 
 header#title-about.flex.flex-column.justify-center.h4
-  a.bn(href="#title-arojects")
+  a.bn(href="#title-about")
     h1.f2.center.tc.black-20 About
+
+.vh-section.bg-white.flex.flex-column
+  section.h-100.flex.flex-column.justify-center
+    h2.measure-narrow.f2.center
+      | Soon!
+
+
+header#title-contact.flex.flex-column.justify-center.h4
+  a.bn(href="#title-contact")
+    h1.f2.center.tc.black-20 Contact
+
+.vh-section.bg-white.flex.flex-column
+  section.h-100.flex.flex-column.justify-center
+    h2.measure-narrow.f2.center
+      | Soon!
+
+
+header.flex.flex-column.justify-center.h4
+  .bn
+    h1.f1.center.tc 👋
