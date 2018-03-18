@@ -18,6 +18,8 @@ let skillList = [
   'test',
   'ship',
   'write',
+  'whiteboard',
+  'sketch'
 ]
 
 let getSkillDiv = function () {
@@ -30,8 +32,14 @@ let getMonthsDiv = function () {
 
 let i = 0;
 function changeSkill() {
-  skillDiv.innerHTML = skillList[i];
+  skillDiv.classList.toggle('o-0')
+  setTimeout(function(){
+    skillDiv.innerHTML = skillList[i];
+    skillDiv.classList.toggle('o-0')
+  }, 300);
+
   i = (i + 1) % skillList.length;
+
 }
 
 let getMonths = function(){

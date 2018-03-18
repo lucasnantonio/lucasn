@@ -121,6 +121,12 @@
 }
 
 @font-face{
+  font-family: Relative-Medium;
+  src: url("{{site.url}}/fonts/relative/relativetrial-medium.otf");
+}
+
+
+@font-face{
   font-family: Relative-Bold;
   src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
 }
@@ -151,7 +157,7 @@
 
 // $base-font-family: "Mabry", Helvetica, Arial, sans-serif;
 // $base-font-family: "Mabry-Medium", Helvetica, Arial, sans-serif;
-$base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
+// $base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
 
 // $base-font-family: "Post-Bold", Helvetica, Arial, sans-serif;
 
@@ -166,6 +172,7 @@ $base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
 
 // $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+$base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
 $base-font-size:   13px;
@@ -175,8 +182,8 @@ $base-line-height: 1.6;
 
 $spacing-unit:     0px;
 
-$text-color:       #222;
-$background-color: #fff;
+$text-color:       #555;
+$background-color: #FFF;
 $brand-color:      #222;
 
 $grey-color:       #828282;
@@ -230,6 +237,19 @@ h2, h3{
 //   font-family: Untitled-Serif
 // }
 
+a{
+  color: $text-color;
+  transition: .2s all;
+}
+
+a:hover{
+padding-bottom: .4rem;
+}
+
+#skills{
+  transition: .3s all;
+}
+
 .b0{
 	bottom: 0;
 }
@@ -238,15 +258,10 @@ h2, h3{
   height: calc(100vh - 16rem);
 }
 
-
-// #articleList div a p{
-// transition: all .2s;
-// }
 #articleList div{
   transition: all .2s;
 }
 #articleList div:hover{
 padding-top:2rem;
 padding-bottom:2rem;
-// transition: all .2s;
 }
