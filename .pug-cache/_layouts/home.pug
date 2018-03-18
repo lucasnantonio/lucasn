@@ -1,8 +1,9 @@
-.flex.flex-column.vh-100.bg-white
-  header
-    h1.f2.center.tc.pv4.black-20#section-lucas Lucas Neumann
-  section.flex.justify-center.h-100
-    h2.measure-narrow.f2.center.self-center
+header#section-lucas.flex.flex-column.justify-center.h4
+  h1.f2.center.tc.black-20 Lucas Neumann
+  
+.vh-section.bg-white.flex.flex-column
+  section.h-100.flex.flex-column.justify-center
+    h2.measure-narrow.f2.center
       | Generalist product designer at Nubank, Sao Paulo, where in the last 
       span#months  
       |  months I’ve been helping incredible folks 
@@ -10,12 +11,14 @@
       span#skills research
       span.black-20 }
       |  financial services that give power back to the people.
-  header
-    a(href="#section-articles")
-      h1.f2.center.tc.pv4.black-20#section-articles Articles
-.flex.flex-column.vh-100
-  section.flex.justify-center.h-90
-    .measure.f2.center.self-center
+
+header#section-articles.flex.flex-column.justify-center.h4
+  a.bn(href="#section-articles")
+    h1.f2.center.tc.black-20 Articles
+
+.vh-section.bg-white.flex.flex-column
+  section.h-100.flex.flex-column.justify-center
+    .measure.f2.center
       .bt.bb.bw-1.b--light-gray.pv3
         a(href='#')
           p How we designed our bank account, part II
@@ -25,5 +28,7 @@
         p A critique of Medium's new clapping interaction
       .bt.bb.bw-1.b--light-gray.pv3
         p First steps for better UX research
-    header
-      h1.f2.center.tc.pv4.black-10 Projects
+
+header#section-projects.flex.flex-column.justify-center.h4
+  a.bn(href="#section-projects")
+    h1.f2.center.tc.black-20 Projects
