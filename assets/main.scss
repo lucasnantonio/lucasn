@@ -237,3 +237,16 @@ h2, h3{
 .vh-section{
   height: calc(100vh - 16rem);
 }
+
+
+// #articleList div a p{
+// transition: all .2s;
+// }
+#articleList div{
+  transition: all .2s;
+}
+#articleList div:hover{
+padding-top:2rem;
+padding-bottom:2rem;
+// transition: all .2s;
+}
