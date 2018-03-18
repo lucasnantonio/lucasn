@@ -243,7 +243,7 @@ a{
 }
 
 a:hover{
-padding-bottom: .4rem;
+padding-bottom: .5rem;
 }
 
 #skills{
@@ -262,6 +262,13 @@ padding-bottom: .4rem;
   transition: all .2s;
 }
 #articleList div:hover{
-padding-top:2rem;
-padding-bottom:2rem;
+padding-top:3rem;
+padding-bottom:3rem;
+}
+
+#menu-container{
+  transition: all .3s;
+}
+.js-hidden-left{
+  margin-left:-30rem;
 }

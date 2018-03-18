@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  getSkillDiv();
-  getMonthsDiv();
+  getDivs();
   setInterval(changeSkill, 2000);
   getMonths();
+  menuAnimation();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
 
 let skillDiv;
 let hiredMonths;
+let menuBtn;
+let menuContainer;
 let skillList = [
   'research',
   'explore',
@@ -22,12 +24,11 @@ let skillList = [
   'sketch'
 ]
 
-let getSkillDiv = function () {
+let getDivs = function () {
   skillDiv = document.getElementById('skills');
-}
-
-let getMonthsDiv = function () {
   hiredMonths = document.getElementById('months');
+  menuBtn = document.getElementById('menu-button');
+  menuContainer = document.getElementById('menu-container');
 }
 
 let i = 0;
@@ -49,4 +50,13 @@ let getMonths = function(){
   months-= hiredDate.getMonth() + 1;
   months+= today.getMonth() +1;
   hiredMonths.innerHTML = (months <= 0 ? 0 : months);
+}
+
+let animateMenu = function (){
+  menuContainer.classList.toggle('js-hidden-left');
+}
+
+let menuAnimation = function(){
+  menuBtn.addEventListener('mouseover',animateMenu);
+  menuContainer.addEventListener('mouseout',animateMenu);
 }
