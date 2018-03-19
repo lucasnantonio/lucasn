@@ -88,21 +88,21 @@ let navigator = function () {
     function(item, index) {
       item.onmouseover = function() {
         let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200 && index != 0) {
+        if (y >= -100 && y <= 200) {
           let backButton = item.querySelectorAll('a:first-child');
           backButton[0].classList.add('js-animate-header');
         }
       }
       item.onmouseleave = function() {
         let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200 && index != 0) {
+        if (y >= -100 && y <= 200) {
           let backButton = item.querySelectorAll('a:first-child');
           backButton[0].classList.remove('js-animate-header');
         }
       }
       item.onclick = function() {
         let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200 && index != 0) {
+        if (y >= -100 && y <= 200) {
           let backButton = item.querySelectorAll('a:first-child');
           backButton[0].classList.remove('js-animate-header');
         }
