@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   setInterval(changeSkill, 2000);
   getMonths();
   menuSetup();
+  navigator();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
 
@@ -11,6 +12,9 @@ let hiredMonths;
 let menuBtn;
 let menuContainer;
 let sections;
+let sectionTitles;
+
+
 let skillList = [
   'research',
   'explore',
@@ -29,18 +33,20 @@ let skillList = [
   'visualise',
 ]
 
-let getDivs = function () {
+let getDivs = function() {
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   menuBtn = document.getElementById('menu-button');
   menuContainer = document.getElementById('menu-container');
   contentWrapper = document.getElementById('content-wrapper');
+  sectionTitles = document.querySelectorAll('.section-title');
 }
 
 let i = 0;
+
 function changeSkill() {
   skillDiv.classList.toggle('o-0')
-  setTimeout(function(){
+  setTimeout(function() {
     skillDiv.innerHTML = skillList[i];
     skillDiv.classList.toggle('o-0')
   }, 300);
@@ -49,31 +55,52 @@ function changeSkill() {
 
 }
 
-let getMonths = function(){
+let getMonths = function() {
   let today = new Date();
   let hiredDate = new Date("April 08, 2016 01:15:00");
-  let months = (today.getFullYear() - hiredDate.getFullYear())*12
-  months-= hiredDate.getMonth() + 1;
-  months+= today.getMonth() +1;
+  let months = (today.getFullYear() - hiredDate.getFullYear()) * 12
+  months -= hiredDate.getMonth() + 1;
+  months += today.getMonth() + 1;
   hiredMonths.innerHTML = (months <= 0 ? 0 : months);
 }
 
-let animateMenuEnter = function (){
+let animateMenuEnter = function() {
   menuContainer.classList.remove('js-hidden-left');
   contentWrapper.style.opacity = .1;
-  console.log('enter');
-  menuBtn.removeEventListener('mouseover',animateMenuEnter);
+  menuBtn.removeEventListener('mouseover', animateMenuEnter);
 }
 
-let animateMenuLeave = function (){
+let animateMenuLeave = function() {
   menuContainer.classList.add('js-hidden-left');
   contentWrapper.style.opacity = 1;
-  console.log('leave');
-  menuBtn.addEventListener('mouseover',animateMenuEnter);
+  menuBtn.addEventListener('mouseover', animateMenuEnter);
 }
 
-let menuSetup = function(){
-  menuBtn.addEventListener('mouseover',animateMenuEnter);
-  menuContainer.addEventListener('mouseleave',animateMenuLeave);
-  menuContainer.addEventListener('click',animateMenuLeave);
+let menuSetup = function() {
+  menuBtn.addEventListener('mouseover', animateMenuEnter);
+  menuContainer.addEventListener('mouseleave', animateMenuLeave);
+  menuContainer.addEventListener('click', animateMenuLeave);
+}
+
+let navigator = function () {
+
+  sectionTitles.forEach(
+    function(item, index) {
+      item.onmouseover = function() {
+        let y = item.getBoundingClientRect().top;
+        if (y >= 0 && y <= 200 && index != 0) {
+          let backButton = item.querySelectorAll('a:first-child');
+          backButton[0].classList.add('js-animate-header');
+        }
+      }
+      item.onmouseleave = function() {
+        let y = item.getBoundingClientRect().top;
+        if (y >= 0 && y <= 200 && index != 0) {
+          let backButton = item.querySelectorAll('a:first-child');
+          backButton[0].classList.remove('js-animate-header');
+        }
+      }
+    })
+
+
 }
