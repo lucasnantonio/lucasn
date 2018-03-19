@@ -179,14 +179,14 @@ $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
-$base-font-size:   13px;
+$base-font-size:   12px;
 $base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
 
 $spacing-unit:     0px;
 
-$text-color:       #555;
+$text-color:       #444;
 $background-color: #FFF;
 $brand-color:      #222;
 
@@ -215,7 +215,8 @@ body{
 }
 
 .mono{
-  font-family: Relative-Mono;
+  // font-family: Relative-Mono;
+  font-family: $base-font-family;
 }
 
 // .sans{
@@ -275,5 +276,5 @@ padding-bottom:3rem;
   margin-left:-30rem;
 }
 .js-animate-header{
-  margin-top:-3rem;
+  margin-top:-8rem;
 }
