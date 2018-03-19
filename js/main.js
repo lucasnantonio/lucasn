@@ -100,6 +100,13 @@ let navigator = function () {
           backButton[0].classList.remove('js-animate-header');
         }
       }
+      item.onclick = function() {
+        let y = item.getBoundingClientRect().top;
+        if (y >= 0 && y <= 200 && index != 0) {
+          let backButton = item.querySelectorAll('a:first-child');
+          backButton[0].classList.remove('js-animate-header');
+        }
+      }
     })
 
 
