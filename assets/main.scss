@@ -153,12 +153,11 @@
   src: url("{{site.url}}/fonts/MabryTrial-Bold.otf");
 }
 @font-face{
-  font-family: Relative-Mono;
+  font-family: Relative-Faux;
   src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
 }
-
 @font-face{
-  font-family: Relative-Mono;
+  font-family: Relative-MonoPitch10;
   src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
 }
 // Our variables
@@ -220,7 +219,7 @@ body{
 }
 
 .mono{
-  font-family: Relative-Mono;
+  font-family: Relative-MonoPitch10;
   // font-family: $base-font-family;
 }
 
