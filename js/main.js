@@ -103,8 +103,11 @@ let navigator = function () {
       item.onclick = function() {
         let y = item.getBoundingClientRect().top;
         if (y >= -100 && y <= 200) {
-          let backButton = item.querySelectorAll('a:first-child');
-          backButton[0].classList.remove('js-animate-header');
+          setTimeout(function(){
+            let backButton = item.querySelectorAll('a:first-child');
+            backButton[0].classList.remove('js-animate-header');
+          }, 300);
+
         }
       }
     })
