@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getMonths();
   menuSetup();
   navigator();
+  articleOpacity();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
 
@@ -13,6 +14,9 @@ let menuBtn;
 let menuContainer;
 let sections;
 let sectionTitles;
+let articles;
+let articleLinks;
+let articleContainer;
 
 
 let skillList = [
@@ -40,6 +44,8 @@ let getDivs = function() {
   menuContainer = document.getElementById('menu-container');
   contentWrapper = document.getElementById('content-wrapper');
   sectionTitles = document.querySelectorAll('.section-title');
+  articles = document.querySelectorAll('#articleList div');
+  articleLinks = document.querySelectorAll('#articleList div a');
 }
 
 let i = 0;
@@ -82,8 +88,7 @@ let menuSetup = function() {
   menuContainer.addEventListener('click', animateMenuLeave);
 }
 
-let navigator = function () {
-
+let navigator = function() {
   sectionTitles.forEach(
     function(item, index) {
       item.onmouseover = function() {
@@ -103,7 +108,7 @@ let navigator = function () {
       item.onclick = function() {
         let y = item.getBoundingClientRect().top;
         if (y >= -100 && y <= 200) {
-          setTimeout(function(){
+          setTimeout(function() {
             let backButton = item.querySelectorAll('a:first-child');
             backButton[0].classList.remove('js-animate-header');
           }, 300);
@@ -111,6 +116,23 @@ let navigator = function () {
         }
       }
     })
+}
 
-
+let articleOpacity = function (){
+  console.log(articles);
+  articles.forEach(function(item){
+    item.onmouseover = function(){
+      articleLinks.forEach(function(itemB){
+        itemB.classList.add("o-20");
+      });
+      item.querySelectorAll('a')[0].classList.remove("o-20");
+    }
+    item.onmouseleave = function(){
+      articleLinks.forEach(function(itemB){
+        itemB.classList.remove("o-20");
+      });
+      item.querySelectorAll('a')[0].classList.remove("o-20");
+      console.log("removed");
+    }
+  })
 }
