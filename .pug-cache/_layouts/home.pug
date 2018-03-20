@@ -1,36 +1,36 @@
-#sidebar.fixed.vh-100.flex.flex-column.justify-between.w6
+#sidebar.fixed.vh-100.flex-l.flex-column.justify-between.w6.dn
   header#title-lucas.mt4.ml4
     a.w-100.bn.lh-title(href="#content")
       h1.mt2.f5.tl.mono lucas neumann 
         br 
         span product designer
       //- h2.f5.tl.mono.black-30 Product Designer
-  #menu-button.mb5.ml4
+  #menu-button.mb4.ml4
     //- | menu
     include diamond.svg
     //- img.w3(src='images/diamond.svg' alt='menu')
     
-#menu-container.fixed.z-max.vh-100.w-100.js-hidden-left.flex.justify-center.bg-green.o-80
+#menu-container.fixed.z-max.vh-100.w-70.js-hidden-left.flex.justify-center.bg-near-black
   .self-center
     ul.lh-copy.list.ol-0
       li
-        a.f2.bn.mono(href="#content") Top
+        a.f2-ns.f3.bn.mono.white(href="#content") Top
       li
-        a.f2.bn.mono(href="#title-articles") Articles
+        a.f2-ns.f3.bn.mono.white(href="#title-articles") Writing
       li
-        a.f2.bn.mono(href="#title-projects") Projects
+        a.f2-ns.f3.bn.mono.white(href="#title-projects") Work
       li
-        a.f2.bn.mono(href="#title-about") About
+        a.f2-ns.f3.bn.mono.white(href="#title-about") About
       li
-        a.f2.bn.mono(href="#title-contact") Contact
+        a.f2-ns.f3.bn.mono.white(href="#title-contact") Contact
     
 
 #content-wrapper.flex
-  #sidebar-spacer.w5.vh-100.dib.mr5
-  #content
-    .vh-section-first.flex.flex-column.ph0-ns.tl-ns.tc
+  #sidebar-spacer.w5.vh-100.mr5.dib-l.dn
+  #content.ph0-l.ph5
+    .vh-section-first.flex.flex-column.tl
       section.h-100.flex.flex-column.justify-start.mt4
-        h2.measure-narrow.f2
+        h2.measure-narrow.f2-ns.f3
           | Generalist product designer at 
           a.bb.bw2.b-(href="http://www.nubank.com.br" target="_blank") Nubank
           | , Sao Paulo, where for the last 
@@ -39,17 +39,17 @@
           span.mono {
           span#skills.mono research
           span.mono }
-          |  financial services that give power back to the people.
+          |  financial services that fight complexity & empower people.
 
     header#title-articles.w-100.h4.dib.section-title.overflow-hidden
       a.bn.h4.db.w-100.flex(href="#title-articles")
-        h1.self-center.f2.mono Articles
+        h1.self-center.f2-ns.f3.mono Writing
       a.bn.h4.db.w-100.flex(href="#content")
-        h1.self-center.f2.mono Back  
+        h1.self-center.f2-ns.f3.mono Back  
           
     .vh-section.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        .f2#articleList
+        .f2-ns.f3#articleList
           .bt.bw2.pv3
             a.bn(href='https://nubank.design/nuconta-part-ii-685b446addc6')
               | How we designed our Bank Account — NuConta Part II
@@ -65,34 +65,34 @@
 
     header#title-projects.w-100.h4.dib.overflow-hidden.section-title
       a.bn.h4.db.w-100.flex(href="#title-projects")
-        h1.self-center.f2.mono Projects
+        h1.self-center.f2-ns.f3.mono Work
       a.bn.h4.db.w-100.flex(href="#title-articles")
-        h1.self-center.f2.mono Back   
+        h1.self-center.f2-ns.f3.mono Back   
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2
+        h2.measure-narrow.f2-ns.f3
           | Soon!
 
     header#title-about.w-100.h4.dib.overflow-hidden.section-title
       a.bn.h4.db.w-100.flex(href="#title-about")
-        h1.self-center.f2.mono About
+        h1.self-center.f2-ns.f3.mono About
       a.bn.h4.db.w-100.flex(href="#title-projects")
-        h1.self-center.f2.mono Back   
+        h1.self-center.f2-ns.f3.mono Back   
 
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2
+        h2.measure-narrow.f2-ns.f3
           | Soon!
 
 
     header#title-contact.w-100.h4.dib.overflow-hidden.section-title
       a.bn.h4.db.w-100.flex(href="#title-contact")
-        h1.self-center.f2.mono Contact
+        h1.self-center.f2-ns.f3.mono Contact
       a.bn.h4.db.w-100.flex(href="#title-about")
-        h1.self-center.f2.mono Back
+        h1.self-center.f2-ns.f3.mono Back
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2
+        h2.measure-narrow.f2-ns.f3
           | Soon!
 
 

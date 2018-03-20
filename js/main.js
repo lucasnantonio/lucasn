@@ -5,20 +5,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   menuSetup();
   navigator();
   articleOpacity();
-  titleOpacity();
+  // titleOpacity();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
-
-let skillDiv;
-let hiredMonths;
-let menuBtn;
-let menuContainer;
-let sections;
-let sectionTitles;
-let articles;
-let articleLinks;
-let articleContainer;
-
 
 let skillList = [
   'research',
@@ -37,6 +26,16 @@ let skillList = [
   'understand',
   'visualise',
 ]
+
+let skillDiv;
+let hiredMonths;
+let menuBtn;
+let menuContainer;
+let sections;
+let sectionTitles;
+let articles;
+let articleLinks;
+let articleContainer;
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
