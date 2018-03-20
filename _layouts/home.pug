@@ -4,15 +4,15 @@ layout: default
 
 
 
-.fixed-ns.vh-100.flex.flex-column.justify-between.dib-ns.dn
-  header#title-lucas.dib.ph5.pv4
-    a.db.w-100.bn.mt2.lh-title(href="#title-lucas")
+#sidebar.fixed.vh-100.flex.flex-column.justify-between.debug.w6
+  header#title-lucas.mt4.ml4
+    a.w-100.bn.mt2.lh-title(href="#title-lucas")
       h1.f5.tl.mono Lucas Neumann 
         br 
-        span.black-30 product designer
+        span product designer
       //- h2.f5.tl.mono.black-30 Product Designer
-  #menu-button.pl5.pb5.f5.black
-    | Menu
+  #menu-button.mb5.ml4
+    | menu
     //- include diamond.svg
     //- img.w3(src='images/diamond.svg' alt='menu')
     
@@ -30,76 +30,78 @@ layout: default
       li
         a.f2.bn.mono(href="#title-contact") Contact
     
-#content-wrapper.w-70.center
-      
-  .vh-section-first.flex.flex-column.ph0-ns.ph5.tl-ns.tc
-    section.h-100.flex.flex-column.justify-start.mt4
-      h2.measure-narrow.f2
-        | Generalist product designer at 
-        a.bb.bw2.b-(href="http://www.nubank.com.br" target="_blank") Nubank
-        | , Sao Paulo, where for the last 
-        span#months.mono 
-        |  months I’ve been helping our teams 
-        span.mono {
-        span#skills.mono research
-        span.mono }
-        |  financial services that give power back to the people.
 
-  header#title-articles.w-100.h4.dib.section-title.overflow-hidden
-    a.bn.h4.db.w-100.flex(href="#title-articles")
-      h1.self-center.f2.mono Articles
-    a.bn.h4.db.w-100.flex(href="#title-lucas")
-      h1.self-center.f2.mono Back  
-        
-  .vh-section.flex.flex-column
-    section.h-100.flex.flex-column.justify-center
-      .f2#articleList
-        .bt.bw2.pv3
-          a.bn(href='https://nubank.design/nuconta-part-ii-685b446addc6')
-            | How we designed our Bank Account — NuConta Part II
-        .bt.bw2.pv3
-          a.bn(href='https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d')
-            | First steps for better UX research
-        .bt.bw2.pv3
-          a.bn(href='https://nubank.design/design-principles-at-nubank-d14317715bb1')
-            | Design Principles at Nubank
-        .bt.bb.bw2.pv3
-          a.bn(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
-            | What it feels like to become a designer
+#content-wrapper.debug.flex
+  #sidebar-spacer.w5.vh-100.dib.mr5
+  #content
+    .vh-section-first.flex.flex-column.ph0-ns.tl-ns.tc
+      section.h-100.flex.flex-column.justify-start.mt4
+        h2.measure-narrow.f2
+          | Generalist product designer at 
+          a.bb.bw2.b-(href="http://www.nubank.com.br" target="_blank") Nubank
+          | , Sao Paulo, where for the last 
+          span#months.mono 
+          |  months I’ve been helping our teams 
+          span.mono {
+          span#skills.mono research
+          span.mono }
+          |  financial services that give power back to the people.
 
-  header#title-projects.w-100.h4.dib.overflow-hidden.section-title
-    a.bn.h4.db.w-100.flex(href="#title-projects")
-      h1.self-center.f2.mono Projects
-    a.bn.h4.db.w-100.flex(href="#title-articles")
-      h1.self-center.f2.mono Back   
-  .vh-section.bg-white.flex.flex-column
-    section.h-100.flex.flex-column.justify-center
-      h2.measure-narrow.f2
-        | Soon!
+    header#title-articles.w-100.h4.dib.section-title.overflow-hidden
+      a.bn.h4.db.w-100.flex(href="#title-articles")
+        h1.self-center.f2.mono Articles
+      a.bn.h4.db.w-100.flex(href="#title-lucas")
+        h1.self-center.f2.mono Back  
+          
+    .vh-section.flex.flex-column
+      section.h-100.flex.flex-column.justify-center
+        .f2#articleList
+          .bt.bw2.pv3
+            a.bn(href='https://nubank.design/nuconta-part-ii-685b446addc6')
+              | How we designed our Bank Account — NuConta Part II
+          .bt.bw2.pv3
+            a.bn(href='https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d')
+              | First steps for better UX research
+          .bt.bw2.pv3
+            a.bn(href='https://nubank.design/design-principles-at-nubank-d14317715bb1')
+              | Design Principles at Nubank
+          .bt.bb.bw2.pv3
+            a.bn(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
+              | What it feels like to become a designer
 
-  header#title-about.w-100.h4.dib.overflow-hidden.section-title
-    a.bn.h4.db.w-100.flex(href="#title-about")
-      h1.self-center.f2.mono About
-    a.bn.h4.db.w-100.flex(href="#title-projects")
-      h1.self-center.f2.mono Back   
+    header#title-projects.w-100.h4.dib.overflow-hidden.section-title
+      a.bn.h4.db.w-100.flex(href="#title-projects")
+        h1.self-center.f2.mono Projects
+      a.bn.h4.db.w-100.flex(href="#title-articles")
+        h1.self-center.f2.mono Back   
+    .vh-section.bg-white.flex.flex-column
+      section.h-100.flex.flex-column.justify-center
+        h2.measure-narrow.f2
+          | Soon!
 
-  .vh-section.bg-white.flex.flex-column
-    section.h-100.flex.flex-column.justify-center
-      h2.measure-narrow.f2
-        | Soon!
+    header#title-about.w-100.h4.dib.overflow-hidden.section-title
+      a.bn.h4.db.w-100.flex(href="#title-about")
+        h1.self-center.f2.mono About
+      a.bn.h4.db.w-100.flex(href="#title-projects")
+        h1.self-center.f2.mono Back   
 
-
-  header#title-contact.w-100.h4.dib.overflow-hidden.section-title
-    a.bn.h4.db.w-100.flex(href="#title-contact")
-      h1.self-center.f2.mono Contact
-    a.bn.h4.db.w-100.flex(href="#title-about")
-      h1.self-center.f2.mono Back
-  .vh-section.bg-white.flex.flex-column
-    section.h-100.flex.flex-column.justify-center
-      h2.measure-narrow.f2
-        | Soon!
+    .vh-section.bg-white.flex.flex-column
+      section.h-100.flex.flex-column.justify-center
+        h2.measure-narrow.f2
+          | Soon!
 
 
-  header.flex.flex-column.justify-center.h4
-    .bn
-      h1.f1.center.tc 👋
+    header#title-contact.w-100.h4.dib.overflow-hidden.section-title
+      a.bn.h4.db.w-100.flex(href="#title-contact")
+        h1.self-center.f2.mono Contact
+      a.bn.h4.db.w-100.flex(href="#title-about")
+        h1.self-center.f2.mono Back
+    .vh-section.bg-white.flex.flex-column
+      section.h-100.flex.flex-column.justify-center
+        h2.measure-narrow.f2
+          | Soon!
+
+
+    header.flex.flex-column.justify-center.h4
+      .bn
+        h1.f1.center.tc 👋
