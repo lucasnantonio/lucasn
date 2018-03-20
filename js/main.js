@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   menuSetup();
   navigator();
   articleOpacity();
+  titleOpacity();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
 
@@ -118,8 +119,21 @@ let navigator = function() {
     })
 }
 
+let titleOpacity = function(){
+  window.onscroll = function(){
+    console.log('scroll');
+    sectionTitles.forEach(function(item){
+      let y = item.getBoundingClientRect().top;
+      if (y >= -100 && y <= 200) {
+        item.querySelectorAll('a h1')[0].classList.remove('o-20');
+      } else {
+        item.querySelectorAll('a h1')[0].classList.add('o-20');
+      }
+    });
+  }
+}
+
 let articleOpacity = function (){
-  console.log(articles);
   articles.forEach(function(item){
     item.onmouseover = function(){
       articleLinks.forEach(function(itemB){
