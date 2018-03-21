@@ -27,6 +27,18 @@
 //   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
 // }
 //
+
+@font-face{
+  font-family: Aktiv;
+    src:url("{{site.url}}/fonts/AktivGrotesk_Trial_Lt.ttf");
+}
+
+@font-face{
+  font-family: Aktiv-Bold;
+    src:url("{{site.url}}/fonts/AktivGrotesk_Trial_Bd.ttf");
+}
+
+
 @font-face{
   font-family: GenLight;
     src:url("{{site.url}}/fonts/Gen-Light.otf");
@@ -109,23 +121,26 @@
   font-family: Post-Medium;
   src: url("{{site.url}}/fonts/post/PostGroteskTrial-Medium.otf");
 }
-
 @font-face{
   font-family: Post-Bold;
   src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
 }
-
+@font-face{
+  font-family: Relative-Faux;
+  src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
+}
+@font-face{
+  font-family: Relative-Mono;
+  src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
+}
 @font-face{
   font-family: Relative;
   src: url("{{site.url}}/fonts/relative/relativetrial-book.otf");
 }
-
 @font-face{
   font-family: Relative-Medium;
   src: url("{{site.url}}/fonts/relative/relativetrial-medium.otf");
 }
-
-
 @font-face{
   font-family: Relative-Bold;
   src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
@@ -135,7 +150,10 @@
   font-family: Visuelt;
   src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
 }
-
+@font-face{
+  font-family: Visuelt-Light;
+  src: url("{{site.url}}/fonts/visuelttrial-light.otf");
+}
 @font-face{
   font-family: Visuelt-Bold;
   src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
@@ -152,35 +170,46 @@
   font-family: Mabry-Bold;
   src: url("{{site.url}}/fonts/MabryTrial-Bold.otf");
 }
-@font-face{
-  font-family: Relative-Faux;
-  src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
-}
-@font-face{
-  font-family: Relative-MonoPitch10;
-  src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
-}
+
+// @font-face{
+//   font-family: Objektiv;
+//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Bd.ttf");
+// }
+// @font-face{
+//   font-family: Objektiv-Light;
+//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Lt.ttf");
+// }
 // Our variables
 
-// $base-font-family: "Mabry", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Mabry", Helvetica, Arial, sans-serif;
 // $base-font-family: "Mabry-Medium", Helvetica, Arial, sans-serif;
 // $base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Post-Bold", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Aktiv", Helvetica, Arial, sans-serif;
+// $base-font-family: "Aktiv-Bold", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+$base-font-family: "Post", Helvetica, Arial, sans-serif;
+$mono-font-family: "Post", Helvetica, Arial, sans-serif;
+
+// $mono-font-family: "Visuelt", Helvetica, Arial, sans-serif;
 // $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Untitled", Helvetica, Arial, sans-serif;
+// $base-font-family: "Objektiv", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Objektiv-Light", Helvetica, Arial, sans-serif;
+
+// $mono-font-family: "Untitled", Helvetica, Arial, sans-serif;
 // $base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
+// $base-font-family: "Untitled-Sans-Bold", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Calibre", Helvetica, Arial, sans-serif;
 // $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
 
 // $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
-$base-font-family: "Relative", Helvetica, Arial, sans-serif;
+
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
-// $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
 $base-font-size:   16px;
@@ -219,7 +248,7 @@ body{
 }
 
 .mono{
-  font-family: Relative-MonoPitch10;
+  font-family: $mono-font-family;
   // font-family: $base-font-family;
 }
 

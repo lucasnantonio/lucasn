@@ -1,13 +1,13 @@
 #sidebar.fixed.vh-100.flex-l.flex-column.justify-between.w6.dn
   header#title-lucas.mt4.ml4
-    a.w-100.bn.lh-title(href="#content")
-      h1.mt2.f6.tl.mono.green lucas neumann 
-        br 
-        span product designer
+    a.w-100.bn(href="#content")
+      h1.mt2.f5.tl.mono Lucas Neumann 
+      h1.f5.tl.mono.light-red Product Designer 
+        //- span product designer
       //- h2.f5.tl.mono.black-30 Product Designer
   #menu-button.mb4.ml4
     //- | menu
-    include diamond.svg
+    //- include diamond.svg
     //- img.w3(src='images/diamond.svg' alt='menu')
     
 #menu-container.fixed.z-max.vh-100.w-70.js-hidden-left.flex.justify-center.bg-green
@@ -29,16 +29,17 @@
   #sidebar-spacer.w5.vh-100.mr5.dib-l.dn
   #content.ph0-l.ph5
     .vh-section-first.flex.flex-column.tl
-      section.h-100.flex.flex-column.justify-start.mt4
+      //- h2.f5.tl.mono.self-start.mt5 Product Designer
+      section.h-100.flex.flex-column.justify-center.mt4
         h2.measure-narrow.f2-ns.f3
           | Generalist product designer at 
           a.bb.bw2.b-(href="http://www.nubank.com.br" target="_blank") Nubank
           | , Sao Paulo, where for the last 
-          span#months.mono 
+          span#months 
           |  months I’ve been helping our teams 
-          span.mono {
-          span#skills.mono research
-          span.mono }
+          span {
+          span#skills research
+          span }
           |  financial services that fight complexity & empower people.
 
     header#title-articles.w-100.h4.dib.section-title.overflow-hidden
