@@ -2,10 +2,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 2000);
   getMonths();
-  menuSetup();
+  // menuSetup();
   navigator();
   articleOpacity();
   setupNavigator();
+  fadeIn()
   // titleOpacity();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
@@ -30,8 +31,8 @@ let skillList = [
 
 let skillDiv;
 let hiredMonths;
-let menuBtn;
-let menuContainer;
+// let menuBtn;
+// let menuContainer;
 let sections;
 let sectionTitles;
 let articles;
@@ -41,8 +42,8 @@ let articleContainer;
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
-  menuBtn = document.getElementById('menu-button');
-  menuContainer = document.getElementById('menu-container');
+  // menuBtn = document.getElementById('menu-button');
+  // menuContainer = document.getElementById('menu-container');
   contentWrapper = document.getElementById('content-wrapper');
   sectionTitles = document.querySelectorAll('.section-title');
   sectionTitleLinks = document.querySelectorAll('.section-title a h3');
@@ -85,29 +86,25 @@ let animateMenuLeave = function() {
   menuBtn.addEventListener('mouseover', animateMenuEnter);
 }
 
-let menuSetup = function() {
-  menuBtn.addEventListener('mouseover', animateMenuEnter);
-  menuContainer.addEventListener('mouseleave', animateMenuLeave);
-  menuContainer.addEventListener('click', animateMenuLeave);
-}
+// let menuSetup = function() {
+  // menuBtn.addEventListener('mouseover', animateMenuEnter);
+  // menuContainer.addEventListener('mouseleave', animateMenuLeave);
+  // menuContainer.addEventListener('click', animateMenuLeave);
+// }
 
-let setupNavigator = function(){
-  sectionTitleLinks.forEach(function(item){
+let setupNavigator = function() {
+  sectionTitleLinks.forEach(function(item) {
     item.parentElement.setAttribute('href', "#section-" + item.innerHTML.toLowerCase())
     item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
     console.log(item.parentElement);
   })
-  sectionTitleBacks.forEach(function(item, index){
+  sectionTitleBacks.forEach(function(item, index) {
     previousSection = sectionTitleLinks[index - 1];
     if (index - 1 >= 0) {
       item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
-    }
-    else{
+    } else {
       item.parentElement.setAttribute('href', "#section-intro")
     }
-
-    // item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
-    // console.log(item.parentElement);
   })
 }
 
@@ -179,4 +176,11 @@ let articleOpacity = function() {
       }
     }
   });
+}
+
+let fadeIn = function() {
+  contentWrapper.classList.add('o-0');
+  setTimeout(function() {
+    contentWrapper.classList.remove('o-0')
+  }, 100);
 }

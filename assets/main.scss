@@ -271,9 +271,11 @@ body{
 
 a,
 #skills,
-#content-wrapper,
 #articleList div{
   transition: all .2s;
+}
+#content-wrapper{
+  transition: opacity 3s;
 }
 
 a{
