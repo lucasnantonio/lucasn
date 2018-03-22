@@ -118,34 +118,46 @@ let navigator = function() {
     })
 }
 
-let titleOpacity = function(){
-  window.onscroll = function(){
-    console.log('scroll');
-    sectionTitles.forEach(function(item){
-      let y = item.getBoundingClientRect().top;
-      if (y >= -100 && y <= 200) {
-        item.querySelectorAll('a h1')[0].classList.remove('o-20');
-      } else {
-        item.querySelectorAll('a h1')[0].classList.add('o-20');
-      }
-    });
-  }
-}
+// let titleOpacity = function(){
+//   window.onscroll = function(){
+//     console.log('scroll');
+//     sectionTitles.forEach(function(item){
+//       let y = item.getBoundingClientRect().top;
+//       if (y >= -100 && y <= 200) {
+//         item.querySelectorAll('a h1')[0].classList.remove('o-20');
+//       } else {
+//         item.querySelectorAll('a h1')[0].classList.add('o-20');
+//       }
+//     });
+//   }
+// }
 
-let articleOpacity = function (){
-  articles.forEach(function(item){
-    item.onmouseover = function(){
-      articleLinks.forEach(function(itemB){
+let articleOpacity = function() {
+  articles.forEach(function(item, index) {
+
+    item.onmouseover = function() {
+      articles.forEach(function(itemB) {
         itemB.classList.add("o-20");
       });
-      item.querySelectorAll('a')[0].classList.remove("o-20");
+      item.classList.remove("o-20");
+      if (index < articles.length - 1){
+        item.classList.add('bb');
+        articles[index + 1].classList.remove('bt');
+      }
+      // add border bottom unless it's the last one
+      // remove border top from the next guy unless it's the last one
     }
-    item.onmouseleave = function(){
-      articleLinks.forEach(function(itemB){
-        itemB.classList.remove("o-20");
+
+    item.onmouseleave = function (){
+      articles.forEach(function(item){
+        item.classList.remove('o-20')
       });
-      item.querySelectorAll('a')[0].classList.remove("o-20");
-      console.log("removed");
+      if (index < articles.length - 1){
+        item.classList.remove('bb');
+        articles[index + 1].classList.add('bt');
+      }
+      // remove opacity from all
+      //
     }
-  })
+  });
 }
