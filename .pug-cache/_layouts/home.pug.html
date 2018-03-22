@@ -1,5 +1,5 @@
 <div class="fixed vh-100 flex-l flex-column justify-between w6 dn" id="sidebar">
-  <header class="mt4 ml4" id="title-lucas"><a class="w-100 bn" href="#content">
+  <header class="mt4 ml4" id="title-lucas"><a class="w-100 bn" href="#section-intro">
       <h1 class="mt2 f5 tl mono">Lucas Neumann </h1>
       <h1 class="f5 tl mono light-red">Product Designer </h1></a></header>
   <div class="mb4 ml4" id="menu-button"></div>
@@ -7,7 +7,7 @@
 <div class="fixed z-max vh-100 w-70 js-hidden-left flex justify-center bg-green" id="menu-container">
   <div class="self-center">
     <ul class="lh-copy list ol-0">
-      <li><a class="f2-ns f3 bn mono white" href="#content">Top</a></li>
+      <li><a class="f2-ns f3 bn mono white" href="#section-intro">Top</a></li>
       <li><a class="f2-ns f3 bn mono white" href="#title-articles">Writing</a></li>
       <li><a class="f2-ns f3 bn mono white" href="#title-projects">Work</a></li>
       <li><a class="f2-ns f3 bn mono white" href="#title-about">About</a></li>
@@ -17,15 +17,12 @@
 </div>
 <div class="flex" id="content-wrapper">
   <div class="w5 vh-100 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <div class="ph0-l ph5" id="content">
+  <div class="ph0-l ph5" id="section-intro">
     <div class="vh-section-first flex flex-column tl">
       <section class="h-100 flex flex-column justify-center mt4">
         <h2 class="measure-narrow f2-ns f3">Generalist product designer at <a class="bb bw2 b-" href="http://www.nubank.com.br" target="_blank">Nubank</a>, Sao Paulo, where for the last <span id="months"></span> months I’ve been <span class="nowrap"><span>helping our teams </span><span>{</span><span id="skills">research</span><span>} financial services</span></span><span class="nowrap"></span>that fight complexity & empower people.</h2>
       </section>
-    </div>
-    <header class="w-100 h4 dib section-title overflow-hidden" id="title-articles"><a class="bn h4 db w-100 flex" href="#title-articles">
-        <h1 class="self-center f2-ns f3 mono">Writing</h1></a><a class="bn h4 db w-100 flex" href="#content">
-        <h1 class="self-center f2-ns f3 mono">Back  </h1></a></header>
+    </div>{% include titles title="Writing"%}
     <div class="vh-section flex flex-column">
       <section class="h-100 flex flex-column justify-center">
         <div class="f2-ns f3" id="articleList">
@@ -35,26 +32,17 @@
           <div class="bt bb bw2 pv3"><a class="bn" href="https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc">What it feels like to become a designer</a></div>
         </div>
       </section>
-    </div>
-    <header class="w-100 h4 dib overflow-hidden section-title" id="title-projects"><a class="bn h4 db w-100 flex" href="#title-projects">
-        <h1 class="self-center f2-ns f3 mono">Work</h1></a><a class="bn h4 db w-100 flex" href="#title-articles">
-        <h1 class="self-center f2-ns f3 mono">Back   </h1></a></header>
+    </div>{% include titles title="Projects"%}
     <div class="vh-section bg-white flex flex-column">
       <section class="h-100 flex flex-column justify-center">
         <h2 class="measure-narrow f2-ns f3">Soon!</h2>
       </section>
-    </div>
-    <header class="w-100 h4 dib overflow-hidden section-title" id="title-about"><a class="bn h4 db w-100 flex" href="#title-about">
-        <h1 class="self-center f2-ns f3 mono">About</h1></a><a class="bn h4 db w-100 flex" href="#title-projects">
-        <h1 class="self-center f2-ns f3 mono">Back   </h1></a></header>
+    </div>{% include titles title="About"%}  
     <div class="vh-section bg-white flex flex-column">
       <section class="h-100 flex flex-column justify-center">
         <h2 class="measure-narrow f2-ns f3">Soon!</h2>
       </section>
-    </div>
-    <header class="w-100 h4 dib overflow-hidden section-title" id="title-contact"><a class="bn h4 db w-100 flex" href="#title-contact">
-        <h1 class="self-center f2-ns f3 mono">Contact</h1></a><a class="bn h4 db w-100 flex" href="#title-about">
-        <h1 class="self-center f2-ns f3 mono">Back</h1></a></header>
+    </div>{% include titles title="Contact"%}
     <div class="vh-section bg-white flex flex-column">
       <section class="h-100 flex flex-column justify-center">
         <h2 class="measure-narrow f2-ns f3">Soon!</h2>

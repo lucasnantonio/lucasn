@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   menuSetup();
   navigator();
   articleOpacity();
+  setupNavigator();
   // titleOpacity();
   var scroll = new SmoothScroll('a[href*="#"]')
 });
@@ -44,6 +45,8 @@ let getDivs = function() {
   menuContainer = document.getElementById('menu-container');
   contentWrapper = document.getElementById('content-wrapper');
   sectionTitles = document.querySelectorAll('.section-title');
+  sectionTitleLinks = document.querySelectorAll('.section-title a h3');
+  sectionTitleBacks = document.querySelectorAll('.section-title a h4');
   articles = document.querySelectorAll('#articleList div');
   articleLinks = document.querySelectorAll('#articleList div a');
 }
@@ -86,6 +89,26 @@ let menuSetup = function() {
   menuBtn.addEventListener('mouseover', animateMenuEnter);
   menuContainer.addEventListener('mouseleave', animateMenuLeave);
   menuContainer.addEventListener('click', animateMenuLeave);
+}
+
+let setupNavigator = function(){
+  sectionTitleLinks.forEach(function(item){
+    item.parentElement.setAttribute('href', "#section-" + item.innerHTML.toLowerCase())
+    item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
+    console.log(item.parentElement);
+  })
+  sectionTitleBacks.forEach(function(item, index){
+    previousSection = sectionTitleLinks[index - 1];
+    if (index - 1 >= 0) {
+      item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
+    }
+    else{
+      item.parentElement.setAttribute('href', "#section-intro")
+    }
+
+    // item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
+    // console.log(item.parentElement);
+  })
 }
 
 let navigator = function() {
@@ -140,24 +163,20 @@ let articleOpacity = function() {
         itemB.classList.add("o-20");
       });
       item.classList.remove("o-20");
-      if (index < articles.length - 1){
+      if (index < articles.length - 1) {
         item.classList.add('bb');
         articles[index + 1].classList.remove('bt');
       }
-      // add border bottom unless it's the last one
-      // remove border top from the next guy unless it's the last one
     }
 
-    item.onmouseleave = function (){
-      articles.forEach(function(item){
+    item.onmouseleave = function() {
+      articles.forEach(function(item) {
         item.classList.remove('o-20')
       });
-      if (index < articles.length - 1){
+      if (index < articles.length - 1) {
         item.classList.remove('bb');
         articles[index + 1].classList.add('bt');
       }
-      // remove opacity from all
-      //
     }
   });
 }

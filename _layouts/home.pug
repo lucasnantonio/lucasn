@@ -6,7 +6,7 @@ layout: default
 
 #sidebar.fixed.vh-100.flex-l.flex-column.justify-between.w6.dn
   header#title-lucas.mt4.ml4
-    a.w-100.bn(href="#content")
+    a.w-100.bn(href="#section-intro")
       h1.mt2.f5.tl.mono Lucas Neumann 
       h1.f5.tl.mono.light-red Product Designer 
         //- span product designer
@@ -20,7 +20,7 @@ layout: default
   .self-center
     ul.lh-copy.list.ol-0
       li
-        a.f2-ns.f3.bn.mono.white(href="#content") Top
+        a.f2-ns.f3.bn.mono.white(href="#section-intro") Top
       li
         a.f2-ns.f3.bn.mono.white(href="#title-articles") Writing
       li
@@ -33,7 +33,7 @@ layout: default
 
 #content-wrapper.flex
   #sidebar-spacer.w5.vh-100.mr5.dib-l.dn
-  #content.ph0-l.ph5
+  #section-intro.ph0-l.ph5
     .vh-section-first.flex.flex-column.tl
       //- h2.f5.tl.mono.self-start.mt5 Product Designer
       section.h-100.flex.flex-column.justify-center.mt4
@@ -51,11 +51,7 @@ layout: default
           span.nowrap
           | that fight complexity & empower people.
 
-    header#title-articles.w-100.h4.dib.section-title.overflow-hidden
-      a.bn.h4.db.w-100.flex(href="#title-articles")
-        h1.self-center.f2-ns.f3.mono Writing
-      a.bn.h4.db.w-100.flex(href="#content")
-        h1.self-center.f2-ns.f3.mono Back  
+    | {% include titles title="Writing"%}
           
     .vh-section.flex.flex-column
       section.h-100.flex.flex-column.justify-center
@@ -73,21 +69,14 @@ layout: default
             a.bn(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
               | What it feels like to become a designer
 
-    header#title-projects.w-100.h4.dib.overflow-hidden.section-title
-      a.bn.h4.db.w-100.flex(href="#title-projects")
-        h1.self-center.f2-ns.f3.mono Work
-      a.bn.h4.db.w-100.flex(href="#title-articles")
-        h1.self-center.f2-ns.f3.mono Back   
+    | {% include titles title="Projects"%}
+        
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
         h2.measure-narrow.f2-ns.f3
           | Soon!
 
-    header#title-about.w-100.h4.dib.overflow-hidden.section-title
-      a.bn.h4.db.w-100.flex(href="#title-about")
-        h1.self-center.f2-ns.f3.mono About
-      a.bn.h4.db.w-100.flex(href="#title-projects")
-        h1.self-center.f2-ns.f3.mono Back   
+    | {% include titles title="About"%}  
 
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
@@ -95,11 +84,8 @@ layout: default
           | Soon!
 
 
-    header#title-contact.w-100.h4.dib.overflow-hidden.section-title
-      a.bn.h4.db.w-100.flex(href="#title-contact")
-        h1.self-center.f2-ns.f3.mono Contact
-      a.bn.h4.db.w-100.flex(href="#title-about")
-        h1.self-center.f2-ns.f3.mono Back
+    | {% include titles title="Contact"%}
+    
     .vh-section.bg-white.flex.flex-column
       section.h-100.flex.flex-column.justify-center
         h2.measure-narrow.f2-ns.f3
