@@ -1,8 +1,8 @@
 #sidebar.fixed.vh-100.flex-l.flex-column.justify-between.w6.dn
-  header#title-lucas.mt4.ml4
+  header#title-lucas.mt4.ml5
     a.w-100.bn(href="#section-intro")
-      h1.mt2.f5.tl.mono Lucas Neumann 
-      h1.f5.tl.mono.light-red Product Designer 
+      h1.mt3.f3.tl.mono.lh-title Lucas Neumann 
+      h1.f3.tl.mono.black-30 Designer
         //- span product designer
       //- h2.f5.tl.mono.black-30 Product Designer
     
@@ -11,59 +11,57 @@
 
 #content-wrapper.flex
   #sidebar-spacer.w5.vh-100.mr5.dib-l.dn
-  #section-intro.ph0-l.ph5
+  #section-intro.ph0-l.ph5.w-100
     .vh-section-first.flex.flex-column.tl
       //- h2.f5.tl.mono.self-start.mt5 Product Designer
       section.h-100.flex.flex-column.justify-center.mt4
-        h2.measure-narrow.f2-ns.f3
+        h2.measure-narrow.f3
           | Generalist product designer at 
-          a.bb.bw2.b-(href="http://www.nubank.com.br" target="_blank") Nubank
+          a.bb.b--black(href="http://www.nubank.com.br" target="_blank") Nubank
           | , Sao Paulo, where for the last 
           span#months
           |  months I’ve been 
-          span.nowrap
+          span.nowrap-l
             span helping our teams 
             span {
             span#skills research
-            span } financial services
-          span.nowrap
-          | that fight complexity & empower people.
+            span } financial services 
+          span.nowrap-l
+          |  that fight complexity & empower people.
 
     | {% include titles title="Writing"%}
           
-    .vh-section.flex.flex-column
+    .vh-section.flex.flex-column.w-60-l
       section.h-100.flex.flex-column.justify-center
-        .f2-ns.f3#articleList
-          .bt.bw2.pv3
+        .f3#articleList
+          .bt.b--black-30.pv3
             a.bn(href='https://nubank.design/nuconta-part-ii-685b446addc6')
               | How we designed our Bank Account — NuConta Part II
-          .bt.bw2.pv3
+            p.metadata.black-30.f6.dn.o-0 6 min. read  
+          .bt.b--black-30.pv3
             a.bn(href='https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d')
               | First steps for better UX research
-          .bt.bw2.pv3
+            p.metadata.black-30.f6.dn.o-0 6 min. read  
+          .bt.b--black-30.pv3
             a.bn(href='https://nubank.design/design-principles-at-nubank-d14317715bb1')
               | Design Principles at Nubank
-          .bt.bb.bw2.pv3
+            p.metadata.black-30.f6.dn.o-0 6 min. read  
+          .bt.b--black-30.bb.pv3.flex.flex-column.overflow-hidden
             a.bn(href='https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc')
               | What it feels like to become a designer
+            p.metadata.black-30.f6.dn.o-0 6 min. read
 
     | {% include titles title="Projects"%}
-    .vh-section.bg-white.flex.flex-column
+    .vh-section.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2-ns.f3
-          | Soon!
+        | {% include projects %}
 
     | {% include titles title="About"%}  
-    .vh-section.bg-white.flex.flex-column
+    .vh-section.flex.flex-column
       section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2-ns.f3
+        h2.measure-narrow.f3
           | Soon!
 
-    | {% include titles title="Contact"%}
-    .vh-section.bg-white.flex.flex-column
-      section.h-100.flex.flex-column.justify-center
-        h2.measure-narrow.f2-ns.f3
-          | Soon!
 
     header.flex.flex-column.justify-center.h4
       .bn

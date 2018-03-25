@@ -283,7 +283,7 @@ a{
 }
 
 a:hover{
-padding-bottom: .5rem;
+// padding-bottom: .5rem;
 }
 
 .b0{
@@ -317,3 +317,15 @@ padding-bottom:3rem;
 .js-animate-header{
   margin-top:-8rem;
 }
+
+.shadow-big{
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+}
+// .screen-perspective{
+//   -webkit-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+//   -moz-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+//   -o-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+//   -ms-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+//   transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+//   box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+// }

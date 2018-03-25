@@ -8,7 +8,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   setupNavigator();
   fadeIn()
   // titleOpacity();
-  var scroll = new SmoothScroll('a[href*="#"]')
+  // api();
+  var scroll = new SmoothScroll('a[href*="#"]',{
+    speed: 1000,
+    easing: 'easeInOutQuint'
+
+  })
 });
 
 let skillList = [
@@ -50,6 +55,8 @@ let getDivs = function() {
   sectionTitleBacks = document.querySelectorAll('.section-title a h4');
   articles = document.querySelectorAll('#articleList div');
   articleLinks = document.querySelectorAll('#articleList div a');
+  titleLucas = document.getElementById('title-lucas');
+  metadata = document.querySelectorAll('.metadata');
 }
 
 let i = 0;
@@ -60,9 +67,7 @@ function changeSkill() {
     skillDiv.innerHTML = skillList[i];
     skillDiv.classList.toggle('o-0')
   }, 300);
-
   i = (i + 1) % skillList.length;
-
 }
 
 let getMonths = function() {
@@ -87,16 +92,15 @@ let animateMenuLeave = function() {
 }
 
 // let menuSetup = function() {
-  // menuBtn.addEventListener('mouseover', animateMenuEnter);
-  // menuContainer.addEventListener('mouseleave', animateMenuLeave);
-  // menuContainer.addEventListener('click', animateMenuLeave);
+// menuBtn.addEventListener('mouseover', animateMenuEnter);
+// menuContainer.addEventListener('mouseleave', animateMenuLeave);
+// menuContainer.addEventListener('click', animateMenuLeave);
 // }
 
 let setupNavigator = function() {
   sectionTitleLinks.forEach(function(item) {
     item.parentElement.setAttribute('href', "#section-" + item.innerHTML.toLowerCase())
     item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
-    console.log(item.parentElement);
   })
   sectionTitleBacks.forEach(function(item, index) {
     previousSection = sectionTitleLinks[index - 1];
@@ -111,7 +115,9 @@ let setupNavigator = function() {
 let navigator = function() {
   sectionTitles.forEach(
     function(item, index) {
+      // item.classList.add('o-30')
       item.onmouseover = function() {
+        item.classList.remove('o-30')
         let y = item.getBoundingClientRect().top;
         if (y >= -100 && y <= 200) {
           let backButton = item.querySelectorAll('a:first-child');
@@ -119,6 +125,7 @@ let navigator = function() {
         }
       }
       item.onmouseleave = function() {
+        // item.classList.add('o-30')
         let y = item.getBoundingClientRect().top;
         if (y >= -100 && y <= 200) {
           let backButton = item.querySelectorAll('a:first-child');
@@ -130,6 +137,7 @@ let navigator = function() {
         if (y >= -100 && y <= 200) {
           setTimeout(function() {
             let backButton = item.querySelectorAll('a:first-child');
+            // item.classList.add('o-30')
             backButton[0].classList.remove('js-animate-header');
           }, 300);
 
@@ -152,14 +160,19 @@ let navigator = function() {
 //   }
 // }
 
+let revealMetadata = function(item){
+  item.classList.remove('o-0', 'dn');
+}
+
 let articleOpacity = function() {
   articles.forEach(function(item, index) {
-
     item.onmouseover = function() {
-      articles.forEach(function(itemB) {
-        itemB.classList.add("o-20");
+      articles.forEach(function(itemB, index) {
+        itemB.classList.add("o-30");
+        metadata[index].classList.add('o-0', 'dn');
       });
-      item.classList.remove("o-20");
+      item.classList.remove("o-30");
+      metadata[index].classList.remove('o-0', 'dn');
       if (index < articles.length - 1) {
         item.classList.add('bb');
         articles[index + 1].classList.remove('bt');
@@ -168,7 +181,8 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.classList.remove('o-20')
+        item.classList.remove('o-30');
+        metadata[index].classList.add('o-0', 'dn');
       });
       if (index < articles.length - 1) {
         item.classList.remove('bb');
@@ -183,4 +197,17 @@ let fadeIn = function() {
   setTimeout(function() {
     contentWrapper.classList.remove('o-0')
   }, 100);
+}
+
+
+let api = function() {
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+      // document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://api.airtable.com/v0/app2xyEX5tEoqDF9Y/clicks?api_key=key8KIoDLtssz0g54&maxRecords=3&view=Grid%20view", true);
+  xhttp.send();
 }
