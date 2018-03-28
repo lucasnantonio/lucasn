@@ -1,19 +1,23 @@
 <div class="fixed vh-100 flex-l flex-column justify-between w6 dn" id="sidebar">
-  <header class="mt4 ml5" id="title-lucas"><a class="w-100 bn" href="#section-intro">
-      <h1 class="mt3 f3 tl mono lh-title">Lucas Neumann </h1>
-      <h1 class="f3 tl mono black-30">Designer</h1></a></header>
-</div>
-<div class="flex" id="content-wrapper">
-  <div class="w5 vh-100 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <div class="ph0-l ph5 w-100" id="section-intro">
-    <div class="vh-section-first flex flex-column tl">
-      <section class="h-100 flex flex-column justify-center mt4">
-        <h2 class="measure-narrow f3">Generalist product designer at <a class="bb b--black" href="http://www.nubank.com.br" target="_blank">Nubank</a>, Sao Paulo, where for the last <span id="months"></span> months I’ve been <span class="nowrap-l"><span>helping our teams </span><span>{</span><span id="skills">research</span><span>} financial services </span></span><span class="nowrap-l"></span> that fight complexity & empower people.</h2>
+  <header class="mt4 ml5" id="title-lucas"><a class="w-100 bn" href="">
+      <h1 class="mt3 f3 tl lh-title">Lucas Neumann </h1></a></header>
+</div>{% include titles title="Product Designer"%}
+<div class="w-100">
+  <div class="vh-section flex flex-column tl" id="first-section">
+    <div class="flex h-100">{% include spacer %}
+      <section class="h-100 flex flex-column justify-start">
+        <h2 class="measure-narrow f1 mt5">Generalist product designer at <a class="bb b--black" href="http://www.nubank.com.br" target="_blank">Nubank</a>, Sao Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span>{</span><span class="dib overflow-x-hidden" id="skills">research</span><span>} financial services </span><span class="nowrap-l"></span> that fight complexity & empower people.</h2>
       </section>
-    </div>{% include titles title="Writing"%}
-    <div class="vh-section flex flex-column w-60-l">
+    </div>
+  </div>{% include titles title="Work"%}
+  <div class="vh-section flex flex-column">
+    <section class="h-100 flex flex-column justify-center">{% include projects %}</section>
+  </div>{% include titles title="Writing"%}    
+  <div class="w-100">
+    <div class="vh-section flex">
+      <div class="flex h-100"></div>{% include spacer %}
       <section class="h-100 flex flex-column justify-center">
-        <div class="f3" id="articleList">
+        <div class="f1" id="articleList">
           <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/nuconta-part-ii-685b446addc6">How we designed our Bank Account — NuConta Part II</a>
             <p class="metadata black-30 f6 dn o-0">6 min. read  </p>
           </div>
@@ -28,19 +32,16 @@
           </div>
         </div>
       </section>
-    </div>{% include titles title="Projects"%}
-    <div class="vh-section flex flex-column">
-      <section class="h-100 flex flex-column justify-center">{% include projects %}</section>
-    </div>{% include titles title="About"%}  
-    <div class="vh-section flex flex-column">
-      <section class="h-100 flex flex-column justify-center">
-        <h2 class="measure-narrow f3">Soon!</h2>
-      </section>
     </div>
-    <header class="flex flex-column justify-center h4">
-      <div class="bn">
-        <h1 class="f1 center tc">👋</h1>
-      </div>
-    </header>
+  </div>{% include titles title="About"%}  
+  <div class="vh-section flex flex-column">
+    <section class="h-100 flex flex-column justify-center">
+      <h2 class="measure-narrow f3">Soon!</h2>
+    </section>
   </div>
+  <header class="flex flex-column justify-center h4">
+    <div class="bn">
+      <h1 class="f1 center tc">👋</h1>
+    </div>
+  </header>
 </div>

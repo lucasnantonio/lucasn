@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
-  setInterval(changeSkill, 2000);
+  setInterval(changeSkill, 12000);
   getMonths();
   // menuSetup();
   navigator();
@@ -38,6 +38,7 @@ let skillDiv;
 let hiredMonths;
 // let menuBtn;
 // let menuContainer;
+let body;
 let sections;
 let sectionTitles;
 let articles;
@@ -49,7 +50,7 @@ let getDivs = function() {
   hiredMonths = document.getElementById('months');
   // menuBtn = document.getElementById('menu-button');
   // menuContainer = document.getElementById('menu-container');
-  contentWrapper = document.getElementById('content-wrapper');
+  // contentWrapper = document.getElementById('content-wrapper');
   sectionTitles = document.querySelectorAll('.section-title');
   sectionTitleLinks = document.querySelectorAll('.section-title a h3');
   sectionTitleBacks = document.querySelectorAll('.section-title a h4');
@@ -57,16 +58,17 @@ let getDivs = function() {
   articleLinks = document.querySelectorAll('#articleList div a');
   titleLucas = document.getElementById('title-lucas');
   metadata = document.querySelectorAll('.metadata');
+  body = document.querySelector('body');
 }
 
 let i = 0;
 
 function changeSkill() {
-  skillDiv.classList.toggle('o-0')
+  skillDiv.classList.toggle('mw0')
   setTimeout(function() {
     skillDiv.innerHTML = skillList[i];
-    skillDiv.classList.toggle('o-0')
-  }, 300);
+    skillDiv.classList.toggle('mw0')
+  }, 1000);
   i = (i + 1) % skillList.length;
 }
 
@@ -103,11 +105,12 @@ let setupNavigator = function() {
     item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
   })
   sectionTitleBacks.forEach(function(item, index) {
+    console.log(index + " " + item)
     previousSection = sectionTitleLinks[index - 1];
     if (index - 1 >= 0) {
       item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
     } else {
-      item.parentElement.setAttribute('href', "#section-intro")
+      item.parentElement.setAttribute('href', "")
     }
   })
 }
@@ -119,7 +122,7 @@ let navigator = function() {
       item.onmouseover = function() {
         item.classList.remove('o-30')
         let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200) {
+        if (y >= -100 && y <= 200 && index != 0) {
           let backButton = item.querySelectorAll('a:first-child');
           backButton[0].classList.add('js-animate-header');
         }
@@ -193,9 +196,9 @@ let articleOpacity = function() {
 }
 
 let fadeIn = function() {
-  contentWrapper.classList.add('o-0');
+  body.classList.add('o-0');
   setTimeout(function() {
-    contentWrapper.classList.remove('o-0')
+    body.classList.remove('o-0')
   }, 100);
 }
 

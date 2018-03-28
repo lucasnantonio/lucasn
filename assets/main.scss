@@ -4,49 +4,33 @@
 @import "tachyons";
 @charset "utf-8";
 
-// @font-face{
-//   font-family: GenLight;
-//     src:url("{{site.url}}/fonts/Gen-Light.otf");
-// }
-
 // @font-face {
-//     font-family: Blanco;
-//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Regular.otf");
-// }
-// @font-face {
-//     font-family: Blanco-Italic;
-//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Italic.otf");
-// }
-// @font-face{
-//   font-family: Blanco-Medium;
-//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Medium.otf");
+//     font-family: Plex;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Regular.ttf");
 // }
 //
-// @font-face{
-//   font-family: Blanco-Bold;
-//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
+// @font-face {
+//     font-family: Plex-Light;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Light.ttf");
 // }
 //
-
-@font-face{
-  font-family: Aktiv;
-    src:url("{{site.url}}/fonts/AktivGrotesk_Trial_Lt.ttf");
-}
-
-@font-face{
-  font-family: Aktiv-Bold;
-    src:url("{{site.url}}/fonts/AktivGrotesk_Trial_Bd.ttf");
-}
-
-
-@font-face{
-  font-family: GenLight;
-    src:url("{{site.url}}/fonts/Gen-Light.otf");
-}
+// @font-face {
+//     font-family: Plex-Mono;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Regular.ttf");
+// }
+//
+// @font-face {
+//     font-family: Plex-Mono-Light;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Light.ttf");
+// }
 
 @font-face {
     font-family: Calibre;
     src:url("{{site.url}}/fonts/calibre/CalibreTest-Regular.otf");
+}
+@font-face {
+    font-family: Calibre-Light;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Light.otf");
 }
 @font-face {
     font-family: Calibre-Italic;
@@ -60,53 +44,6 @@
 @font-face{
   font-family: Calibre-Bold;
   src: url("{{site.url}}/fonts/calibre/CalibreTest-Bold.otf");
-}
-
-@font-face {
-    font-family: Founders;
-    src:url("{{site.url}}/fonts/founders/FoundersGroteskTest-Regular.otf");
-}
-@font-face {
-    font-family: Founders-Italic;
-    src:url("{{site.url}}/fonts/founders/CalibreTest-Italic.otf");
-}
-@font-face{
-  font-family: Founders-Medium;
-  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Medium.otf");
-}
-
-@font-face{
-  font-family: Founders-Bold;
-  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Bold.otf");
-}
-
-@font-face {
-    font-family: Untitled-Serif;
-    src:url("{{site.url}}/fonts/untitled/UntitledSerifTest-Regular.otf");
-}
-@font-face {
-    font-family: Untitled-Sans;
-    src:url("{{site.url}}/fonts/untitled/UntitledSansTest-Regular.otf");
-}
-
-@font-face{
-  font-family: Untitled-Serif-Medium;
-  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Medium.otf");
-}
-
-@font-face{
-  font-family: Untitled-Sans-Medium;
-  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Medium.otf");
-}
-
-@font-face{
-  font-family: Untitled-Sans-Bold;
-  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Bold.otf");
-}
-
-@font-face{
-  font-family: Untitled-Serif-Bold;
-  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Bold.otf");
 }
 
 @font-face {
@@ -158,62 +95,27 @@
   font-family: Visuelt-Bold;
   src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
 }
-@font-face{
-  font-family: Mabry;
-  src: url("{{site.url}}/fonts/MabryTrial-Regular.otf");
-}
-@font-face{
-  font-family: Mabry-Medium;
-  src: url("{{site.url}}/fonts/MabryTrial-Medium.otf");
-}
-@font-face{
-  font-family: Mabry-Bold;
-  src: url("{{site.url}}/fonts/MabryTrial-Bold.otf");
-}
 
-// @font-face{
-//   font-family: Objektiv;
-//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Bd.ttf");
-// }
-// @font-face{
-//   font-family: Objektiv-Light;
-//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Lt.ttf");
-// }
+@import "ibm-plex";
 // Our variables
 
-// $mono-font-family: "Mabry", Helvetica, Arial, sans-serif;
-// $base-font-family: "Mabry-Medium", Helvetica, Arial, sans-serif;
-// $base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
+$base-font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
 
-// $mono-font-family: "Aktiv", Helvetica, Arial, sans-serif;
-// $base-font-family: "Aktiv-Bold", Helvetica, Arial, sans-serif;
-
-$base-font-family: "Post", Helvetica, Arial, sans-serif;
-$mono-font-family: "Post", Helvetica, Arial, sans-serif;
-
-// $mono-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
 // $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
-// $mono-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Objektiv", Helvetica, Arial, sans-serif;
-// $mono-font-family: "Objektiv-Light", Helvetica, Arial, sans-serif;
-
-// $mono-font-family: "Untitled", Helvetica, Arial, sans-serif;
-// $base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
-// $base-font-family: "Untitled-Sans-Bold", Helvetica, Arial, sans-serif;
-
-// $mono-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre-Light", Helvetica, Arial, sans-serif;
 // $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
-
-// $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
 
 // $base-font-family: "Relative", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
-// $mono-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
-$base-font-size:   16px;
-$base-font-weight: 100;
+$base-font-size:   14px;
+$base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
 
@@ -247,10 +149,10 @@ body{
   font-size: $base-font-size;
 }
 
-.mono{
-  font-family: $mono-font-family;
-  // font-family: $base-font-family;
-}
+// .mono{
+//   font-family: $base-font-family;
+//   // font-family: $base-font-family;
+// }
 
 // .sans{
 //   font-family: Untitled-Sans;
@@ -270,11 +172,16 @@ body{
 
 
 a,
-#skills,
 #articleList div{
   transition: all .2s;
 }
-#content-wrapper{
+#skills{
+  max-width: 17rem;
+  transition: 1s;
+  // height:1em;
+  vertical-align: bottom;
+}
+body{
   transition: opacity 3s;
 }
 
@@ -290,8 +197,12 @@ a:hover{
 	bottom: 0;
 }
 
-.vh-section-first{
-  height: calc(100vh - 8rem);
+.mw0{
+  max-width: 1px !important;
+}
+
+#first-section{
+  // height: calc(100vh - 8rem);
 }
 
 .vh-section{
@@ -321,11 +232,11 @@ padding-bottom:3rem;
 .shadow-big{
   box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
 }
-// .screen-perspective{
-//   -webkit-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-//   -moz-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-//   -o-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-//   -ms-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-//   transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-//   box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
-// }
+.screen-perspective{
+  -webkit-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -moz-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -o-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -ms-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+}
