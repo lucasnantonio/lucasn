@@ -100,6 +100,7 @@
 // Our variables
 
 $base-font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+$mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 
 // $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
 // $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
@@ -201,14 +202,23 @@ a:hover{
   max-width: 1px !important;
 }
 
-#first-section{
-  // height: calc(100vh - 8rem);
+.mono{
+  font-family: $mono-font-family;
 }
 
 .vh-section{
   height: calc(100vh - 16rem);
 }
 
+.perspective{
+  transform: rotate(16deg) skew(-4.5deg, -16.5deg);
+  transition: all .5s
+}
+
+.big-shadow{
+  box-shadow: 90px 200px 70px 5px rgba(0,0,0,0.25);
+  transition: all .5s;
+}
 
 #articleList div:hover{
 padding-top:3rem;

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 12000);
+  skillClick();
   getMonths();
   // menuSetup();
   navigator();
@@ -62,6 +63,12 @@ let getDivs = function() {
 }
 
 let i = 0;
+
+function skillClick() {
+  skillDiv.onclick = function(){
+    changeSkill();
+  }
+}
 
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
