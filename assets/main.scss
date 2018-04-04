@@ -115,7 +115,7 @@ $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
-$base-font-size:   13px;
+$base-font-size:   10px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -181,12 +181,13 @@ a,
   transition: 1s;
   // height:1em;
   vertical-align: bottom;
-  border-bottom: 5px dotted silver;
+  border-bottom: .15em dotted silver;
   line-height: 1.35em;
   font-style: italic;
 }
-skills:hover{
-  border-bottom: 5px dotted #222;
+
+#skills:hover{
+  border-bottom: .15em dotted $text-color;
 }
 
 body{

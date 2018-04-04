@@ -2,6 +2,5 @@ doctype html
 html(lang='{{ page.lang | default: site.lang | default: en }}')
 	include head.html
 	body
-		main.rellax(aria-label='Content')
-			div
-				| {{ content }}
+		main.ph0-l.ph5.overflow-hidden
+			| {{ content }}
