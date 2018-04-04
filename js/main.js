@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  fadeIn()
+  fadeIn();
+  showProfilePic(profilePic);
   // titleOpacity();
   // api();
   var scroll = new SmoothScroll('a[href*="#"]',{
@@ -49,6 +50,7 @@ let articleContainer;
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
+  profilePic = document.getElementById('profilePic');
   // menuBtn = document.getElementById('menu-button');
   // menuContainer = document.getElementById('menu-container');
   // contentWrapper = document.getElementById('content-wrapper');
@@ -68,6 +70,20 @@ function skillClick() {
   skillDiv.onclick = function(){
     changeSkill();
   }
+}
+
+function showImage(img) {
+  img.classList.remove('o-0');
+  img.classList.add('js-fadeIn');
+  img.style.marginLeft = '0rem';
+  img.src = "./images/lucasneumann.JPG"
+}
+
+function showProfilePic(profilePic) {
+  profilePic.style.marginLeft = '5rem';
+  imagesLoaded(profilePic, function(){
+  showImage(profilePic);
+})
 }
 
 function changeSkill() {

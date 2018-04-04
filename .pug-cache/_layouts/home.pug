@@ -1,7 +1,7 @@
 #sidebar.fixed.vh-100.flex-l.flex-column.justify-between.w6.dn
   header#title-lucas.mt4.ml5
     a.w-100.bn(href="#section-product%20designer")
-      h1.mt3.f3.tl.lh-title Lucas Neumann 
+      h1.mt3.f3.tl.lh-title.mono Lucas Neumann 
       //- h1.f3.tl.mono.black-30 Designer
         //- span product designer
       //- h2.f5.tl.mono.black-30 Product Designer
@@ -14,22 +14,24 @@
     //- h2.f5.tl.mono.self-start.mt5 Product Designer
     .flex.h-100
       | {% include spacer %}
-      section.h-100.flex.flex-column.justify-start
-        h2.measure-narrow.f1.mt5
+      section.h-100.flex.pr5
+        .self-center.mw8
+          img.o-0#profilePic(src="./images/lucasneumann.JPG")
+        h2.measure-narrow.f1.self-center.bg-white.pa5.z-max.negative-margin-5
           | Generalist product designer at 
-          a.bb.b--black(href="http://www.nubank.com.br" target="_blank") Nubank
+          a.link.bn(href="http://www.nubank.com.br" target="_blank") Nubank
           | , São Paulo, where for the last 
           span#months
           |  months I’ve been 
           span helping our teams 
-          span {
+          //- span {
           span.dib.overflow-x-hidden.pointer#skills research
-          span } financial services 
-          span.nowrap-l
+          span  financial services 
+          span.nowrap
           |  that fight complexity & empower&nbsp;people.
 
+          
 
-      
   
   | {% include titles title="Work"%}
   .vh-section.flex.flex-column

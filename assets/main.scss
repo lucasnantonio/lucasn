@@ -115,7 +115,7 @@ $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
-$base-font-size:   14px;
+$base-font-size:   13px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -181,7 +181,14 @@ a,
   transition: 1s;
   // height:1em;
   vertical-align: bottom;
+  border-bottom: 5px dotted silver;
+  line-height: 1.35em;
+  font-style: italic;
 }
+skills:hover{
+  border-bottom: 5px dotted #222;
+}
+
 body{
   transition: opacity 3s;
 }
@@ -237,6 +244,13 @@ padding-bottom:3rem;
 }
 .js-animate-header{
   margin-top:-8rem;
+}
+.js-fadeIn{
+  transition: all 1.5s;
+  opacity: 1;
+}
+.negative-margin-5{
+  margin-left:-5rem;
 }
 
 .shadow-big{
