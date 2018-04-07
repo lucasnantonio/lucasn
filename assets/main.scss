@@ -115,7 +115,7 @@ $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
 // $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
 
-$base-font-size:   10px;
+$base-font-size:   11px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -215,6 +215,9 @@ a:hover{
 }
 
 .vh-section{
+  height: calc(100vh - 16rem);
+}
+.vh-section-first{
   height: calc(100vh - 16rem);
 }
 
