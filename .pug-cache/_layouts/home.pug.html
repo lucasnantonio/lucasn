@@ -1,42 +1,5 @@
-<div class="fixed vh-100 flex-l flex-column justify-between w6 dn" id="sidebar">
-  <header class="mt4-l mt5 ml5" id="title-lucas"><a class="w-100 bn" href="#section-product%20designer">
-      <h1 class="mt3 f3 tl lh-title mono">Lucas Neumann </h1></a></header>
-</div>
-<header class="mt4 db dn-l" id="title-lucas"><a class="w-100 bn" href="#section-product%20designer">
-    <h1 class="mt3 f3 tl lh-title mono">Lucas Neumann</h1></a></header>
-<div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4-l h3 dib overflow-hidden section-title"><a class="bn h4-l h3 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">Product Designer</h3></a><a class="bn h4-l h3 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
-</div>
-<section class="flex vh-section-first">{% include spacer %}
-  <div class="h-100 w-100 flex pl5-ns pr6-ns ph0 justify-between">
-    <div class="self-center mw7 dib-l dn"><img class="o-0" id="profilePic" src="./images/lucasneumann.JPG"/></div>
-    <div class="flex w-100">
-      <h2 class="measure center f3 mono self-center pl6-l pl0">Generalist product designer at <a class="link bn" href="http://www.nubank.com.br" target="_blank">Nubank</a>, São Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span class="dib overflow-x-hidden pointer" id="skills">research</span><span> financial services </span><span class="nowrap"></span> that fight complexity & empower&nbsp;people.</h2>
-    </div>
-  </div>
-</section>{% include titles title="Writing"%}    
-<section class="vh-section flex justify-center pl5-ns pr6-ns ph0">{% include spacer %}
-  <div class="mono f3 h-100 w-100 flex flex-column pr6-ns ph0 justify-center" id="articleList">
-    <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/nuconta-part-ii-685b446addc6" target="_blank">How we designed our Bank Account — NuConta Part II</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">7 min. read ↗  </p>
-    </div>
-    <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d" target="_blank">First steps for better UX research</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">8 min. read ↗</p>
-    </div>
-    <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/design-principles-at-nubank-d14317715bb1" target="_blank">Design Principles at Nubank</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">6 min. read ↗ </p>
-    </div>
-    <div class="bt b--black-30 pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc" target="_blank">What it feels like to become a designer</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">3 min. read ↗</p>
-    </div>
-    <div class="bt b--black-30 bb pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/why-%EF%B8%8F-trumps-8766ddc0c0e6" target="_blank">A critique of Medium's claps</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">5 min. read ↗</p>
-    </div>
-  </div>
-</section>{% include titles title="Work"%}
-<section class="vh-section flex">
-  <h2 class="f3 self-center center">Soon!</h2>
-</section>{% include titles title="*"%}
+{% include components-sidebar %}    
+{% include section-hero %}
+{% include section-writing %}
+{% include section-work %}  
+{% include titles title="*" %}
