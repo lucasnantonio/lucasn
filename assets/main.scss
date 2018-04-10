@@ -1,6 +1,7 @@
 ---
 ---
 
+<<<<<<< HEAD
 @import  "tachyons""
 @charset "utf-8";
 // @font-face{
@@ -256,10 +257,251 @@ a:hover {
   transition: all 0.3s;
 
   & ul li a:hover {
+=======
+@import "tachyons";
+@charset "utf-8";
+
+// @font-face {
+//     font-family: Plex;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Regular.ttf");
+// }
+//
+// @font-face {
+//     font-family: Plex-Light;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Light.ttf");
+// }
+//
+// @font-face {
+//     font-family: Plex-Mono;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Regular.ttf");
+// }
+//
+// @font-face {
+//     font-family: Plex-Mono-Light;
+//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Light.ttf");
+// }
+
+@font-face {
+    font-family: Calibre;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Regular.otf");
+}
+@font-face {
+    font-family: Calibre-Light;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Light.otf");
+}
+@font-face {
+    font-family: Calibre-Italic;
+    src:url("{{site.url}}/fonts/calibre/CalibreTest-Italic.otf");
+}
+@font-face{
+  font-family: Calibre-Medium;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Medium.otf");
+}
+
+@font-face{
+  font-family: Calibre-Bold;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Bold.otf");
+}
+
+@font-face {
+    font-family: Post;
+    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Book.otf");
+}
+@font-face {
+    font-family: Post-Italic;
+    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Italic.otf");
+}
+@font-face{
+  font-family: Post-Medium;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Medium.otf");
+}
+@font-face{
+  font-family: Post-Bold;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
+}
+@font-face{
+  font-family: Relative-Faux;
+  src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
+}
+@font-face{
+  font-family: Relative-Mono;
+  src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
+}
+@font-face{
+  font-family: Relative;
+  src: url("{{site.url}}/fonts/relative/relativetrial-book.otf");
+}
+@font-face{
+  font-family: Relative-Medium;
+  src: url("{{site.url}}/fonts/relative/relativetrial-medium.otf");
+}
+@font-face{
+  font-family: Relative-Bold;
+  src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
+}
+
+@font-face{
+  font-family: Visuelt;
+  src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
+}
+@font-face{
+  font-family: Visuelt-Light;
+  src: url("{{site.url}}/fonts/visuelttrial-light.otf");
+}
+@font-face{
+  font-family: Visuelt-Bold;
+  src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
+}
+
+@import "ibm-plex";
+// Our variables
+
+$base-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+$mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+
+// $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
+
+// $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre-Light", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
+
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
+
+$base-font-size:   10px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
+
+$spacing-unit:     0px;
+
+$text-color:       #444;
+$background-color: #FFF;
+$brand-color:      #222;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  #222;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Import partials from the `minima` theme.
+@import "minima";
+
+html{
+  font-size: $base-font-size;
+}
+
+body{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+// .mono{
+//   font-family: $base-font-family;
+//   // font-family: $base-font-family;
+// }
+
+// .sans{
+//   font-family: Untitled-Sans;
+// }
+//
+// .sans-medium{
+//   font-family: Untitled-Sans-Medium;
+// }
+//
+// .sans-bold{
+//   font-family: Untitled-Sans-Bold;
+// }
+//
+// .serif{
+//   font-family: Untitled-Serif
+// }
+
+
+a,
+#articleList div{
+  transition: all .2s;
+}
+#skills{
+  max-width: 17rem;
+  transition: 1s;
+  // height:1em;
+  vertical-align: bottom;
+  border-bottom: .15em dotted silver;
+  line-height: 1.35em;
+  font-style: italic;
+}
+
+#skills:hover{
+  border-bottom: .15em dotted $text-color;
+}
+
+body{
+  transition: opacity 3s;
+}
+
+a{
+  color: $text-color;
+}
+
+a:hover{
+// padding-bottom: .5rem;
+}
+
+.b0{
+	bottom: 0;
+}
+
+.mw0{
+  max-width: 1px !important;
+}
+
+.mono{
+  font-family: $mono-font-family;
+}
+
+.vh-section{
+  height: calc(100vh - 16rem);
+}
+.vh-section-first{
+  height: calc(100vh - 16rem);
+}
+
+.perspective{
+  transform: rotate(16deg) skew(-4.5deg, -16.5deg);
+  transition: all .5s
+}
+
+.big-shadow{
+  box-shadow: 90px 200px 70px 5px rgba(0,0,0,0.25);
+  transition: all .5s;
+}
+
+#articleList div:hover{
+padding-top:3rem;
+padding-bottom:3rem;
+}
+
+#menu-container{
+  transition: all .3s;
+  & ul li a:hover{
+>>>>>>> bc80ff09f057ecea09ba12841decdc48c0684065
     color: $text-color;
   }
 }
 
+<<<<<<< HEAD
 .js-hidden-left {
   margin-left: -100vw;
 }
@@ -274,4 +516,30 @@ a:hover {
   -o-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
   -ms-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
   transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+=======
+.js-hidden-left{
+  margin-left:-100vw;
+}
+.js-animate-header{
+  margin-top:-8rem;
+}
+.js-fadeIn{
+  transition: all 1.5s;
+  opacity: 1;
+}
+.negative-margin-5{
+  margin-left:-5rem;
+}
+
+.shadow-big{
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+}
+.screen-perspective{
+  -webkit-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -moz-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -o-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  -ms-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+>>>>>>> bc80ff09f057ecea09ba12841decdc48c0684065
 }
