@@ -26,6 +26,9 @@ gems:
 exclude:
 - Gemfile
 - Gemfile.lock
+keep_files:
+  - .git
+  - .gitignore
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"
