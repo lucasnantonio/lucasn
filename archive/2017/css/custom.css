@@ -1,0 +1,133 @@
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: black;
+    transition: width .5s ease;
+}
+
+.sliding-u-l-r-l--white:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width .5s ease;
+}
+
+.sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: black;
+    transition: width .5s ease;
+}
+
+.sliding-u-l-r-l--white:hover:before {
+    width: 100%;
+    background: white;
+    transition: width .5s ease;
+}
+
+.sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+.button-black{
+  /*width:23%;*/
+  /*height:40px;*/
+	padding: 1rem;
+  background:transparent;
+  border:2px solid black;
+  box-shadow:inset 0 0 0 0 black;
+  -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
+  -moz-transition: -moz-box-shadow 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  color:black;
+	transform: scale(1);
+	cursor: pointer;
+}
+
+.button-black:hover{
+  color:#fff;
+}
+
+.slideRight-black:hover{
+  box-shadow:inset 300px 0 0 0 black;
+	transform: scale(1.05)
+}
+
+
+.button-white{
+  /*width:23%;*/
+  /*height:40px;*/
+	padding: 1rem;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:inset 0 0 0 0 white;
+  -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
+  -moz-transition: -moz-box-shadow 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  color:white;
+	transform: scale(1);
+	cursor: pointer;
+}
+
+.button-white:hover{
+  color:#873bbf;
+}
+
+.slideRight-white:hover{
+  box-shadow:inset 300px 0 0 0 white;
+	transform: scale(1.05)
+}
+
+.container {
+  font-size: .6rem;
+	color: white;
+	margin-bottom: .6rem;
+}
+
+.circled-number {
+  display: inline-block;
+  border: 1px solid black;
+	background-color: black;
+  width: 1.6em;
+  height: 1.6em;
+  line-height: 1.6em;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.serif{
+	font-family: 'Vollkorn', Serif;
+}
+
+#profile-front, #profile-back{
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+}

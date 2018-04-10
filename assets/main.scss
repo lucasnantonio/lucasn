@@ -1,0 +1,277 @@
+---
+---
+
+@import  "tachyons""
+@charset "utf-8";
+// @font-face{
+//   font-family: GenLight;
+//     src:url("{{site.url}}/fonts/Gen-Light.otf");
+// }
+// @font-face {
+//     font-family: Blanco;
+//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Regular.otf");
+// }
+// @font-face {
+//     font-family: Blanco-Italic;
+//     src:url("{{site.url}}/fonts/blanco/BlancoTrial-Italic.otf");
+// }
+// @font-face{
+//   font-family: Blanco-Medium;
+//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Medium.otf");
+// }
+//
+// @font-face{
+//   font-family: Blanco-Bold;
+//   src: url("{{site.url}}/fonts/blanco/BlancoTrial-Bold.otf");
+// }
+//
+@font-face {
+  font-family: Aktiv;
+  src: url("{{site.url}}/fonts/AktivGrotesk_Trial_Lt.ttf");
+}
+@font-face {
+  font-family: Aktiv-Bold;
+  src: url("{{site.url}}/fonts/AktivGrotesk_Trial_Bd.ttf");
+}
+@font-face {
+  font-family: GenLight;
+  src: url("{{site.url}}/fonts/Gen-Light.otf");
+}
+@font-face {
+  font-family: Calibre;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Regular.otf");
+}
+@font-face {
+  font-family: Calibre-Italic;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Italic.otf");
+}
+@font-face {
+  font-family: Calibre-Medium;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Medium.otf");
+}
+@font-face {
+  font-family: Calibre-Bold;
+  src: url("{{site.url}}/fonts/calibre/CalibreTest-Bold.otf");
+}
+@font-face {
+  font-family: Founders;
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Regular.otf");
+}
+@font-face {
+  font-family: Founders-Italic;
+  src: url("{{site.url}}/fonts/founders/CalibreTest-Italic.otf");
+}
+@font-face {
+  font-family: Founders-Medium;
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Medium.otf");
+}
+@font-face {
+  font-family: Founders-Bold;
+  src: url("{{site.url}}/fonts/founders/FoundersGroteskTest-Bold.otf");
+}
+@font-face {
+  font-family: Untitled-Serif;
+  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Regular.otf");
+}
+@font-face {
+  font-family: Untitled-Sans;
+  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Regular.otf");
+}
+@font-face {
+  font-family: Untitled-Serif-Medium;
+  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Medium.otf");
+}
+@font-face {
+  font-family: Untitled-Sans-Medium;
+  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Medium.otf");
+}
+@font-face {
+  font-family: Untitled-Sans-Bold;
+  src: url("{{site.url}}/fonts/untitled/UntitledSansTest-Bold.otf");
+}
+@font-face {
+  font-family: Untitled-Serif-Bold;
+  src: url("{{site.url}}/fonts/untitled/UntitledSerifTest-Bold.otf");
+}
+@font-face {
+  font-family: Post;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Book.otf");
+}
+@font-face {
+  font-family: Post-Italic;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Italic.otf");
+}
+@font-face {
+  font-family: Post-Medium;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Medium.otf");
+}
+@font-face {
+  font-family: Post-Bold;
+  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
+}
+@font-face {
+  font-family: Relative-Faux;
+  src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
+}
+@font-face {
+  font-family: Relative-Mono;
+  src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
+}
+@font-face {
+  font-family: Relative;
+  src: url("{{site.url}}/fonts/relative/relativetrial-book.otf");
+}
+@font-face {
+  font-family: Relative-Medium;
+  src: url("{{site.url}}/fonts/relative/relativetrial-medium.otf");
+}
+@font-face {
+  font-family: Relative-Bold;
+  src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
+}
+@font-face {
+  font-family: Visuelt;
+  src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
+}
+@font-face {
+  font-family: Visuelt-Light;
+  src: url("{{site.url}}/fonts/visuelttrial-light.otf");
+}
+@font-face {
+  font-family: Visuelt-Bold;
+  src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
+}
+@font-face {
+  font-family: Mabry;
+  src: url("{{site.url}}/fonts/MabryTrial-Regular.otf");
+}
+@font-face {
+  font-family: Mabry-Medium;
+  src: url("{{site.url}}/fonts/MabryTrial-Medium.otf");
+}
+@font-face {
+  font-family: Mabry-Bold;
+  src: url("{{site.url}}/fonts/MabryTrial-Bold.otf");
+}
+// @font-face{
+//   font-family: Objektiv;
+//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Bd.ttf");
+// }
+// @font-face{
+//   font-family: Objektiv-Light;
+//   src: url("{{site.url}}/fonts/ObjektivMk3_Trial_Lt.ttf");
+// }
+// Our variables
+// $mono-font-family: "Mabry", Helvetica, Arial, sans-serif;
+// $base-font-family: "Mabry-Medium", Helvetica, Arial, sans-serif;
+// $base-font-family: "Mabry-Bold", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Aktiv", Helvetica, Arial, sans-serif;
+// $base-font-family: "Aktiv-Bold", Helvetica, Arial, sans-serif;
+$base-font-family: "Post", Helvetica, Arial, sans-serif;
+$mono-font-family: "Post", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Visuelt", Helvetica, Arial, sans-serif;
+// $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
+// $base-font-family: "Objektiv", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Objektiv-Light", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Untitled", Helvetica, Arial, sans-serif;
+// $base-font-family: "Untitled-Sans-Medium", Helvetica, Arial, sans-serif;
+// $base-font-family: "Untitled-Sans-Bold", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Calibre", Helvetica, Arial, sans-serif;
+// $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
+// $base-font-family: "GenLight", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
+// $mono-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
+// $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 100;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.6;
+$spacing-unit: 0;
+$text-color: #444;
+$background-color: #FFFFFF;
+$brand-color: #222;
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: #222;
+// Width of the content area
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 800px;
+// Import partials from the `minima` theme.
+@import "minima";
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  background-color: $background-color;
+}
+
+.mono {
+  font-family: $mono-font-family;
+  // font-family: $base-font-family;
+}
+
+#articleList div,
+#skills,
+a {
+  transition: all 0.2s;
+}
+
+#content-wrapper {
+  transition: opacity 3s;
+}
+
+a {
+  color: $text-color;
+}
+
+a:hover {
+  // padding-bottom: .5rem;
+}
+
+.b0 {
+  bottom: 0;
+}
+
+.vh-section-first {
+  height: calc(100vh - 8rem);
+}
+
+.vh-section {
+  height: calc(100vh - 16rem);
+}
+
+#articleList div:hover {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#menu-container {
+  transition: all 0.3s;
+
+  & ul li a:hover {
+    color: $text-color;
+  }
+}
+
+.js-hidden-left {
+  margin-left: -100vw;
+}
+
+.js-animate-header {
+  margin-top: -8rem;
+}
+
+.screen-perspective {
+  -webkit-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+  -moz-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+  -o-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+  -ms-transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+  transform: rotateX(45deg) rotateY(0deg) rotateZ(45deg);
+}
