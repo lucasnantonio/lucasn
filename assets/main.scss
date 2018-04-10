@@ -24,79 +24,8 @@
 //     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Light.ttf");
 // }
 
-@font-face {
-    font-family: Calibre;
-    src:url("{{site.url}}/fonts/calibre/CalibreTest-Regular.otf");
-}
-@font-face {
-    font-family: Calibre-Light;
-    src:url("{{site.url}}/fonts/calibre/CalibreTest-Light.otf");
-}
-@font-face {
-    font-family: Calibre-Italic;
-    src:url("{{site.url}}/fonts/calibre/CalibreTest-Italic.otf");
-}
-@font-face{
-  font-family: Calibre-Medium;
-  src: url("{{site.url}}/fonts/calibre/CalibreTest-Medium.otf");
-}
 
-@font-face{
-  font-family: Calibre-Bold;
-  src: url("{{site.url}}/fonts/calibre/CalibreTest-Bold.otf");
-}
-
-@font-face {
-    font-family: Post;
-    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Book.otf");
-}
-@font-face {
-    font-family: Post-Italic;
-    src:url("{{site.url}}/fonts/post/PostGroteskTrial-Italic.otf");
-}
-@font-face{
-  font-family: Post-Medium;
-  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Medium.otf");
-}
-@font-face{
-  font-family: Post-Bold;
-  src: url("{{site.url}}/fonts/post/PostGroteskTrial-Bold.otf");
-}
-@font-face{
-  font-family: Relative-Faux;
-  src: url("{{site.url}}/fonts/relative/relativetrial-faux.otf");
-}
-@font-face{
-  font-family: Relative-Mono;
-  src: url("{{site.url}}/fonts/relative/relativetrial-mono10pitch.otf");
-}
-@font-face{
-  font-family: Relative;
-  src: url("{{site.url}}/fonts/relative/relativetrial-book.otf");
-}
-@font-face{
-  font-family: Relative-Medium;
-  src: url("{{site.url}}/fonts/relative/relativetrial-medium.otf");
-}
-@font-face{
-  font-family: Relative-Bold;
-  src: url("{{site.url}}/fonts/relative/relativetrial-bold.otf");
-}
-
-@font-face{
-  font-family: Visuelt;
-  src: url("{{site.url}}/fonts/visuelttrial-regular.otf");
-}
-@font-face{
-  font-family: Visuelt-Light;
-  src: url("{{site.url}}/fonts/visuelttrial-light.otf");
-}
-@font-face{
-  font-family: Visuelt-Bold;
-  src: url("{{site.url}}/fonts/visuelttrial-bold.otf");
-}
-
-@import "ibm-plex";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 // Our variables
 
 $base-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
