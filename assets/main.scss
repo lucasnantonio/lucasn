@@ -1,51 +1,16 @@
 ---
 ---
 
-@import "tachyons";
+
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&subset=latin-ext');
 
-// @font-face {
-//     font-family: Plex;
-//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Regular.ttf");
-// }
-//
-// @font-face {
-//     font-family: Plex-Light;
-//     src:url("{{site.url}}/fonts/ibm/IBMPlexSans-Light.ttf");
-// }
-//
-// @font-face {
-//     font-family: Plex-Mono;
-//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Regular.ttf");
-// }
-//
-// @font-face {
-//     font-family: Plex-Mono-Light;
-//     src:url("{{site.url}}/fonts/ibm/IBMPlexMono-Light.ttf");
-// }
-
-
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
-// Our variables
 
 $base-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 
-// $base-font-family: "Visuelt", Helvetica, Arial, sans-serif;
-// $base-font-family: "Visuelt-Bold", Helvetica, Arial, sans-serif;
-// $base-font-family: "Visuelt-Light", Helvetica, Arial, sans-serif;
-
-// $base-font-family: "Calibre", Helvetica, Arial, sans-serif;
-// $base-font-family: "Calibre-Light", Helvetica, Arial, sans-serif;
-// $base-font-family: "Calibre-Bold", Helvetica, Arial, sans-serif;
-
-// $base-font-family: "Relative", Helvetica, Arial, sans-serif;
-// $base-font-family: "Relative-Medium", Helvetica, Arial, sans-serif;
-// $base-font-family: "Relative-Mono", Helvetica, Arial, sans-serif;
-// $base-font-family: "Relative-Bold", Helvetica, Arial, sans-serif;
-
-$base-font-size:   10px;
-$base-font-weight: 400;
+$base-font-size:   15px;
+$base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
 
@@ -66,13 +31,15 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
 // Import partials from the `minima` theme.
 @import "minima";
 
-html{
+html,
+html *{
   font-size: $base-font-size;
 }
+
+
 
 body{
   font-family: $base-font-family;
@@ -110,9 +77,9 @@ a,
   transition: 1s;
   // height:1em;
   vertical-align: bottom;
-  border-bottom: .15em dotted silver;
+  border-bottom: .15em dotted white;
   line-height: 1.35em;
-  font-style: italic;
+  // font-style: italic;
 }
 
 #skills:hover{
@@ -143,12 +110,11 @@ a:hover{
   font-family: $mono-font-family;
 }
 
-.vh-section{
-  height: calc(100vh - 16rem);
-}
-.vh-section-first{
-  height: calc(100vh - 16rem);
-}
+// .vh-section{
+//   height: calc(100vh - 12rem);
+// }
+
+
 
 .perspective{
   transform: rotate(16deg) skew(-4.5deg, -16.5deg);
@@ -189,11 +155,81 @@ padding-bottom:3rem;
 .shadow-big{
   box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
 }
-.screen-perspective{
-  -webkit-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-  -moz-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-  -o-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-  -ms-transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
-  transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);
+.screen-perspective-right{
+  -webkit-transform: rotate(5deg) scale(1);
+  -moz-transform: rotate(5deg) scale(1);
+  -o-transform: rotate(5deg) scale(1);
+  -ms-transform: rotate(5deg) scale(1);
+  transform: rotate(5deg) scale(1);
   box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+  transition: all 0.6s;
+}
+.screen-perspective-left{
+  -webkit-transform: rotate(-5deg) scale(1);
+  -moz-transform: rotate(-5deg) scale(1);
+  -o-transform: rotate(-5deg) scale(1);
+  -ms-transform: rotate(-5deg) scale(1);
+  transform: rotate(-5deg) scale(1);
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+  transition: all 0.6s;
+}
+.screen-perspective-right:hover{
+  -webkit-transform: rotate(7deg) scale(1.05);
+  -moz-transform: rotate(7deg) scale(1.05);
+  -o-transform: rotate(7deg) scale(1.05);
+  -ms-transform: rotate(7deg) scale(1.05);
+  transform: rotate(7deg) scale(1.05);
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+  transition: all 0.6s;
+}
+.screen-perspective-left:hover{
+  -webkit-transform: rotate(-7deg) scale(1.01);
+  -moz-transform: rotate(-7deg) scale(1.01);
+  -o-transform: rotate(-7deg) scale(1.01);
+  -ms-transform: rotate(-7deg) scale(1.01);
+  transform: rotate(-7deg) scale(1.01);
+  box-shadow: 0 174px 135px 0 rgba(0,0,0,0.08);
+  transition: all 0.6s;
+}
+
+// CUSTOM tachyons
+
+.bg-purple{
+  background-color: #8e17f9;
+}
+.light-pink{
+  color: #FFB5C7;
+}
+.bg-pink{
+  background-color: #f88bd4;
+}
+.lh-copy{
+  line-height: 1.8em;
+}
+.w6 {
+  width: 24rem;
+}
+.mw6{
+  max-width: 18rem;
+}
+.h4{
+  height:6rem;
+}
+
+@media screen and (min-width: 60em){
+.h4-l {
+    height: 6rem;
+}
+}
+
+@media screen and (min-width: 64em){
+.vh-section{
+  height: calc(100vh - 12rem);
+}
+.vh-section-first{
+  height: calc(100vh - 12rem);
+}
+.mw6-l {
+  width: 24rem;
+}
 }

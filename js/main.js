@@ -76,7 +76,7 @@ function showImage(img) {
   img.classList.remove('o-0');
   img.classList.add('js-fadeIn');
   img.style.marginLeft = '0rem';
-  img.src = "./images/lucasneumann.JPG"
+  img.src = "./images/lucasneumann.png"
 }
 
 function showProfilePic(profilePic) {
