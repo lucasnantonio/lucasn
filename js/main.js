@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   setupNavigator();
   fadeIn();
   showProfilePic(profilePic);
+  carousel();
   // titleOpacity();
   // api();
   var scroll = new SmoothScroll('a[href*="#"]',{
@@ -46,6 +47,8 @@ let sectionTitles;
 let articles;
 let articleLinks;
 let articleContainer;
+let carouselContainer;
+
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
@@ -62,6 +65,7 @@ let getDivs = function() {
   titleLucas = document.getElementById('title-lucas');
   metadata = document.querySelectorAll('.metadata');
   body = document.querySelector('body');
+  carouselContainer = document.querySelector('#main-carousel');
 }
 
 let i = 0;
@@ -70,6 +74,14 @@ function skillClick() {
   skillDiv.onclick = function(){
     changeSkill();
   }
+}
+
+let carousel = function(){
+  var flkty = new Flickity( carouselContainer, {
+  // options
+  cellAlign: 'left',
+  contain: true
+});
 }
 
 function showImage(img) {
