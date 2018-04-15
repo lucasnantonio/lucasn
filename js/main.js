@@ -8,12 +8,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   setupNavigator();
   fadeIn();
   showProfilePic(profilePic);
-  carousel();
-  var scroll = new SmoothScroll('a[href*="#"]',{
-    speed: 1000,
-    easing: 'easeInOutQuint'
-
-  })
+  projectsCarousel();
+  smoothScroll();
 });
 
 let skillList = [
@@ -68,9 +64,17 @@ function skillClick() {
   }
 }
 
-let carousel = function(){
+let smoothScroll = function(){
+  var scroll = new SmoothScroll('a[href*="#"]',{
+    speed: 1000,
+    easing: 'easeInOutQuint'
+  })
+}
+
+let projectsCarousel = function(){
   var flkty = new Flickity( carouselContainer, {
   // options
+  prevNextButtons: false,
   pageDots: false,
   cellAlign: 'left',
   contain: true
