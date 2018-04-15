@@ -3,15 +3,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   setInterval(changeSkill, 12000);
   skillClick();
   getMonths();
-  // menuSetup();
   navigator();
   articleOpacity();
   setupNavigator();
   fadeIn();
   showProfilePic(profilePic);
   carousel();
-  // titleOpacity();
-  // api();
   var scroll = new SmoothScroll('a[href*="#"]',{
     speed: 1000,
     easing: 'easeInOutQuint'
@@ -39,8 +36,6 @@ let skillList = [
 
 let skillDiv;
 let hiredMonths;
-// let menuBtn;
-// let menuContainer;
 let body;
 let sections;
 let sectionTitles;
@@ -54,9 +49,6 @@ let getDivs = function() {
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
-  // menuBtn = document.getElementById('menu-button');
-  // menuContainer = document.getElementById('menu-container');
-  // contentWrapper = document.getElementById('content-wrapper');
   sectionTitles = document.querySelectorAll('.section-title');
   sectionTitleLinks = document.querySelectorAll('.section-title a h3');
   sectionTitleBacks = document.querySelectorAll('.section-title a h4');
@@ -79,6 +71,7 @@ function skillClick() {
 let carousel = function(){
   var flkty = new Flickity( carouselContainer, {
   // options
+  pageDots: false,
   cellAlign: 'left',
   contain: true
 });
@@ -115,24 +108,6 @@ let getMonths = function() {
   months += today.getMonth() + 1;
   hiredMonths.innerHTML = (months <= 0 ? 0 : months);
 }
-
-let animateMenuEnter = function() {
-  menuContainer.classList.remove('js-hidden-left');
-  contentWrapper.style.opacity = .1;
-  menuBtn.removeEventListener('mouseover', animateMenuEnter);
-}
-
-let animateMenuLeave = function() {
-  menuContainer.classList.add('js-hidden-left');
-  contentWrapper.style.opacity = 1;
-  menuBtn.addEventListener('mouseover', animateMenuEnter);
-}
-
-// let menuSetup = function() {
-// menuBtn.addEventListener('mouseover', animateMenuEnter);
-// menuContainer.addEventListener('mouseleave', animateMenuLeave);
-// menuContainer.addEventListener('click', animateMenuLeave);
-// }
 
 let setupNavigator = function() {
   sectionTitleLinks.forEach(function(item) {
@@ -184,20 +159,6 @@ let navigator = function() {
     })
 }
 
-// let titleOpacity = function(){
-//   window.onscroll = function(){
-//     console.log('scroll');
-//     sectionTitles.forEach(function(item){
-//       let y = item.getBoundingClientRect().top;
-//       if (y >= -100 && y <= 200) {
-//         item.querySelectorAll('a h1')[0].classList.remove('o-20');
-//       } else {
-//         item.querySelectorAll('a h1')[0].classList.add('o-20');
-//       }
-//     });
-//   }
-// }
-
 let revealMetadata = function(item){
   item.classList.remove('o-0', 'dn');
 }
@@ -235,17 +196,4 @@ let fadeIn = function() {
   setTimeout(function() {
     body.classList.remove('o-0')
   }, 100);
-}
-
-
-let api = function() {
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
-      // document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "https://api.airtable.com/v0/app2xyEX5tEoqDF9Y/clicks?api_key=key8KIoDLtssz0g54&maxRecords=3&view=Grid%20view", true);
-  xhttp.send();
 }
