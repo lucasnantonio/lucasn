@@ -39,6 +39,8 @@ let articles;
 let articleLinks;
 let articleContainer;
 let carouselContainer;
+let previousButton;
+let nextButton;
 
 
 let getDivs = function() {
@@ -54,6 +56,8 @@ let getDivs = function() {
   metadata = document.querySelectorAll('.metadata');
   body = document.querySelector('body');
   carouselContainer = document.querySelector('#main-carousel');
+  previousButton = document.querySelectorAll('.carousel--previous');
+  nextButton = document.querySelectorAll('.carousel--next');
 }
 
 let i = 0;
@@ -72,13 +76,30 @@ let smoothScroll = function(){
 }
 
 let projectsCarousel = function(){
+
   var flkty = new Flickity( carouselContainer, {
   // options
   prevNextButtons: false,
   pageDots: false,
   cellAlign: 'left',
-  contain: true
+  contain: true,
+  draggable: false
 });
+
+  previousButton.forEach(
+    function(item){
+      item.addEventListener( 'click', function() {
+      flkty.previous(true);
+    });
+  });
+
+  nextButton.forEach(
+    function(item){
+      item.addEventListener( 'click', function() {
+      flkty.next(true);
+    });
+  });
+
 }
 
 function showImage(img) {
