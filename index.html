@@ -1,158 +1,235 @@
 <!DOCTYPE html>
 <html lang=""><head>
+
+  <title>Lucas Neumann</title>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Lucas Neumann</title>
   <meta name="description" content="Lucas Neumann. I juggle research, product design and some code @ Nubank Brasil. Co-founder @ projetofeito.">
 
-  <link rel="stylesheet" href="assets/main.css">
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="Lucas Neumann" href="/feed.xml">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/custom.css">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-	<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Vollkorn:400,400i" rel="stylesheet">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Vollkorn:400,400i" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="assets/main.css">
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
 	<script src="js/main.js"></script>
 
 
-
+  
 </head>
 
   <body>
-    <main class="ph0-l ph5 overflow-hidden"><div class="fixed vh-100 flex-l flex-column justify-between w6 dn" id="sidebar">
+    <main class="overflow-hidden"><div class="fixed vh-100 flex-l flex-column justify-between w6-l w5 dn" id="sidebar">
   <header class="mt4-l mt5 ml5" id="title-lucas"><a class="w-100 bn" href="#section-product%20designer">
-      <h1 class="mt3 f3 tl lh-title mono">Lucas Neumann </h1></a></header>
+      <h1 class="mt1 tl lh-title mono">Lucas Neumann </h1></a></header>
 </div>
 <header class="mt4 db dn-l" id="title-lucas"><a class="w-100 bn" href="#section-product%20designer">
-    <h1 class="mt3 f3 tl lh-title mono">Lucas Neumann</h1></a></header>
-<div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4-l h3 dib overflow-hidden section-title"><a class="bn h4-l h3 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">Product Designer</h3></a><a class="bn h4-l h3 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
+    <h1 class="mt1 pt1 lh-title pl0-l tc">Lucas Neumann</h1></a></header>    
+<div class="flex mb0-l mb4">
+  <div class="w5 dib-l dn" id="sidebar-spacer"></div>
+  <header class="h4-l h2 dib overflow-hidden section-title ma0-l center"><a class="bn h4-l h2 db w-100 flex">
+      <h3 class="self-center m0-ns center black-30 pl0-l">Product Designer</h3></a><a class="bn h4-l h2 db w-100 flex">
+      <h4 class="self-center mono black-30">↑</h4></a></header>
 </div>
 <section class="flex vh-section-first"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
-  <div class="h-100 w-100 flex pl5-ns pr6-ns ph0 justify-between">
-    <div class="self-center mw7 dib-l dn"><img class="o-0" id="profilePic" src="./images/lucasneumann.JPG"/></div>
-    <div class="flex w-100">
-      <h2 class="measure center f3 mono self-center pl6-l pl0">Generalist product designer at <a class="link bn" href="http://www.nubank.com.br" target="_blank">Nubank</a>, São Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span class="dib overflow-x-hidden pointer" id="skills">research</span><span> financial services </span><span class="nowrap"></span> that fight complexity & empower&nbsp;people.</h2>
+  <div class="flex flex-row-l flex-column h-100 w-100 justify-between-l justify-center">
+    <div class="flex w-100 justify-start-l justify-center">
+      <div class="self-center mw6-l mw5 mb0-l mb5"><img class="o-0" id="profilePic" src="./images/lucasneumann.png"/></div>
+    </div>
+    <div class="flex w-100 justify-start ph5">
+      <h2 class="measure-narrow ma0-l center mono self-center lh-copy tl-l tc">Generalist product designer at <a class="link bn" href="http://www.nubank.com.br" target="_blank">Nubank</a>, São Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span class="pink">{ </span><span class="b dib overflow-x-hidden pointer pink" id="skills">research</span><span class="pink"> }</span><span> financial services </span><span class="nowrap"></span> that fight complexity & empower&nbsp;people.</h2>
     </div>
   </div>
 </section>
 <div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4 dib overflow-hidden section-title"><a class="bn h4 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">Writing</h3></a><a class="bn h4 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
+  <div class="w5 dib-l dn" id="sidebar-spacer"></div>
+  <header class="h4 dib overflow-hidden section-title w-auto-l w-100"><a class="bn h4 db w-100 flex">
+      <h3 class="self-center m0-ns center black-30 pl0-l">Work</h3></a><a class="bn h4 db w-100 flex">
+      <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
 </div>
-<section class="vh-section flex justify-center pl5-ns pr6-ns ph0"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
-  <div class="mono f3 h-100 w-100 flex flex-column pr6-ns ph0 justify-center" id="articleList">
+<div id="main-carousel">
+  <section class="carousel-cell w-100 vh-section flex justify-center bg-purple overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+    <div class="flex flex-column w-100 pv0-l pv6 justify-between">
+      <div class="flex flex-row-l flex-column-reverse h-100 w-80-l w-100 justify-center">
+        <div class="flex w-50-l w-100 center">
+          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5">
+            <div class="flex flex-column pa4 bt br bl light-pink bg-purple">
+              <div class="flex justify-between bb mb3 pb3">
+                <p class="b">NuConta</p>
+                <p>2017</p>
+              </div>
+              <p class="measure-narrow lh-copy">Designing a transparent, revolutionary bank account from zero to one to serve millions of customers.</p>
+              <div class="measure-narrow mt4 pt3 flex-l dn">
+                <div class="flex flex-column mono">
+                  <h2 class="mb3 b f7">Role</h2>
+                  <p class="f7">Foundational Research</p>
+                  <p class="f7">Product Design</p>
+                  <p class="f7">Prototyping</p>
+                  <p class="f7">UX Copywriting</p>
+                </div>
+              </div>
+            </div><a class="link flex ba bt0 light-pink pa4 pv3 justify-between hover-white" href="https://www.nubank.com.br/nuconta/" target="_blank">
+              <p>READ MORE</p>
+              <p>↗            </p></a>
+          </div>
+        </div>
+        <div class="flex center justify-center w-50-l w-80">
+          <div class="self-center w-50 big-shadow overflow-hidden br2"><img src="./images/nuconta2.png"/></div>
+          <div class="self-center w-50 big-shadow overflow-hidden br2 negative-margin-left-2"><img src="./images/nuconta.gif"/></div>
+        </div>
+      </div><div class="flex justify-between pv4 mt4 w-80 mh0-l center" style="color: #FFB5C7">
+  <p class="carousel--previous pointer">← PREV</p>
+  <p class="carousel--next pointer">NEXT →</p>
+</div>
+    </div>
+  </section>
+  <section class="carousel-cell w-100 vh-section flex justify-center bg-dark-green overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+    <div class="flex flex-column w-100 pv0-l pv6 justify-between">
+      <div class="flex flex-row-l flex-column-reverse h-100 w-80-l w-100 justify-center">
+        <div class="flex w-50-l w-100 center">
+          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5">
+            <div class="flex flex-column pa4 bt br bl light-green bg-dark-green">
+              <div class="flex justify-between bb mb3 pb3">
+                <p class="b">GoldenArt</p>
+                <p>2017</p>
+              </div>
+              <p class="measure-narrow lh-copy">Bringing a 30 year family business' website up to speed with the market.</p>
+              <div class="measure-narrow mt4 pt3 flex-l dn">
+                <div class="flex flex-column mono">
+                  <h2 class="mb3 b f7">Role</h2>
+                  <p class="f7">Design</p>
+                  <p class="f7">Development</p>
+                </div>
+              </div>
+            </div><a class="link flex ba bt0 light-green pa4 pv3 justify-between hover-white" href="https://www.goldenart.com.br" target="_blank">
+              <p>SEE LIVE</p>
+              <p>↗            </p></a>
+          </div>
+        </div>
+        <div class="flex center justify-center w-50-l w-80">
+          <div class="self-center big-shadow overflow-hidden br2"><img src="./images/golden-art-1.png"/></div>
+        </div>
+      </div><div class="flex justify-between pv4 mt4 w-80 mh0-l center" style="color: #58e7c4">
+  <p class="carousel--previous pointer">← PREV</p>
+  <p class="carousel--next pointer">NEXT →</p>
+</div>
+    </div>
+  </section>
+</div>
+<div class="flex">
+  <div class="w5 dib-l dn" id="sidebar-spacer"></div>
+  <header class="h4 dib overflow-hidden section-title w-auto-l w-100"><a class="bn h4 db w-100 flex">
+      <h3 class="self-center m0-ns center black-30 pl0-l">Writing</h3></a><a class="bn h4 db w-100 flex">
+      <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
+</div>    
+<section class="vh-section flex justify-center"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+  <div class="mono h-100 w-100-l w-80 flex flex-column pr6-l ph0 justify-center" id="articleList">
     <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/nuconta-part-ii-685b446addc6" target="_blank">How we designed our Bank Account — NuConta Part II</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">7 min. read ↗  </p>
+      <p class="metadata black-30 mt3 dn o-0">7 min. read &#x2197;&#xFE0E;  </p>
     </div>
     <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d" target="_blank">First steps for better UX research</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">8 min. read ↗</p>
+      <p class="metadata black-30 mt3 dn o-0">8 min. read &#x2197;&#xFE0E;</p>
     </div>
     <div class="bt b--black-30 pv3"><a class="bn" href="https://nubank.design/design-principles-at-nubank-d14317715bb1" target="_blank">Design Principles at Nubank</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">6 min. read ↗ </p>
+      <p class="metadata black-30 mt3 dn o-0">6 min. read &#x2197;&#xFE0E; </p>
     </div>
     <div class="bt b--black-30 pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc" target="_blank">What it feels like to become a designer</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">3 min. read ↗</p>
+      <p class="metadata black-30 mt3 dn o-0">3 min. read &#x2197;&#xFE0E;</p>
     </div>
     <div class="bt b--black-30 bb pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/why-%EF%B8%8F-trumps-8766ddc0c0e6" target="_blank">A critique of Medium's claps</a>
-      <p class="metadata black-30 mt3 f3 dn o-0">5 min. read ↗</p>
+      <p class="metadata black-30 mt3 dn o-0">5 min. read &#x2197;&#xFE0E;</p>
     </div>
   </div>
-</section>
-<div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4 dib overflow-hidden section-title"><a class="bn h4 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">Work</h3></a><a class="bn h4 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
-</div>
-<section class="vh-section flex">
-  <h2 class="f3 self-center center">Soon!</h2>
-</section>
+</section>  
 <div class="dn db-l"><div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4 dib overflow-hidden section-title"><a class="bn h4 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">About</h3></a><a class="bn h4 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
-</div>
-<section class="flex flex-row-l flex-column pl5-ns pr6-ns ph0">
+  <div class="w5 dib-l dn" id="sidebar-spacer"></div>
+  <header class="h4 dib overflow-hidden section-title w-auto-l w-100"><a class="bn h4 db w-100 flex">
+      <h3 class="self-center m0-ns center black-30 pl0-l">About</h3></a><a class="bn h4 db w-100 flex">
+      <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
+</div>    
+<section class="flex flex-row-l flex-column justify-center">
   <div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
-  <div class="flex flex-column mt7 mr5 w-third-l w-50">
-  <h4 class="f3 mb4">Links</h4>
-  <div class="w-100 mb4 mt4 flex flex-column"><a class="bn link f3 mb3" href="https://dribbble.com/lucasnantonio">Dribbble ↗</a><a class="bn link f3 mb3" href="https://www.linkedin.com/in/lucasneumann/">Linkedin ↗</a><a class="bn link f3 mb3" href="https://twitter.com/lucasnantonio">Twitter ↗</a><a class="bn link f3 mb3" href="https://medium.com/@lucasnantonio">Medium ↗</a><a class="bn link f3 mb3" href="mailto:lucasneumann.fau@gmail.com">Email ↗</a></div>
+  <div class="flex flex-column mt7 mr5 w-20-l w-50"> 
+  <h4 class="mb4">Contact</h4>
+  <div class="w-100 mb4 mt4 flex flex-column"><a class="bn link mb3" href="https://dribbble.com/lucasnantonio">Dribbble &#x2197;&#xFE0E;</a><a class="bn link mb3" href="https://www.linkedin.com/in/lucasneumann/">Linkedin &#x2197;&#xFE0E;</a><a class="bn link mb3" href="https://twitter.com/lucasnantonio">Twitter &#x2197;&#xFE0E;</a><a class="bn link mb3" href="https://medium.com/@lucasnantonio">Medium &#x2197;&#xFE0E;</a><a class="bn link mb3" href="mailto:lucasneumann.fau@gmail.com">Email &#x2197;&#xFE0E;</a></div>
 </div>
-  <div class="flex flex-column mt7 mr5 w-third-l w-50">
-  <h4 class="f3 mb4">Work</h4>
+  <div class="flex flex-column mt7 mr5 w-40-l w-50">
+  <h4 class="mb4">Work</h4>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Nubank<span class="ph2">•</span><em>2016–today</em></h3>
-    <p class="f3 measure-narrow">Building a banking system from the ground up. I'm part of the design team responsible for the end-to-end Nubank user experience, touching everything from user research, to product design, and a little coding.</p>
+    <h3 class="mb3 mt4 i">Nubank<span class="ph2">•</span><em>2016–today</em></h3>
+    <p class="measure-narrow">Building a banking system from the ground up. I'm part of the design team responsible for the end-to-end Nubank user experience, touching everything from user research, to product design, and a little coding.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Nossas Cidades<span class="ph2">•</span><em>2015–2017</em></h3>
-    <p class="f3 measure-narrow">I was the single product designer during the process to launch BONDE.ORG, on online platform that allows for activists to build the online presence of their causes and pressure government for change.</p>
+    <h3 class="mb3 mt4 i">Nossas Cidades<span class="ph2">•</span><em>2015–2017</em></h3>
+    <p class="measure-narrow">I was the single product designer during the process to launch BONDE.ORG, on online platform that allows for activists to build the online presence of their causes and pressure government for change.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Airbus<span class="ph2">•</span><em>2014–2017</em></h3>
-    <p class="f3 measure-narrow">A 3-year long journey to design and prototype a patent-pending trolley system for garbage recycling in commercial airlines. From the times I used to do industrial design stuff.</p>
+    <h3 class="mb3 mt4 i">Airbus<span class="ph2">•</span><em>2014–2017</em></h3>
+    <p class="measure-narrow">A 3-year long journey to design and prototype a patent-pending trolley system for garbage recycling in commercial airlines. From the times I used to do industrial design stuff.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Redbull<span class="ph2">•</span><em>2016</em></h3>
-    <p class="f3 measure-narrow">I was awarded a Redbull scholarship to work for four months on Mapa Daqui, an online platform for collaborative, citizen-led wayfinding systems for urban centers.</p>
+    <h3 class="mb3 mt4 i">Redbull<span class="ph2">•</span><em>2016</em></h3>
+    <p class="measure-narrow">I was awarded a Redbull scholarship to work for four months on Mapa Daqui, an online platform for collaborative, citizen-led wayfinding systems for urban centers.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Insitum<span class="ph2">•</span><em>2015</em></h3>
-    <p class="f3 measure-narrow">I worked with clients such as Natura and Bosch on country-wide field user research efforts and design workshops for various undisclosed projects.</p>
+    <h3 class="mb3 mt4 i">Insitum<span class="ph2">•</span><em>2015</em></h3>
+    <p class="measure-narrow">I worked with clients such as Natura and Bosch on country-wide field user research efforts and design workshops for various undisclosed projects.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Kano<span class="ph2">•</span><em>2014</em></h3>
-    <p class="f3 measure-narrow">I worked with Kano as they prepared to ship their first child-friendly, modular computer after their 1 million pound kickstarter campaign. I contributed to making the onboarding experience, UI and copywriting as on-the-spot as possible for first-time users.</p>
+    <h3 class="mb3 mt4 i">Kano<span class="ph2">•</span><em>2014</em></h3>
+    <p class="measure-narrow">I worked with Kano as they prepared to ship their first child-friendly, modular computer after their 1 million pound kickstarter campaign. I contributed to making the onboarding experience, UI and copywriting as on-the-spot as possible for first-time users.</p>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Futurebrand<span class="ph2">•</span><em>2012</em></h3>
-    <p class="f3 measure-narrow">I worked with big brands such as Nestle, Garoto, Boticário and BRfoods on branding and packaging design.</p>
+    <h3 class="mb3 mt4 i">Futurebrand<span class="ph2">•</span><em>2012</em></h3>
+    <p class="measure-narrow">I worked with big brands such as Nestle, Garoto, Boticário and BRfoods on branding and packaging design.</p>
   </div>
 </div>
-  <div class="flex flex-column mt7 mr5 w-third-l w-50">
-  <h4 class="uppercase tracked f3 mb4">Press</h4>
+  <div class="flex flex-column mt7 mr5 w-40-l w-50">
+  <h4 class="uppercase mb4">Press</h4>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Fast Company<span class="ph2">•</span><em>2016</em></h3>
-    <p class="f3 measure-narrow">Meet Bossy, A Cute Desktop Assistant That Wants You To Be A Better Worker</p><a class="link f3" href="https://www.fastcompany.com/3028572/this-simple-tool-will-help-you-stop-working-ridiculous-hours">Read ↗</a>
+    <h3 class="mb3 mt4 i">Fast Company<span class="ph2">•</span><em>2016</em></h3>
+    <p class="mb3 measure-narrow">Meet Bossy, A Cute Desktop Assistant That Wants You To Be A Better Worker</p><a class="link" href="https://www.fastcompany.com/3028572/this-simple-tool-will-help-you-stop-working-ridiculous-hours">Read &#x2197;&#xFE0E;</a>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Wired<span class="ph2">•</span><em>2016</em></h3>
-    <p class="f3 measure-narrow">Work 2.0: A Web-Connected Sticky Note That Bosses You Around</p><a class="link f3" href="https://www.wired.com/2014/04/work-2-0-a-web-connected-sticky-note-that-bosses-you-around/">Read ↗</a>
+    <h3 class="mb3 mt4 i">Wired<span class="ph2">•</span><em>2016</em></h3>
+    <p class="mb3 measure-narrow">Work 2.0: A Web-Connected Sticky Note That Bosses You Around</p><a class="link" href="https://www.wired.com/2014/04/work-2-0-a-web-connected-sticky-note-that-bosses-you-around/">Read &#x2197;&#xFE0E;</a>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Dezeen<span class="ph2">•</span><em>2016</em></h3>
-    <p class="f3 measure-narrow">For Play is a sex design exhibition without any dildos</p><a class="link f3" href="https://www.dezeen.com/2016/10/26/for-play-sex-exhibition-mu-gallery-dutch-design-week-2016/">Read ↗</a>
+    <h3 class="mb3 mt4 i">Dezeen<span class="ph2">•</span><em>2016</em></h3>
+    <p class="mb3 measure-narrow">For Play is a sex design exhibition without any dildos</p><a class="link" href="https://www.dezeen.com/2016/10/26/for-play-sex-exhibition-mu-gallery-dutch-design-week-2016/">Read &#x2197;&#xFE0E;</a>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Folha de São Paulo<span class="ph2">•</span><em>2016</em></h3>
-    <p class="f3 measure-narrow">Projeto espalha mapas com pontos de interesse nos bairros paulistanos</p><a class="link f3" href="http://www1.folha.uol.com.br/cotidiano/2016/02/1738840-estudante-cria-mapa-para-pedestres.shtml">Read ↗</a>
+    <h3 class="mb3 mt4 i">Folha de São Paulo<span class="ph2">•</span><em>2016</em></h3>
+    <p class="mb3 measure-narrow">Projeto espalha mapas com pontos de interesse nos bairros paulistanos</p><a class="link" href="http://www1.folha.uol.com.br/cotidiano/2016/02/1738840-estudante-cria-mapa-para-pedestres.shtml">Read &#x2197;&#xFE0E;</a>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Estadão<span class="ph2">•</span><em>2015–2017</em></h3>
-    <p class="f3 measure-narrow">SP tem nova tribo: os ‘hackers urbanos’</p><a class="link f3" href="http://sao-paulo.estadao.com.br/noticias/geral,sp-tem-nova-tribo-os-hackers-urbanos,10000076653">Read ↗</a>
+    <h3 class="mb3 mt4 i">Estadão<span class="ph2">•</span><em>2015–2017</em></h3>
+    <p class="mb3 measure-narrow">SP tem nova tribo: os ‘hackers urbanos’</p><a class="link" href="http://sao-paulo.estadao.com.br/noticias/geral,sp-tem-nova-tribo-os-hackers-urbanos,10000076653">Read &#x2197;&#xFE0E;</a>
   </div>
   <div class="w-100 mb5">
-    <h3 class="f3 mb3 mt4 i">Catraca livre<span class="ph2">•</span><em>2015–2017</em></h3>
-    <p class="f3 measure-narrow">Projeto colaborativo espalha mapas com sugestões de passeios, bares e eventos em SP</p><a class="link f3" href="https://catracalivre.com.br/geral/arquivo/indicacao/projeto-colaborativo-espalha-mapas-com-sugestoes-de-passeios-bares-e-eventos-em-sp/">Read ↗</a>
+    <h3 class="mb3 mt4 i">Catraca livre<span class="ph2">•</span><em>2015–2017</em></h3>
+    <p class="mb3 measure-narrow">Projeto colaborativo espalha mapas com sugestões de passeios, bares e eventos em SP</p><a class="link" href="https://catracalivre.com.br/geral/arquivo/indicacao/projeto-colaborativo-espalha-mapas-com-sugestoes-de-passeios-bares-e-eventos-em-sp/">Read &#x2197;&#xFE0E;</a>
   </div>
 </div>
 </section>  </div><div class="flex">
-  <div class="w5 mr5 dib-l dn" id="sidebar-spacer"></div>
-  <header class="h4 dib overflow-hidden section-title"><a class="bn h4 db w-100 flex">
-      <h3 class="self-center f3 mono black-30">*</h3></a><a class="bn h4 db w-100 flex">
-      <h4 class="self-center f3 mono black-30">↑</h4></a></header>
+  <div class="w5 dib-l dn" id="sidebar-spacer"></div>
+  <header class="h4 dib overflow-hidden section-title w-auto-l w-100"><a class="bn h4 db w-100 flex">
+      <h3 class="self-center m0-ns center black-30 pl0-l">*</h3></a><a class="bn h4 db w-100 flex">
+      <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
 </div></main>
   </body>
 </html>
