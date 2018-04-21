@@ -83,7 +83,7 @@ let projectsCarousel = function(){
   pageDots: false,
   cellAlign: 'left',
   contain: true,
-  draggable: false
+  cellSelector: ".carousel-cell"
 });
 
   previousButton.forEach(
