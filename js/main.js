@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  fadeIn();
-  showProfilePic(profilePic);
+  fadeInBody();
+  // showProfilePic(profilePic);
   projectsCarousel();
   smoothScroll();
+  showImages();
 });
 
 let skillList = [
@@ -41,6 +42,7 @@ let articleContainer;
 let carouselContainer;
 let previousButton;
 let nextButton;
+let imgContainers;
 
 
 let getDivs = function() {
@@ -58,9 +60,21 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
+  imgContainers = document.querySelectorAll('.img-container')
 }
 
 let i = 0;
+
+function isInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var html = document.documentElement;
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    rect.right <= (window.innerWidth || html.clientWidth)
+  );
+}
 
 function skillClick() {
   skillDiv.onclick = function(){
@@ -81,7 +95,6 @@ let projectsCarousel = function(){
   prevNextButtons: false,
   pageDots: false,
   cellAlign: 'left',
-
   contain: true,
   cellSelector: ".carousel-cell"
 });
@@ -101,18 +114,28 @@ let projectsCarousel = function(){
   });
 }
 
-function showImage(img) {
-  img.classList.remove('o-0');
-  img.classList.add('js-fadeIn');
-  img.style.marginLeft = '0rem';
-  img.src = "./images/lucasneumann.png"
-}
+function showImages() {
+  imgContainers.forEach(function(item){
+    item.classList.add("o-0");
+    if (isInViewport(item)){
+      // item.classList.remove('o-0');
+      imagesLoaded(item, function(){
+        item.classList.add('animated');
+        item.classList.add('fadeInUp');
+      })
+    }
+  })
+  window.addEventListener("scroll", function(){
+    imgContainers.forEach(function(item){
+      if (isInViewport(item)){
+        item.classList.remove('o-0');
+        item.classList.add('animated');
+        item.classList.add('fadeInUp');
+      }
+    })
+  })
 
-function showProfilePic(profilePic) {
-  profilePic.style.marginLeft = '5rem';
-  imagesLoaded(profilePic, function(){
-  showImage(profilePic);
-})
+
 }
 
 function changeSkill() {
@@ -215,7 +238,7 @@ let articleOpacity = function() {
   });
 }
 
-let fadeIn = function() {
+let fadeInBody = function() {
   body.classList.add('o-0');
   setTimeout(function() {
     body.classList.remove('o-0')
