@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang=""><head>
+
+  <title>Lucas Neumann</title>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Lucas Neumann</title>
   <meta name="description" content="Lucas Neumann. I juggle research, product design and some code @ Nubank Brasil. Co-founder @ projetofeito.">
 
-
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="/">
   <link rel="alternate" type="application/rss+xml" title="Lucas Neumann" href="/feed.xml">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Vollkorn:400,400i" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
   <link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="assets/main.css">
 
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
-	<link href="https://fonts.googleapis.com/css?family=Chivo:300,400|Vollkorn:400,400i" rel="stylesheet">
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
 	<script src="js/main.js"></script>
@@ -55,36 +61,75 @@
       <h3 class="self-center m0-ns center black-30 pl0-l">Work</h3></a><a class="bn h4 db w-100 flex">
       <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
 </div>
-<section class="vh-section flex justify-center bg-purple overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
-  <div class="flex w-100 pv0-l pv6">
-    <div class="flex flex-row-l flex-column-reverse justify-center w-80-l w-100">
-      <div class="flex flex-column self-center center mt0-l mt5 w-50-l w-80">
-        <div class="flex flex-column pa4 bt br bl light-pink bg-purple w-80-l w-100">
-          <div class="flex justify-between bb mb3 pb3">
-            <p class="b">NuConta</p>
-            <p>2017</p>
+<div id="main-carousel">
+  <section class="carousel-cell w-100 vh-section flex justify-center bg-purple overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+    <div class="flex flex-column w-100 pv0-l pv6 justify-between">
+      <div class="flex flex-row-l flex-column-reverse h-100 w-80-l w-100 justify-center">
+        <div class="flex w-50-l w-100 center">
+          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5">
+            <div class="flex flex-column pa4 bt br bl light-pink bg-purple">
+              <div class="flex justify-between bb mb3 pb3">
+                <p class="b">NuConta</p>
+                <p>2017</p>
+              </div>
+              <p class="measure-narrow lh-copy">Designing a transparent, revolutionary bank account from zero to one to serve millions of customers.</p>
+              <div class="measure-narrow mt4 pt3 flex-l dn">
+                <div class="flex flex-column mono">
+                  <h2 class="mb3 b f7">Role</h2>
+                  <p class="f7">Foundational Research</p>
+                  <p class="f7">Product Design</p>
+                  <p class="f7">Prototyping</p>
+                  <p class="f7">UX Copywriting</p>
+                </div>
+              </div>
+            </div><a class="link flex ba bt0 light-pink pa4 pv3 justify-between hover-white" href="https://www.nubank.com.br/nuconta/" target="_blank">
+              <p>READ MORE</p>
+              <p>↗            </p></a>
           </div>
-          <p class="measure-narrow lh-copy">Designing a transparent, revolutionary bank account from zero to one to serve millions of customers.</p>
-          <div class="measure-narrow mt4 pt3 flex-l dn">
-            <div class="flex flex-column mono">
-              <h2 class="mb3 b f7">Role</h2>
-              <p class="f7">Foundational Research</p>
-              <p class="f7">Product Design</p>
-              <p class="f7">Prototyping</p>
-              <p class="f7">UX Copywriting</p>
-            </div>
-          </div>
-        </div><a class="link flex ba bt0 light-pink pa4 pv3 w-80-l w-100 justify-between hover-white" href="https://www.nubank.com.br/nuconta/" target="_blank">
-          <p>READ MORE</p>
-          <p>&#x2197;&#xFE0E;</p></a>
-      </div>
-      <div class="flex center w-50-l w-80">
-        <div class="self-center w-50 big-shadow overflow-hidden br2 screen-perspective-left"><img src="./images/nuconta2.png"/></div>
-        <div class="self-center w-50 big-shadow overflow-hidden br2 screen-perspective-right"><img src="./images/nuconta.gif"/></div>
-      </div>
+        </div>
+        <div class="flex center justify-center w-50-l w-80">
+          <div class="self-center w-50 big-shadow overflow-hidden br2"><img src="./images/nuconta2.png"/></div>
+          <div class="self-center w-50 big-shadow overflow-hidden br2 negative-margin-left-2"><img src="./images/nuconta.gif"/></div>
+        </div>
+      </div><div class="flex justify-between pv4 mt4 w-80 mh0-l center" style="color: #FFB5C7">
+  <p class="carousel--previous pointer">← PREV</p>
+  <p class="carousel--next pointer">NEXT →</p>
+</div>
     </div>
-  </div>
-</section>
+  </section>
+  <section class="carousel-cell w-100 vh-section flex justify-center bg-dark-green overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+    <div class="flex flex-column w-100 pv0-l pv6 justify-between">
+      <div class="flex flex-row-l flex-column-reverse h-100 w-80-l w-100 justify-center">
+        <div class="flex w-50-l w-100 center">
+          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5">
+            <div class="flex flex-column pa4 bt br bl light-green bg-dark-green">
+              <div class="flex justify-between bb mb3 pb3">
+                <p class="b">GoldenArt</p>
+                <p>2017</p>
+              </div>
+              <p class="measure-narrow lh-copy">Bringing a 30 year family business' website up to speed with the market.</p>
+              <div class="measure-narrow mt4 pt3 flex-l dn">
+                <div class="flex flex-column mono">
+                  <h2 class="mb3 b f7">Role</h2>
+                  <p class="f7">Design</p>
+                  <p class="f7">Development</p>
+                </div>
+              </div>
+            </div><a class="link flex ba bt0 light-green pa4 pv3 justify-between hover-white" href="https://www.goldenart.com.br" target="_blank">
+              <p>SEE LIVE</p>
+              <p>↗            </p></a>
+          </div>
+        </div>
+        <div class="flex center justify-center w-50-l w-80">
+          <div class="self-center big-shadow overflow-hidden br2"><img src="./images/golden-art-1.png"/></div>
+        </div>
+      </div><div class="flex justify-between pv4 mt4 w-80 mh0-l center" style="color: #58e7c4">
+  <p class="carousel--previous pointer">← PREV</p>
+  <p class="carousel--next pointer">NEXT →</p>
+</div>
+    </div>
+  </section>
+</div>
 <div class="flex">
   <div class="w5 dib-l dn" id="sidebar-spacer"></div>
   <header class="h4 dib overflow-hidden section-title w-auto-l w-100"><a class="bn h4 db w-100 flex">
