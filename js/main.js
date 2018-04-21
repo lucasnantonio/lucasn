@@ -234,13 +234,16 @@ let revealMetadata = function(item){
 
 let articleOpacity = function() {
   articles.forEach(function(item, index) {
+
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
         itemB.classList.add("o-30");
         metadata[index].classList.add('o-0', 'dn');
       });
       item.classList.remove("o-30");
+      item.childNodes[0].classList.add("f4");
       metadata[index].classList.remove('o-0', 'dn');
+
       if (index < articles.length - 1) {
         item.classList.add('bb');
         articles[index + 1].classList.remove('bt');
@@ -249,6 +252,7 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
+        item.childNodes[0].classList.remove("f4");
         item.classList.remove('o-30');
         metadata[index].classList.add('o-0', 'dn');
       });
