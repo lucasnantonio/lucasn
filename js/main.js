@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  fadeInBody();
-  // showProfilePic(profilePic);
+  // fadeInBody();
   projectsCarousel();
   smoothScroll();
   showImages();
+  // animatePreloader();
 });
 
 let skillList = [
@@ -43,9 +43,11 @@ let carouselContainer;
 let previousButton;
 let nextButton;
 let imgContainers;
-
+let preloader;
 
 let getDivs = function() {
+  content = document.getElementById('content')
+  preloader = document.getElementById('preloader');
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
@@ -60,10 +62,25 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
-  imgContainers = document.querySelectorAll('.img-container')
+  imgContainers = document.querySelectorAll('.img-container');
+  images = document.querySelectorAll('img');
 }
 
 let i = 0;
+
+function animatePreloader(){
+  // content.style.opacity = 0;
+  setTimeout(function(){
+    anime({
+      targets: preloader,
+      translateX: 20000,
+      easing: 'easeInOutSine',
+      duration: 2000,
+    }
+    )
+  }, 500)
+}
+
 
 function isInViewport(element) {
   var rect = element.getBoundingClientRect();
@@ -114,29 +131,35 @@ let projectsCarousel = function(){
   });
 }
 
-function showImages() {
+function hideImages(){
   imgContainers.forEach(function(item){
-    item.classList.add("o-0");
+    item.classList.add("animated", 'bg-near-white', 'o-0');
+  })
+}
+
+function fadeInUpImages(){
+  imgContainers.forEach(function(item){
+    let child = item.childNodes[0];
+    child.classList.add('o-0', 'animated');
+    imagesLoaded(child, function(){
+      child.classList.add('fadeIn');
+    })
     if (isInViewport(item)){
-      // item.classList.remove('o-0');
-      imagesLoaded(item, function(){
-        item.classList.add('animated');
-        item.classList.add('fadeInUp');
-      })
+      item.classList.add('fadeInUp');
     }
   })
-  window.addEventListener("scroll", function(){
-    imgContainers.forEach(function(item){
-      if (isInViewport(item)){
-        item.classList.remove('o-0');
-        item.classList.add('animated');
-        item.classList.add('fadeInUp');
-      }
+}
+
+function showImages() {
+  hideImages();
+  fadeInUpImages();
+  imgContainers.forEach(function(item){
+    window.addEventListener("scroll", function(item){
+      fadeInUpImages();
     })
   })
 
-
-}
+  }
 
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
@@ -162,7 +185,6 @@ let setupNavigator = function() {
     item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
   })
   sectionTitleBacks.forEach(function(item, index) {
-    console.log(index + " " + item)
     previousSection = sectionTitleLinks[index - 1];
     if (index - 1 >= 0) {
       item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
