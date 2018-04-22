@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   projectsCarousel();
   smoothScroll();
   showImages();
+  articleEntranceAnimation();
   // animatePreloader();
 });
 
@@ -230,6 +231,31 @@ let navigator = function() {
 
 let revealMetadata = function(item){
   item.classList.remove('o-0', 'dn');
+}
+
+let articleEntranceAnimation = function() {
+  console.log(articles)
+  articles.forEach(function(item){
+    item.style.opacity = 0;
+    item.style.transform = "translateX(-200px)";
+  })
+
+  window.addEventListener('scroll', function (){
+    if (isInViewport(articles[0])){
+    console.log('fernanda');
+    anime(
+      {
+        targets: articles,
+        translateX: 0,
+        opacity: 1,
+        duration: function(el, i, l) {
+          return 500 + (i * 500);
+        }
+      }
+    );
+  }
+  })
+
 }
 
 let articleOpacity = function() {
