@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  fadeIn();
-  showProfilePic(profilePic);
+  // fadeInBody();
   projectsCarousel();
   smoothScroll();
+  showImages();
+  // animatePreloader();
 });
 
 let skillList = [
@@ -41,9 +42,12 @@ let articleContainer;
 let carouselContainer;
 let previousButton;
 let nextButton;
-
+let imgContainers;
+let preloader;
 
 let getDivs = function() {
+  content = document.getElementById('content')
+  preloader = document.getElementById('preloader');
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
@@ -58,9 +62,36 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
+  imgContainers = document.querySelectorAll('.img-container');
+  images = document.querySelectorAll('img');
 }
 
 let i = 0;
+
+function animatePreloader(){
+  // content.style.opacity = 0;
+  setTimeout(function(){
+    anime({
+      targets: preloader,
+      translateX: 20000,
+      easing: 'easeInOutSine',
+      duration: 2000,
+    }
+    )
+  }, 500)
+}
+
+
+function isInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var html = document.documentElement;
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    rect.right <= (window.innerWidth || html.clientWidth)
+  );
+}
 
 function skillClick() {
   skillDiv.onclick = function(){
@@ -81,7 +112,6 @@ let projectsCarousel = function(){
   prevNextButtons: false,
   pageDots: false,
   cellAlign: 'left',
-
   contain: true,
   cellSelector: ".carousel-cell"
 });
@@ -101,19 +131,35 @@ let projectsCarousel = function(){
   });
 }
 
-function showImage(img) {
-  img.classList.remove('o-0');
-  img.classList.add('js-fadeIn');
-  img.style.marginLeft = '0rem';
-  img.src = "./images/lucasneumann.png"
+function hideImages(){
+  imgContainers.forEach(function(item){
+    item.classList.add("animated", 'bg-near-white', 'o-0');
+  })
 }
 
-function showProfilePic(profilePic) {
-  profilePic.style.marginLeft = '5rem';
-  imagesLoaded(profilePic, function(){
-  showImage(profilePic);
-})
+function fadeInUpImages(){
+  imgContainers.forEach(function(item){
+    let child = item.childNodes[0];
+    child.classList.add('o-0', 'animated');
+    imagesLoaded(child, function(){
+      child.classList.add('fadeIn');
+    })
+    if (isInViewport(item)){
+      item.classList.add('fadeInUp');
+    }
+  })
 }
+
+function showImages() {
+  hideImages();
+  fadeInUpImages();
+  imgContainers.forEach(function(item){
+    window.addEventListener("scroll", function(item){
+      fadeInUpImages();
+    })
+  })
+
+  }
 
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
@@ -139,7 +185,6 @@ let setupNavigator = function() {
     item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
   })
   sectionTitleBacks.forEach(function(item, index) {
-    console.log(index + " " + item)
     previousSection = sectionTitleLinks[index - 1];
     if (index - 1 >= 0) {
       item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
@@ -189,13 +234,16 @@ let revealMetadata = function(item){
 
 let articleOpacity = function() {
   articles.forEach(function(item, index) {
+
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
         itemB.classList.add("o-30");
         metadata[index].classList.add('o-0', 'dn');
       });
       item.classList.remove("o-30");
+      item.childNodes[0].classList.add("f4");
       metadata[index].classList.remove('o-0', 'dn');
+
       if (index < articles.length - 1) {
         item.classList.add('bb');
         articles[index + 1].classList.remove('bt');
@@ -204,6 +252,7 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
+        item.childNodes[0].classList.remove("f4");
         item.classList.remove('o-30');
         metadata[index].classList.add('o-0', 'dn');
       });
@@ -215,7 +264,7 @@ let articleOpacity = function() {
   });
 }
 
-let fadeIn = function() {
+let fadeInBody = function() {
   body.classList.add('o-0');
   setTimeout(function() {
     body.classList.remove('o-0')
