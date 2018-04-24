@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // fadeInBody();
   projectsCarousel();
   smoothScroll();
-  showImages();
+  // showImages();
   articleEntranceAnimation();
   fadeInLeft();
 });
@@ -61,20 +61,11 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
-  imgContainers = document.querySelectorAll('.img-container');
+  // imgContainers = document.querySelectorAll('.img-container');
   images = document.querySelectorAll('img');
 }
 
 let i = 0;
-
-// function fadeInLeft(){
-//   let fadeInLeft = document.querySelectorAll('.js-fadein-left');
-//   setTimeout(function(){
-//     fadeInLeft.forEach(function(item){
-//       item.style.opacity = 0;
-//       item.classList.add('animated', 'fadeInLeft')
-//     })
-//   }, 2000)
 
 function fadeInLeft(){
   let sections = document.querySelectorAll('section');
@@ -102,14 +93,14 @@ function fadeInLeft(){
   window.addEventListener('scroll', function(){
     sections.forEach(function(item){
       let sectionItems = item.querySelectorAll('.js-fadein-left');
-      if (isInViewport(item)){
+      if (isInViewport(item, 200)){
             anime({
               targets: fadeInLeft,
               translateX: 0,
               opacity: 1,
               elasticity: 0,
               duration: function(el, i, l) {
-                return 1300 + (i * 1300);
+                return 600 + (i * 600);
               }
             });
         }
@@ -119,14 +110,14 @@ function fadeInLeft(){
 
 }
 
-function isInViewport(element) {
+function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || html.clientHeight) &&
-    rect.right <= (window.innerWidth || html.clientWidth)
+    rect.top >= 0 + offset
+    // rect.left >= 0 &&
+    // rect.bottom <= (window.innerHeight || html.clientHeight) &&
+    // rect.right <= (window.innerWidth || html.clientWidth)
   );
 }
 
@@ -173,30 +164,6 @@ function hideImages(){
     item.classList.add("animated", 'bg-near-white', 'o-0');
   })
 }
-
-function fadeInUpImages(){
-  imgContainers.forEach(function(item){
-    let child = item.childNodes[0];
-    child.classList.add('o-0', 'animated');
-    imagesLoaded(child, function(){
-      child.classList.add('fadeIn');
-    })
-    if (isInViewport(item)){
-      item.classList.add('fadeInUp');
-    }
-  })
-}
-
-function showImages() {
-  hideImages();
-  fadeInUpImages();
-  imgContainers.forEach(function(item){
-    window.addEventListener("scroll", function(item){
-      fadeInUpImages();
-    })
-  })
-
-  }
 
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
@@ -276,7 +243,7 @@ let articleEntranceAnimation = function() {
   })
 
   window.addEventListener('scroll', function (){
-    if (isInViewport(articles[0])){
+    if (isInViewport(articles[0], 0)){
     anime(
       {
         targets: articles,
