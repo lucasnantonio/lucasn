@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
-  setInterval(changeSkill, 12000);
+  setInterval(changeSkill, 6000);
   skillClick();
   getMonths();
   navigator();
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   smoothScroll();
   showImages();
   articleEntranceAnimation();
-  // animatePreloader();
+  fadeInLeft();
 });
 
 let skillList = [
@@ -44,11 +44,9 @@ let carouselContainer;
 let previousButton;
 let nextButton;
 let imgContainers;
-let preloader;
 
 let getDivs = function() {
   content = document.getElementById('content')
-  preloader = document.getElementById('preloader');
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
@@ -69,19 +67,33 @@ let getDivs = function() {
 
 let i = 0;
 
-function animatePreloader(){
-  // content.style.opacity = 0;
+// function fadeInLeft(){
+//   let fadeInLeft = document.querySelectorAll('.js-fadein-left');
+//   setTimeout(function(){
+//     fadeInLeft.forEach(function(item){
+//       item.style.opacity = 0;
+//       item.classList.add('animated', 'fadeInLeft')
+//     })
+//   }, 2000)
+
+function fadeInLeft(){
+  let fadeInLeft = document.querySelectorAll('.js-fadein-left');
+  fadeInLeft.forEach(function(item){
+    item.style.opacity = 0;
+    item.style.transform = "translateX(-100px)";
+  })
   setTimeout(function(){
     anime({
-      targets: preloader,
-      translateX: 20000,
-      easing: 'easeInOutSine',
-      duration: 2000,
-    }
-    )
-  }, 500)
+      targets: fadeInLeft,
+      translateX: 0,
+      opacity: 1,
+      elasticity: 0,
+      duration: function(el, i, l) {
+        return 1300 + (i * 1300);
+      }
+    });
+}, 2000);
 }
-
 
 function isInViewport(element) {
   var rect = element.getBoundingClientRect();
@@ -234,7 +246,6 @@ let revealMetadata = function(item){
 }
 
 let articleEntranceAnimation = function() {
-  console.log(articles)
   articles.forEach(function(item){
     item.style.opacity = 0;
     item.style.transform = "translateX(-200px)";
@@ -242,14 +253,14 @@ let articleEntranceAnimation = function() {
 
   window.addEventListener('scroll', function (){
     if (isInViewport(articles[0])){
-    console.log('fernanda');
     anime(
       {
         targets: articles,
         translateX: 0,
         opacity: 1,
+        elasticity: 0,
         duration: function(el, i, l) {
-          return 500 + (i * 500);
+          return 300 + (i * 300);
         }
       }
     );
@@ -267,7 +278,6 @@ let articleOpacity = function() {
         metadata[index].classList.add('o-0', 'dn');
       });
       item.classList.remove("o-30");
-      item.childNodes[0].classList.add("f4");
       metadata[index].classList.remove('o-0', 'dn');
 
       if (index < articles.length - 1) {
@@ -278,7 +288,6 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.childNodes[0].classList.remove("f4");
         item.classList.remove('o-30');
         metadata[index].classList.add('o-0', 'dn');
       });

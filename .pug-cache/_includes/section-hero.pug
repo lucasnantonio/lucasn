@@ -10,9 +10,20 @@ section.flex.vh-section-first
   | {% include spacer %}
   .flex.flex-row-l.flex-column.h-100.w-100.justify-between-l.justify-center
     .flex.w-100.justify-start-l.justify-center
-      .self-center.mw6-l.mw5.mb0-l.mb5.img-container
-        img#profilePic(src="./images/lucasneumann.png")
-    .flex.w-100.justify-start.ph5
+      .flex.flex-column.self-center.mw6-l.mw5.mb0-l.mb5
+        .js-fadein-left
+          img#profilePic(src="./images/lucasneumann.png")
+        //- .flex.self-end
+        //-   ul.list.db-l.dn.mt6
+        //-     li
+        //-       a(href="https://dribbble.com/lucasnantonio" target="_blank").black-30 — Dribbble
+        //-     li
+        //-       a(href="https://www.linkedin.com/in/lucasneumann/" target="_blank").black-30 — Linkedin
+        //-     li
+        //-       a(href="https://medium.com/@lucasnantonio" target="_blank").black-30 — Medium
+        //-     li
+        //-       a(href="mailto:lucasneumann.fau@gmail.com" target="_blank").black-30 — Email  
+    .flex.w-100.justify-start.ph5.js-fadein-left
       h2.measure-narrow.ma0-l.center.mono.self-center.lh-copy.tl-l.tc
         | Generalist product designer at 
         a.link.bn(href="http://www.nubank.com.br" target="_blank") Nubank
@@ -20,9 +31,9 @@ section.flex.vh-section-first
         span#months
         |  months I’ve been 
         span helping our teams 
-        span { 
+        span.b { 
         span.b.dib.overflow-x-hidden.pointer#skills research
-        span  }
+        span.b  }
         span  financial services 
         span.nowrap
         |  that fight complexity & empower&nbsp;people.
