@@ -77,14 +77,20 @@ let i = 0;
 //   }, 2000)
 
 function fadeInLeft(){
+  let sections = document.querySelectorAll('section');
   let fadeInLeft = document.querySelectorAll('.js-fadein-left');
-  fadeInLeft.forEach(function(item){
-    item.style.opacity = 0;
-    item.style.transform = "translateX(-100px)";
-  })
+
+  sections.forEach(function(item){
+    let sectionItems = item.querySelectorAll('.js-fadein-left');
+    sectionItems.forEach(function(item){
+      item.style.opacity = 0;
+      item.style.transform = "translateX(-100px)";
+    });
+  });
   setTimeout(function(){
+    console.log(sections[0]);
     anime({
-      targets: fadeInLeft,
+      targets: sections[0].querySelectorAll('.js-fadein-left'),
       translateX: 0,
       opacity: 1,
       elasticity: 0,
@@ -92,7 +98,25 @@ function fadeInLeft(){
         return 1300 + (i * 1300);
       }
     });
-}, 2000);
+  }, 2000);
+  window.addEventListener('scroll', function(){
+    sections.forEach(function(item){
+      let sectionItems = item.querySelectorAll('.js-fadein-left');
+      if (isInViewport(item)){
+            anime({
+              targets: fadeInLeft,
+              translateX: 0,
+              opacity: 1,
+              elasticity: 0,
+              duration: function(el, i, l) {
+                return 1300 + (i * 1300);
+              }
+            });
+        }
+      }
+    )
+  });
+
 }
 
 function isInViewport(element) {
