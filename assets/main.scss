@@ -148,6 +148,10 @@ padding-bottom:3rem;
   transition: all 1.5s;
   opacity: 1;
 }
+.js-fadein-left{
+  // opacity: 0;
+  // transform: translateX(-200px);
+}
 .negative-margin-5{
   margin-left:-5rem;
 }

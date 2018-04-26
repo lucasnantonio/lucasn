@@ -6,11 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  // fadeInBody();
   projectsCarousel();
   smoothScroll();
-  // showImages();
-  articleEntranceAnimation();
   fadeInLeft();
 });
 
@@ -61,106 +58,84 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
-  // imgContainers = document.querySelectorAll('.img-container');
   images = document.querySelectorAll('img');
 }
 
 let i = 0;
 
-function fadeInLeft(){
+function fadeInLeft() {
   let sections = document.querySelectorAll('section');
-  let fadeInLeft = document.querySelectorAll('.js-fadein-left');
+  let controller = new ScrollMagic.Controller();
 
-  sections.forEach(function(item){
-    let sectionItems = item.querySelectorAll('.js-fadein-left');
-    sectionItems.forEach(function(item){
-      item.style.opacity = 0;
-      item.style.transform = "translateX(-100px)";
-    });
-  });
-  setTimeout(function(){
-    console.log(sections[0]);
-    anime({
-      targets: sections[0].querySelectorAll('.js-fadein-left'),
-      translateX: 0,
-      opacity: 1,
-      elasticity: 0,
-      duration: function(el, i, l) {
-        return 1300 + (i * 1300);
-      }
-    });
-  }, 2000);
-  window.addEventListener('scroll', function(){
-    sections.forEach(function(item){
-      let sectionItems = item.querySelectorAll('.js-fadein-left');
-      if (isInViewport(item, 200)){
-            anime({
-              targets: fadeInLeft,
-              translateX: 0,
-              opacity: 1,
-              elasticity: 0,
-              duration: function(el, i, l) {
-                return 600 + (i * 600);
-              }
-            });
-        }
-      }
-    )
-  });
-
+  sections.forEach(function(section) {
+    let sectionItems = section.querySelectorAll('.js-fadein-left')
+    let tween = new TweenMax.staggerFromTo(sectionItems, .7, {
+        transform: "translateX(-50px)",
+        opacity: 0,
+      }, {
+        transform: "translateX(0px)",
+        opacity: 1,
+      },
+      0.2);
+    let scene = new ScrollMagic.Scene({
+        triggerElement: section,
+        offset: 0 // start scene after scrolling for 100px
+      })
+      .setTween(tween)
+      .addTo(controller);
+  })
 }
 
 function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
+
   return (
-    rect.top >= 0 + offset
-    // rect.left >= 0 &&
-    // rect.bottom <= (window.innerHeight || html.clientHeight) &&
-    // rect.right <= (window.innerWidth || html.clientWidth)
-  );
+    rect.top >= 0 + offset &&
+    rect.bottom <= (30000)
+  )
 }
 
 function skillClick() {
-  skillDiv.onclick = function(){
+  skillDiv.onclick = function() {
     changeSkill();
   }
 }
 
-let smoothScroll = function(){
-  var scroll = new SmoothScroll('a[href*="#"]',{
+let smoothScroll = function() {
+  var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
     easing: 'easeInOutQuint'
   })
 }
 
-let projectsCarousel = function(){
-  var flkty = new Flickity( carouselContainer, {
-  // options
-  prevNextButtons: false,
-  pageDots: false,
-  cellAlign: 'left',
-  contain: true,
-  cellSelector: ".carousel-cell"
-});
+let projectsCarousel = function() {
+  var flkty = new Flickity(carouselContainer, {
+    // options
+    prevNextButtons: false,
+    pageDots: false,
+    cellAlign: 'left',
+    contain: true,
+    cellSelector: ".carousel-cell"
+  });
 
   previousButton.forEach(
-    function(item){
-      item.addEventListener( 'click', function() {
-      flkty.previous(true);
+    function(item) {
+      item.addEventListener('click', function() {
+        flkty.previous(true);
+      });
     });
-  });
 
   nextButton.forEach(
-    function(item){
-      item.addEventListener( 'click', function() {
-      flkty.next(true);
+    function(item) {
+      item.addEventListener('click', function() {
+        flkty.next(true);
+      });
     });
-  });
 }
 
-function hideImages(){
-  imgContainers.forEach(function(item){
+function hideImages() {
+  imgContainers.forEach(function(item) {
     item.classList.add("animated", 'bg-near-white', 'o-0');
   })
 }
@@ -232,32 +207,8 @@ let navigator = function() {
     })
 }
 
-let revealMetadata = function(item){
+let revealMetadata = function(item) {
   item.classList.remove('o-0', 'dn');
-}
-
-let articleEntranceAnimation = function() {
-  articles.forEach(function(item){
-    item.style.opacity = 0;
-    item.style.transform = "translateX(-200px)";
-  })
-
-  window.addEventListener('scroll', function (){
-    if (isInViewport(articles[0], 0)){
-    anime(
-      {
-        targets: articles,
-        translateX: 0,
-        opacity: 1,
-        elasticity: 0,
-        duration: function(el, i, l) {
-          return 300 + (i * 300);
-        }
-      }
-    );
-  }
-  })
-
 }
 
 let articleOpacity = function() {
