@@ -26,7 +26,12 @@
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="js/smooth-scroll.js"></script>
-  <script src="js/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+
 	<script src="js/main.js"></script>
 
 
@@ -50,10 +55,12 @@
 <section class="flex vh-section-first"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
   <div class="flex flex-row-l flex-column h-100 w-100 justify-between-l justify-center">
     <div class="flex w-100 justify-start-l justify-center">
-      <div class="self-center mw6-l mw5 mb0-l mb5 img-container"><img id="profilePic" src="./images/lucasneumann.png"/></div>
+      <div class="flex flex-column self-center mw6-l mw5 mb0-l mb5">
+        <div class="js-fadein-left"><img id="profilePic" src="./images/lucasneumann.png"/></div>
+      </div>
     </div>
-    <div class="flex w-100 justify-start ph5">
-      <h2 class="measure-narrow ma0-l center mono self-center lh-copy tl-l tc">Generalist product designer at <a class="link bn" href="http://www.nubank.com.br" target="_blank">Nubank</a>, São Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span>{ </span><span class="b dib overflow-x-hidden pointer" id="skills">research</span><span> }</span><span> financial services </span><span class="nowrap"></span> that fight complexity & empower&nbsp;people.</h2>
+    <div class="flex w-100 justify-start ph5 js-fadein-left">
+      <h2 class="measure-narrow ma0-l center mono self-center lh-copy tl-l tc">Generalist product designer at <a class="link bn" href="http://www.nubank.com.br" target="_blank">Nubank</a>, São Paulo, where for the last <span id="months"></span> months I’ve been <span>helping our teams </span><span class="b">{ </span><span class="b dib overflow-x-hidden pointer" id="skills">research</span><span class="b"> }</span><span> financial services </span><span class="nowrap"></span> that fight complexity & empower&nbsp;people.</h2>
     </div>
   </div>
 </section>
@@ -64,11 +71,11 @@
       <h4 class="self-center m0-ns center black-30 pl0-l">↑</h4></a></header>
 </div>
 <div id="main-carousel">
-  <section class="carousel-cell w-100 vh-100 flex justify-center bg-purple overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+  <section class="carousel-cell w-100 vh-100-l flex justify-center bg-purple overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
     <div class="flex flex-column w-100 pv0-l pv6 justify-center">
       <div class="flex flex-row-l flex-column-reverse w-80-l w-100 justify-center">
         <div class="flex w-50-l w-100 center">
-          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5">
+          <div class="flex flex-column self-center w-auto-l w-80 mh0-l center mt0-l mt5 js-fadein-left">
             <div class="flex flex-column pa4 bt br bl light-pink bg-purple">
               <div class="flex justify-between bb mb3 pb3">
                 <p class="b">NuConta</p>
@@ -86,12 +93,12 @@
               </div>
             </div><a class="link flex ba bt0 light-pink pa4 pv3 justify-between hover-white" href="https://www.nubank.com.br/nuconta/" target="_blank">
               <p>READ MORE</p>
-              <p>↗            </p></a>
+              <p>&#x2197;&#xFE0E;</p></a>
           </div>
         </div>
         <div class="flex center justify-center w-50-l w-80">
-          <div class="self-center w-50 big-shadow overflow-hidden br2 img-container"><img src="./images/nuconta2.png"/></div>
-          <div class="self-center w-50 big-shadow overflow-hidden br2 negative-margin-left-2 img-container"><img src="./images/nuconta.gif"/></div>
+          <div class="self-center w-50 big-shadow overflow-hidden br2 js-fadein-left"><img src="./images/nuconta2.png"/></div>
+          <div class="self-center w-50 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="./images/nuconta.gif"/></div>
         </div>
       </div><div class="flex justify-between pv4 mt4 w-80 mh0-l center" style="color: #FFB5C7">
   <p class="carousel--previous pointer">← PREV</p>
@@ -99,7 +106,7 @@
 </div>
     </div>
   </section>
-  <section class="carousel-cell w-100 vh-100 flex justify-center bg-dark-green overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
+  <section class="carousel-cell w-100 vh-100-l flex justify-center bg-dark-green overflow-hidden"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
     <div class="flex flex-column w-100 pv0-l pv6 justify-center">
       <div class="flex flex-row-l flex-column-reverse w-80-l w-100 justify-center">
         <div class="flex w-50-l w-100 center">
@@ -119,7 +126,7 @@
               </div>
             </div><a class="link flex ba bt0 light-green pa4 pv3 justify-between hover-white" href="https://www.goldenart.com.br" target="_blank">
               <p>SEE LIVE</p>
-              <p>↗            </p></a>
+              <p>&#x2197;&#xFE0E;            </p></a>
           </div>
         </div>
         <div class="flex center justify-center w-50-l w-80">
@@ -140,19 +147,19 @@
 </div>    
 <section class="vh-section flex justify-center"><div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
   <div class="mono h-100 w-100-l w-80 flex flex-column pr6-l ph0 justify-center" id="articleList">
-    <div class="bt pv3"><a class="bn" href="https://nubank.design/nuconta-part-ii-685b446addc6" target="_blank">How we designed our Bank Account — NuConta Part II</a>
+    <div class="bt pv3 js-fadein-left"><a class="bn" href="https://nubank.design/nuconta-part-ii-685b446addc6" target="_blank">How we designed our Bank Account — NuConta Part II</a>
       <p class="metadata black-30 mt3 dn o-0">7 min. read &#x2197;&#xFE0E;  </p>
     </div>
-    <div class="bt pv3"><a class="bn" href="https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d" target="_blank">First steps for better UX research</a>
+    <div class="bt pv3 js-fadein-left"><a class="bn" href="https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d" target="_blank">First steps for better UX research</a>
       <p class="metadata black-30 mt3 dn o-0">8 min. read &#x2197;&#xFE0E;</p>
     </div>
-    <div class="bt pv3"><a class="bn" href="https://nubank.design/design-principles-at-nubank-d14317715bb1" target="_blank">Design Principles at Nubank</a>
+    <div class="bt pv3 js-fadein-left"><a class="bn" href="https://nubank.design/design-principles-at-nubank-d14317715bb1" target="_blank">Design Principles at Nubank</a>
       <p class="metadata black-30 mt3 dn o-0">6 min. read &#x2197;&#xFE0E; </p>
     </div>
-    <div class="bt pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc" target="_blank">What it feels like to become a designer</a>
+    <div class="bt pv3 flex flex-column overflow-hidden js-fadein-left"><a class="bn" href="https://medium.com/@lucasnantonio/to-my-fellow-designers-and-architects-97f3526c7cfc" target="_blank">What it feels like to become a designer</a>
       <p class="metadata black-30 mt3 dn o-0">3 min. read &#x2197;&#xFE0E;</p>
     </div>
-    <div class="bt bb pv3 flex flex-column overflow-hidden"><a class="bn" href="https://medium.com/@lucasnantonio/why-%EF%B8%8F-trumps-8766ddc0c0e6" target="_blank">A critique of Medium's claps</a>
+    <div class="bt bb pv3 flex flex-column overflow-hidden js-fadein-left"><a class="bn" href="https://medium.com/@lucasnantonio/why-%EF%B8%8F-trumps-8766ddc0c0e6" target="_blank">A critique of Medium's claps</a>
       <p class="metadata black-30 mt3 dn o-0">5 min. read &#x2197;&#xFE0E;</p>
     </div>
   </div>
@@ -165,11 +172,11 @@
 </div>    
 <section class="flex flex-row-l flex-column justify-center">
   <div class="w5 vh-100 dib-l dn flex-none" id="sidebar-spacer"></div>
-  <div class="flex flex-column mt7 mr5 w-20-l w-50"> 
+  <div class="flex flex-column mt7 mr5 w-third-l w-50 js-fadein-left">
   <h4 class="mb4">Contact</h4>
-  <div class="w-100 mb4 mt4 flex flex-column"><a class="pv2 bt link" href="https://dribbble.com/lucasnantonio">Dribbble &#x2197;&#xFE0E;</a><a class="pv2 bt link" href="https://www.linkedin.com/in/lucasneumann/">Linkedin &#x2197;&#xFE0E;</a><a class="pv2 bt link" href="https://twitter.com/lucasnantonio">Twitter &#x2197;&#xFE0E;</a><a class="pv2 bt link" href="https://medium.com/@lucasnantonio">Medium &#x2197;&#xFE0E;</a><a class="pv2 bt bb link" href="mailto:lucasneumann.fau@gmail.com">Email &#x2197;&#xFE0E;</a></div>
+  <div class="w-100 mb4 mt4 flex flex-column measure-narrow"><a class="flex justify-between pv2 bt link" href="https://dribbble.com/lucasnantonio"> <span>Dribbble </span><span>&#x2197;&#xFE0E;</span></a><a class="flex justify-between pv2 bt link" href="https://www.linkedin.com/in/lucasneumann/"> <span>Linkedin </span><span>&#x2197;&#xFE0E;</span></a><a class="flex justify-between pv2 bt link" href="https://twitter.com/lucasnantonio"> <span>Twitter </span><span>&#x2197;&#xFE0E;</span></a><a class="flex justify-between pv2 bt link" href="https://medium.com/@lucasnantonio"> <span>Medium </span><span>&#x2197;&#xFE0E;</span></a><a class="flex justify-between pv2 bt bb link" href="mailto:lucasneumann.fau@gmail.com"> <span>Email </span><span>&#x2197;&#xFE0E;</span></a></div>
 </div>
-  <div class="flex flex-column mt7 mr5 w-40-l w-50">
+  <div class="flex flex-column mt7 mr5 w-third-l w-50 js-fadein-left">
   <h4 class="mb4">Work</h4>
   <div class="w-100 mb5">
     <h3 class="mb3 mt4 i">Nubank<span class="ph2">•</span><em>2016–today</em></h3>
@@ -177,7 +184,7 @@
   </div>
   <div class="w-100 mb5">
     <h3 class="mb3 mt4 i">Nossas Cidades<span class="ph2">•</span><em>2015–2017</em></h3>
-    <p class="measure-narrow">I was the single product designer during the process to launch BONDE.ORG, on online platform that allows for activists to build the online presence of their causes and pressure government for change.</p>
+    <p class="measure-narrow">I was the single product designer during the process to launch BONDE.ORG, an online platform that allows for activists to build the online presence of their causes and pressure government for change.</p>
   </div>
   <div class="w-100 mb5">
     <h3 class="mb3 mt4 i">Airbus<span class="ph2">•</span><em>2014–2017</em></h3>
@@ -200,7 +207,7 @@
     <p class="measure-narrow">I worked with big brands such as Nestle, Garoto, Boticário and BRfoods on branding and packaging design.</p>
   </div>
 </div>
-  <div class="flex flex-column mt7 mr5 w-40-l w-50">
+  <div class="flex flex-column mt7 mr5 w-third-l w-50 js-fadein-left">
   <h4 class="uppercase mb4">Press</h4>
   <div class="w-100 mb5">
     <h3 class="mb3 mt4 i">Fast Company<span class="ph2">•</span><em>2016</em></h3>

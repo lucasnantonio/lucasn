@@ -1,17 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
-  setInterval(changeSkill, 12000);
+  setInterval(changeSkill, 6000);
   skillClick();
   getMonths();
   navigator();
   articleOpacity();
   setupNavigator();
-  // fadeInBody();
   projectsCarousel();
   smoothScroll();
-  showImages();
-  articleEntranceAnimation();
-  // animatePreloader();
+  fadeInLeft();
 });
 
 let skillList = [
@@ -44,11 +41,9 @@ let carouselContainer;
 let previousButton;
 let nextButton;
 let imgContainers;
-let preloader;
 
 let getDivs = function() {
   content = document.getElementById('content')
-  preloader = document.getElementById('preloader');
   skillDiv = document.getElementById('skills');
   hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
@@ -63,104 +58,87 @@ let getDivs = function() {
   carouselContainer = document.querySelector('#main-carousel');
   previousButton = document.querySelectorAll('.carousel--previous');
   nextButton = document.querySelectorAll('.carousel--next');
-  imgContainers = document.querySelectorAll('.img-container');
   images = document.querySelectorAll('img');
 }
 
 let i = 0;
 
-function animatePreloader(){
-  // content.style.opacity = 0;
-  setTimeout(function(){
-    anime({
-      targets: preloader,
-      translateX: 20000,
-      easing: 'easeInOutSine',
-      duration: 2000,
-    }
-    )
-  }, 500)
+function fadeInLeft() {
+  let sections = document.querySelectorAll('section');
+  let controller = new ScrollMagic.Controller();
+
+  sections.forEach(function(section) {
+    let sectionItems = section.querySelectorAll('.js-fadein-left')
+    let tween = new TweenMax.staggerFromTo(sectionItems, .7, {
+        transform: "translateX(-50px)",
+        opacity: 0,
+      }, {
+        transform: "translateX(0px)",
+        opacity: 1,
+      },
+      0.2);
+    let scene = new ScrollMagic.Scene({
+        triggerElement: section,
+        offset: 0 // start scene after scrolling for 100px
+      })
+      .setTween(tween)
+      .addTo(controller);
+  })
 }
 
-
-function isInViewport(element) {
+function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
+
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || html.clientHeight) &&
-    rect.right <= (window.innerWidth || html.clientWidth)
-  );
+    rect.top >= 0 + offset &&
+    rect.bottom <= (30000)
+  )
 }
 
 function skillClick() {
-  skillDiv.onclick = function(){
+  skillDiv.onclick = function() {
     changeSkill();
   }
 }
 
-let smoothScroll = function(){
-  var scroll = new SmoothScroll('a[href*="#"]',{
+let smoothScroll = function() {
+  var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
     easing: 'easeInOutQuint'
   })
 }
 
-let projectsCarousel = function(){
-  var flkty = new Flickity( carouselContainer, {
-  // options
-  prevNextButtons: false,
-  pageDots: false,
-  cellAlign: 'left',
-  contain: true,
-  cellSelector: ".carousel-cell"
-});
+let projectsCarousel = function() {
+  var flkty = new Flickity(carouselContainer, {
+    // options
+    prevNextButtons: false,
+    pageDots: false,
+    cellAlign: 'left',
+    contain: true,
+    cellSelector: ".carousel-cell"
+  });
 
   previousButton.forEach(
-    function(item){
-      item.addEventListener( 'click', function() {
-      flkty.previous(true);
+    function(item) {
+      item.addEventListener('click', function() {
+        flkty.previous(true);
+      });
     });
-  });
 
   nextButton.forEach(
-    function(item){
-      item.addEventListener( 'click', function() {
-      flkty.next(true);
+    function(item) {
+      item.addEventListener('click', function() {
+        flkty.next(true);
+      });
     });
-  });
 }
 
-function hideImages(){
-  imgContainers.forEach(function(item){
+function hideImages() {
+  imgContainers.forEach(function(item) {
     item.classList.add("animated", 'bg-near-white', 'o-0');
   })
 }
-
-function fadeInUpImages(){
-  imgContainers.forEach(function(item){
-    let child = item.childNodes[0];
-    child.classList.add('o-0', 'animated');
-    imagesLoaded(child, function(){
-      child.classList.add('fadeIn');
-    })
-    if (isInViewport(item)){
-      item.classList.add('fadeInUp');
-    }
-  })
-}
-
-function showImages() {
-  hideImages();
-  fadeInUpImages();
-  imgContainers.forEach(function(item){
-    window.addEventListener("scroll", function(item){
-      fadeInUpImages();
-    })
-  })
-
-  }
 
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
@@ -229,33 +207,8 @@ let navigator = function() {
     })
 }
 
-let revealMetadata = function(item){
+let revealMetadata = function(item) {
   item.classList.remove('o-0', 'dn');
-}
-
-let articleEntranceAnimation = function() {
-  console.log(articles)
-  articles.forEach(function(item){
-    item.style.opacity = 0;
-    item.style.transform = "translateX(-200px)";
-  })
-
-  window.addEventListener('scroll', function (){
-    if (isInViewport(articles[0])){
-    console.log('fernanda');
-    anime(
-      {
-        targets: articles,
-        translateX: 0,
-        opacity: 1,
-        duration: function(el, i, l) {
-          return 500 + (i * 500);
-        }
-      }
-    );
-  }
-  })
-
 }
 
 let articleOpacity = function() {
@@ -267,7 +220,6 @@ let articleOpacity = function() {
         metadata[index].classList.add('o-0', 'dn');
       });
       item.classList.remove("o-30");
-      item.childNodes[0].classList.add("f4");
       metadata[index].classList.remove('o-0', 'dn');
 
       if (index < articles.length - 1) {
@@ -278,7 +230,6 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.childNodes[0].classList.remove("f4");
         item.classList.remove('o-30');
         metadata[index].classList.add('o-0', 'dn');
       });
