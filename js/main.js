@@ -140,30 +140,6 @@ function hideImages() {
   })
 }
 
-function fadeInUpImages(){
-  imgContainers.forEach(function(item){
-    let child = item.childNodes[0];
-    child.classList.add('o-0', 'animated');
-    imagesLoaded(child, function(){
-      child.classList.add('fadeIn');
-    })
-    if (isInViewport(item)){
-      item.classList.add('fadeInUp');
-    }
-  })
-}
-
-function showImages() {
-  hideImages();
-  fadeInUpImages();
-  imgContainers.forEach(function(item){
-    window.addEventListener("scroll", function(item){
-      fadeInUpImages();
-    })
-  })
-
-  }
-
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
@@ -244,7 +220,6 @@ let articleOpacity = function() {
         metadata[index].classList.add('o-0', 'dn');
       });
       item.classList.remove("o-30");
-      item.childNodes[0].classList.add("f4");
       metadata[index].classList.remove('o-0', 'dn');
 
       if (index < articles.length - 1) {
@@ -255,7 +230,6 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.childNodes[0].classList.remove("f4");
         item.classList.remove('o-30');
         metadata[index].classList.add('o-0', 'dn');
       });
