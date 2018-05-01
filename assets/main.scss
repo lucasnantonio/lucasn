@@ -16,9 +16,9 @@ $base-line-height: 1.6;
 
 $spacing-unit:     0px;
 
-$text-color:       #444;
+$text-color:       #404757;
 $background-color: #FFF;
-$brand-color:      #222;
+$brand-color:      #404757x;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -162,22 +162,6 @@ padding-bottom:3rem;
 
 
 // CUSTOM tachyons
-
-.bg-dark-green{
-  background-color: #196a60;
-}
-.bg-purple{
-  background-color: #8e17f9;
-}
-.light-pink{
-  color: #FFB5C7;
-}
-.bg-pink{
-  background-color: #f88bd4;
-}
-.light-green{
-  color: #58e7c4;
-}
 
 .lh-copy{
   line-height: 1.8em;

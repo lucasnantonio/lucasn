@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   navigator();
   articleOpacity();
-  setupNavigator();
+  // setupNavigator();
   smoothScroll();
   fadeInLeft();
 });
