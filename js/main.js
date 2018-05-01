@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navigator();
   articleOpacity();
   setupNavigator();
-  projectsCarousel();
   smoothScroll();
   fadeInLeft();
 });
@@ -35,7 +34,6 @@ let sectionTitles;
 let articles;
 let articleLinks;
 let articleContainer;
-let carouselContainer;
 let previousButton;
 let nextButton;
 let imgContainers;
@@ -52,9 +50,6 @@ let getDivs = function() {
   titleLucas = document.getElementById('title-lucas');
   metadata = document.querySelectorAll('.metadata');
   body = document.querySelector('body');
-  carouselContainer = document.querySelector('#main-carousel');
-  previousButton = document.querySelectorAll('.carousel--previous');
-  nextButton = document.querySelectorAll('.carousel--next');
   images = document.querySelectorAll('img');
 }
 
@@ -104,31 +99,6 @@ let smoothScroll = function() {
     speed: 1000,
     easing: 'easeInOutQuint'
   })
-}
-
-let projectsCarousel = function() {
-  var flkty = new Flickity(carouselContainer, {
-    // options
-    prevNextButtons: false,
-    pageDots: false,
-    cellAlign: 'left',
-    contain: true,
-    cellSelector: ".carousel-cell"
-  });
-
-  previousButton.forEach(
-    function(item) {
-      item.addEventListener('click', function() {
-        flkty.previous(true);
-      });
-    });
-
-  nextButton.forEach(
-    function(item) {
-      item.addEventListener('click', function() {
-        flkty.next(true);
-      });
-    });
 }
 
 function changeSkill() {
