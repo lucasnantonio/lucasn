@@ -1,33 +1,62 @@
-//- NUCONTA
-section.w-100.flex.justify-center.overflow-hidden(style="background-color:#7a71ef; color: #fff")
-  .flex.flex-column.w-100.pv0-l.pv6.justify-center
-    .flex.flex-row-l.flex-column-reverse.w-80-l.w-100.justify-center
+.w-80.center.br2.overflow-hidden
+  //- NUCONTA
+  section.w-100.flex.justify-center.center.overflow-hidden.pa6(style="background-color:#431A6B; color: #fff")
+    .flex.flex-row-l.flex-column-reverse.justify-center
       .flex.w-50-l.w-100.center
         .flex.flex-column.self-center.w-auto-l.w-80.mh0-l.center.mt0-l.mt5.js-fadein-left
-          .flex.flex-column.pa4
-            .flex.justify-between.mb4.pb3
-              p.b NuConta
-              p 2017
-            p.measure-narrow.lh-copy
-              | Designing a transparent, revolutionary bank account from zero to one to serve millions of customers.
+          .flex.flex-column.mr5
+            .flex.justify-between.mb5.pb3.b.mono.f5
+              p NuConta — 2017
+              //- p 2017
+            p.measure-narrow.lh-copy.mb6
+              | A transparent, revolutionary bank account designed from zero to one to serve millions of customers.
+            a.link.mb4.mono.f5(href="http://nubank.com.br/nuconta" target="_blank")  Read More &#x2197;&#xFE0E;
+            .mono.f5.o-50 [ Case study coming soon ]
       .flex.center.justify-center.w-50-l.w-80
         .self-center.w-50.big-shadow.overflow-hidden.br2.js-fadein-left
           img(src="./images/nuconta2.png")    
         .self-center.w-50.big-shadow.overflow-hidden.br2.negative-margin-left-2.js-fadein-left
           img(src="./images/nuconta.gif")
 
-//- GOLDEN-ART
-section.w-50-l.w-100.flex.justify-center.overflow-hidden(style="background-color:#ef4f51; color: #EAC1B2")
-  .flex.flex-column
-    .flex.justify-between
-      p.b GoldenArt
-      p 2017
-    p.measure-narrow.lh-copy
-      | Bringing a 30 year family business' website up to speed with the market.
-    .flex.center.justify-center.w-50-l.w-80
-      img(src="./images/golden-art-1.png")
+  .flex
+    //- GOLDEN-ART
+    section.w-50-l.w-100.flex.justify-center.overflow-hidden.pa6(style="background-color:#ef4f51; color: #fff")
+      .flex.flex-column-l.flex-column-reverse
+        .w-50-l.w-100.mb5
+          .flex.justify-between.mono.f5.js-fadein-left
+            p.b GoldenArt
+            p 2017
+          p.measure-narrow.lh-copy.f5.js-fadein-left
+            | Renovating a 30 year family business' website.
+        .flex.center.justify-center
+          .self-center.big-shadow.overflow-hidden.br2.js-fadein-left
+            img(src="./images/golden-art-1.png")
 
 
+    //- KANO
+    section.w-50-l.w-100.flex.justify-center.overflow-hidden.pa6(style="background-color:#F3F5F7; color: #988D8A")
+      .flex.flex-column-l.flex-column-reverse
+        .w-50-l.w-100.mb5
+          .flex.justify-between.mono.f5.js-fadein-left
+            p.b Kano Computing
+            p 2014
+          p.measure-narrow.lh-copy.f5.js-fadein-left
+            | A computer kit that teaches kids programming and creative skills.
+        .flex.center.justify-center
+          .self-center.big-shadow.overflow-hidden.br2.js-fadein-left
+            img(src="./images/golden-art-1.png")
 
-
-   
+  //- DESIGN PROCESSS
+  section.w-100.center.br3.pa6.flex.overflow-hidden(style="background-color:#404757; color: #fff")
+    .flex.flex-column-l.flex-column-reverse.jusfity-center.center
+      .w-50-l.w-100.mb5
+        .flex.justify-between.mono.f5.center
+          p.b Design Process
+          p 2018
+        p.measure-narrow.lh-copy.f5
+          | I’m creating a living catalog of design process advice.
+      .flex.center.justify-center
+        .self-center.big-shadow.overflow-hidden.br2.js-fadein-left
+          img(src="./images/golden-art-1.png")
+       
+  | {% include section-dribbble %}

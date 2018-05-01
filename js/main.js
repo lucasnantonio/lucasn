@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 let skillList = [
-  'research',
-  'explore',
   'design',
   'validate',
+  'explore',
+  'research',
   'define',
   'prototype',
   'test',
