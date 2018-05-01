@@ -81,7 +81,7 @@ function animateProjectsUp() {
   setTimeout(function() {
     TweenMax.to("#hero", .5, {
       ease: Back.easeOut.config(1),
-      height: '95vh'
+      height: '90vh'
     })
   }, 3500)
 }
@@ -123,14 +123,15 @@ let revealMetadata = function(item) {
 }
 
 let articleOpacity = function() {
+  console.log(articles);
   articles.forEach(function(item, index) {
-
+    console.log(item)
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
-        itemB.classList.add("o-30");
+        itemB.style.opacity="0.3";
         metadata[index].classList.add('o-0', 'dn');
       });
-      item.classList.remove("o-30");
+      item.style.opacity="1";
       metadata[index].classList.remove('o-0', 'dn');
 
       if (index < articles.length - 1) {
@@ -141,7 +142,7 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.classList.remove('o-30');
+        item.style.opacity="1";
         metadata[index].classList.add('o-0', 'dn');
       });
       if (index < articles.length - 1) {
