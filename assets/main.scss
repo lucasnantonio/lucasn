@@ -59,6 +59,15 @@ a{
   color: inherit;
 }
 
+.hover-left{
+  // margin-left:0;
+  transition: margin-left .2s;
+}
+.hover-left:hover{
+  margin-left: .5rem;
+  transition: margin-left .2s;
+}
+
 .b0{
 	bottom: 0;
 }
