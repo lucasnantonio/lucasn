@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   smoothScroll();
   fadeInLeft();
   animateProjectsUp();
+  rotateNubankDesign();
 });
 
 let skillList = [
@@ -53,6 +54,15 @@ let getDivs = function() {
 }
 
 let i = 0;
+
+function rotateNubankDesign() {
+  TweenMax.to("#nubank-design-team", 15, {
+    rotation:360,
+    repeat: -1,
+    transformOrigin:"50% 50%",
+    ease: Linear.easeNone
+  })
+}
 
 function fadeInLeft() {
   let sections = document.querySelectorAll('section');
