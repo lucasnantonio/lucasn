@@ -134,12 +134,6 @@ let projectsCarousel = function() {
     });
 }
 
-function hideImages() {
-  imgContainers.forEach(function(item) {
-    item.classList.add("animated", 'bg-near-white', 'o-0');
-  })
-}
-
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
