@@ -1,8 +1,6 @@
 #content
   | {% include section-hero.pug %}
-  | {% include section-work.pug %}
-  | {% include section-writing.pug %}
-  //- | {% include section-dribbble %}  
-  .dn.db-l
-    //- | {% include section-about.pug %} 
-    | {% include section-about-links %}
+  .flex-l.flex-column.dn
+    | {% include section-work.pug %}
+    | {% include section-writing.pug %} 
+  | {% include section-about-links %}
