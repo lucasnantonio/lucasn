@@ -3,13 +3,14 @@
 
 
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700|IBM+Plex+Serif:300,400,700');
 
 
-$base-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
 $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
+$serif-font-family: "IBM Plex Serif", Georgia, serif;
+$base-font-family: "IBM Plex Serif", Georgia, serif;
 
-$base-font-size:   15px;
+$base-font-size:   24px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -18,84 +19,44 @@ $spacing-unit:     0px;
 
 $text-color:       #404757;
 $background-color: #FFF;
-$brand-color:      #404757x;
+$brand-color:      #404757;
+$grey-color: #333;
+$grey-color-light: #ccc;
+$grey-color-dark: #222;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  #222;
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-// Import partials from the `minima` theme.
-@import "minima";
-
-html,
-html *{
-  font-size: $base-font-size;
+h1, h2, h3, h4, h5, h6{
+  font-weight: 400;
 }
-
-
 
 body{
-  font-family: $base-font-family;
+  font-family: $serif-font-family;
   font-size: $base-font-size;
+  color: $text-color;
 }
 
-// .mono{
-//   font-family: $base-font-family;
-//   // font-family: $base-font-family;
-// }
-
-// .sans{
-//   font-family: Untitled-Sans;
-// }
-//
-// .sans-medium{
-//   font-family: Untitled-Sans-Medium;
-// }
-//
-// .sans-bold{
-//   font-family: Untitled-Sans-Bold;
-// }
-//
-// .serif{
-//   font-family: Untitled-Serif
-// }
-
-
-a,
-#articleList div{
-  transition: all .2s;
+.mono{
+  font-family: $mono-font-family;
+  font-weight: 200;
 }
+
+.serif{
+  font-family: $serif-font-family
+}
+
 #skills{
   max-width: 17rem;
   transition: 1s;
-  // height:1em;
   vertical-align: bottom;
   border-bottom: .15em dotted white;
   line-height: 1.35em;
-  // font-style: italic;
 }
 
 #skills:hover{
   border-bottom: .15em dotted $text-color;
 }
 
-body{
-  transition: opacity 3s;
-}
-
 a{
   color: $text-color;
-}
-
-a:hover{
-// padding-bottom: .5rem;
 }
 
 .b0{
@@ -104,21 +65,6 @@ a:hover{
 
 .mw0{
   max-width: 1px !important;
-}
-
-.mono{
-  font-family: $mono-font-family;
-}
-
-// .vh-section{
-//   height: calc(100vh - 12rem);
-// }
-
-
-
-.perspective{
-  transform: rotate(16deg) skew(-4.5deg, -16.5deg);
-  transition: all .5s
 }
 
 .big-shadow{
@@ -131,34 +77,12 @@ padding-top:3rem;
 padding-bottom:3rem;
 }
 
-#menu-container{
-  transition: all .3s;
-  & ul li a:hover{
-    color: $text-color;
-  }
-}
-
-.js-hidden-left{
-  margin-left:-100vw;
-}
-.js-animate-header{
-  margin-top:-6rem;
-}
-.js-fadeIn{
-  transition: all 1.5s;
-  opacity: 1;
-}
-.js-fadein-left{
-  // opacity: 0;
-  // transform: translateX(-200px);
-}
 .negative-margin-5{
   margin-left:-5rem;
 }
 .negative-margin-left-2{
   margin-left:-2rem;
 }
-
 
 
 // CUSTOM tachyons
