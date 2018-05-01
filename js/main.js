@@ -83,7 +83,7 @@ function animateProjectsUp() {
       ease: Back.easeOut.config(1),
       height: '95vh'
     })
-  }, 5000)
+  }, 3500)
 }
 
 function isInViewport(element, offset) {
