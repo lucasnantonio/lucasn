@@ -2,11 +2,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 6000);
   skillClick();
-  navigator();
   articleOpacity();
-  // setupNavigator();
   smoothScroll();
   fadeInLeft();
+  animateProjectsUp();
 });
 
 let skillList = [
@@ -78,6 +77,15 @@ function fadeInLeft() {
   })
 }
 
+function animateProjectsUp() {
+  setTimeout(function() {
+    TweenMax.to("#hero", .5, {
+      ease: Back.easeOut.config(1),
+      height: '95vh'
+    })
+  }, 5000)
+}
+
 function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
@@ -108,55 +116,6 @@ function changeSkill() {
     skillDiv.classList.toggle('mw0')
   }, 1000);
   i = (i + 1) % skillList.length;
-}
-
-let setupNavigator = function() {
-  sectionTitleLinks.forEach(function(item) {
-    item.parentElement.setAttribute('href', "#section-" + item.innerHTML.toLowerCase())
-    item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
-  })
-  sectionTitleBacks.forEach(function(item, index) {
-    previousSection = sectionTitleLinks[index - 1];
-    if (index - 1 >= 0) {
-      item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
-    } else {
-      item.parentElement.setAttribute('href', "")
-    }
-  })
-}
-
-let navigator = function() {
-  sectionTitles.forEach(
-    function(item, index) {
-      // item.classList.add('o-30')
-      item.onmouseover = function() {
-        item.classList.remove('o-30')
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200 && index != 0) {
-          let backButton = item.querySelectorAll('a:first-child');
-          backButton[0].classList.add('js-animate-header');
-        }
-      }
-      item.onmouseleave = function() {
-        // item.classList.add('o-30')
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200) {
-          let backButton = item.querySelectorAll('a:first-child');
-          backButton[0].classList.remove('js-animate-header');
-        }
-      }
-      item.onclick = function() {
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200) {
-          setTimeout(function() {
-            let backButton = item.querySelectorAll('a:first-child');
-            // item.classList.add('o-30')
-            backButton[0].classList.remove('js-animate-header');
-          }, 300);
-
-        }
-      }
-    })
 }
 
 let revealMetadata = function(item) {
@@ -191,11 +150,4 @@ let articleOpacity = function() {
       }
     }
   });
-}
-
-let fadeInBody = function() {
-  body.classList.add('o-0');
-  setTimeout(function() {
-    body.classList.remove('o-0')
-  }, 100);
 }
