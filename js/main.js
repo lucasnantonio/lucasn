@@ -2,19 +2,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 6000);
   skillClick();
-  navigator();
   articleOpacity();
-  setupNavigator();
-  projectsCarousel();
   smoothScroll();
   fadeInLeft();
+  animateProjectsUp();
+  rotateNubankDesign();
 });
 
 let skillList = [
-  'research',
-  'explore',
   'design',
   'validate',
+  'explore',
+  'research',
   'define',
   'prototype',
   'test',
@@ -35,7 +34,6 @@ let sectionTitles;
 let articles;
 let articleLinks;
 let articleContainer;
-let carouselContainer;
 let previousButton;
 let nextButton;
 let imgContainers;
@@ -52,13 +50,19 @@ let getDivs = function() {
   titleLucas = document.getElementById('title-lucas');
   metadata = document.querySelectorAll('.metadata');
   body = document.querySelector('body');
-  carouselContainer = document.querySelector('#main-carousel');
-  previousButton = document.querySelectorAll('.carousel--previous');
-  nextButton = document.querySelectorAll('.carousel--next');
   images = document.querySelectorAll('img');
 }
 
 let i = 0;
+
+function rotateNubankDesign() {
+  TweenMax.to("#nubank-design-team", 15, {
+    rotation:360,
+    repeat: -1,
+    transformOrigin:"50% 50%",
+    ease: Linear.easeNone
+  })
+}
 
 function fadeInLeft() {
   let sections = document.querySelectorAll('section');
@@ -81,6 +85,15 @@ function fadeInLeft() {
       .setTween(tween)
       .addTo(controller);
   })
+}
+
+function animateProjectsUp() {
+  setTimeout(function() {
+    TweenMax.to("#hero", .5, {
+      ease: Back.easeOut.config(1),
+      height: '90vh'
+    })
+  }, 3500)
 }
 
 function isInViewport(element, offset) {
@@ -106,31 +119,6 @@ let smoothScroll = function() {
   })
 }
 
-let projectsCarousel = function() {
-  var flkty = new Flickity(carouselContainer, {
-    // options
-    prevNextButtons: false,
-    pageDots: false,
-    cellAlign: 'left',
-    contain: true,
-    cellSelector: ".carousel-cell"
-  });
-
-  previousButton.forEach(
-    function(item) {
-      item.addEventListener('click', function() {
-        flkty.previous(true);
-      });
-    });
-
-  nextButton.forEach(
-    function(item) {
-      item.addEventListener('click', function() {
-        flkty.next(true);
-      });
-    });
-}
-
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
@@ -140,68 +128,20 @@ function changeSkill() {
   i = (i + 1) % skillList.length;
 }
 
-let setupNavigator = function() {
-  sectionTitleLinks.forEach(function(item) {
-    item.parentElement.setAttribute('href', "#section-" + item.innerHTML.toLowerCase())
-    item.parentElement.parentElement.id = "section-" + item.innerHTML.toLowerCase()
-  })
-  sectionTitleBacks.forEach(function(item, index) {
-    previousSection = sectionTitleLinks[index - 1];
-    if (index - 1 >= 0) {
-      item.parentElement.setAttribute('href', "#section-" + sectionTitleLinks[index - 1].innerHTML.toLowerCase())
-    } else {
-      item.parentElement.setAttribute('href', "")
-    }
-  })
-}
-
-let navigator = function() {
-  sectionTitles.forEach(
-    function(item, index) {
-      // item.classList.add('o-30')
-      item.onmouseover = function() {
-        item.classList.remove('o-30')
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200 && index != 0) {
-          let backButton = item.querySelectorAll('a:first-child');
-          backButton[0].classList.add('js-animate-header');
-        }
-      }
-      item.onmouseleave = function() {
-        // item.classList.add('o-30')
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200) {
-          let backButton = item.querySelectorAll('a:first-child');
-          backButton[0].classList.remove('js-animate-header');
-        }
-      }
-      item.onclick = function() {
-        let y = item.getBoundingClientRect().top;
-        if (y >= -100 && y <= 200) {
-          setTimeout(function() {
-            let backButton = item.querySelectorAll('a:first-child');
-            // item.classList.add('o-30')
-            backButton[0].classList.remove('js-animate-header');
-          }, 300);
-
-        }
-      }
-    })
-}
-
 let revealMetadata = function(item) {
   item.classList.remove('o-0', 'dn');
 }
 
 let articleOpacity = function() {
+  console.log(articles);
   articles.forEach(function(item, index) {
-
+    console.log(item)
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
-        itemB.classList.add("o-30");
+        itemB.style.opacity="0.3";
         metadata[index].classList.add('o-0', 'dn');
       });
-      item.classList.remove("o-30");
+      item.style.opacity="1";
       metadata[index].classList.remove('o-0', 'dn');
 
       if (index < articles.length - 1) {
@@ -212,7 +152,7 @@ let articleOpacity = function() {
 
     item.onmouseleave = function() {
       articles.forEach(function(item) {
-        item.classList.remove('o-30');
+        item.style.opacity="1";
         metadata[index].classList.add('o-0', 'dn');
       });
       if (index < articles.length - 1) {
@@ -221,11 +161,4 @@ let articleOpacity = function() {
       }
     }
   });
-}
-
-let fadeInBody = function() {
-  body.classList.add('o-0');
-  setTimeout(function() {
-    body.classList.remove('o-0')
-  }, 100);
 }
