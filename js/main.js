@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 6000);
   skillClick();
-  getMonths();
   navigator();
   articleOpacity();
   setupNavigator();
@@ -30,7 +29,6 @@ let skillList = [
 ]
 
 let skillDiv;
-let hiredMonths;
 let body;
 let sections;
 let sectionTitles;
@@ -45,7 +43,6 @@ let imgContainers;
 let getDivs = function() {
   content = document.getElementById('content')
   skillDiv = document.getElementById('skills');
-  hiredMonths = document.getElementById('months');
   profilePic = document.getElementById('profilePic');
   sectionTitles = document.querySelectorAll('.section-title');
   sectionTitleLinks = document.querySelectorAll('.section-title a h3');
@@ -134,12 +131,6 @@ let projectsCarousel = function() {
     });
 }
 
-function hideImages() {
-  imgContainers.forEach(function(item) {
-    item.classList.add("animated", 'bg-near-white', 'o-0');
-  })
-}
-
 function changeSkill() {
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
@@ -147,15 +138,6 @@ function changeSkill() {
     skillDiv.classList.toggle('mw0')
   }, 1000);
   i = (i + 1) % skillList.length;
-}
-
-let getMonths = function() {
-  let today = new Date();
-  let hiredDate = new Date("April 08, 2016 01:15:00");
-  let months = (today.getFullYear() - hiredDate.getFullYear()) * 12
-  months -= hiredDate.getMonth() + 1;
-  months += today.getMonth() + 1;
-  hiredMonths.innerHTML = (months <= 0 ? 0 : months);
 }
 
 let setupNavigator = function() {
