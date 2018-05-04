@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   articleOpacity();
   smoothScroll();
   fadeInLeft();
-  animateProjectsUp();
+  // animateProjectsUp();
   rotateNubankDesign();
 });
 
@@ -22,8 +22,6 @@ let skillList = [
   'write',
   'whiteboard',
   'sketch',
-  'inform',
-  'understand',
   'visualise',
 ]
 
@@ -53,7 +51,7 @@ let getDivs = function() {
   images = document.querySelectorAll('img');
 }
 
-let i = 0;
+
 
 function rotateNubankDesign() {
   TweenMax.to("#nubank-design-team", 15, {
@@ -120,6 +118,7 @@ let smoothScroll = function() {
 }
 
 function changeSkill() {
+  let i = 0;
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
     skillDiv.innerHTML = skillList[i];
