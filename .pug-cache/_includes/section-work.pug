@@ -2,14 +2,12 @@
   //- NUCONTA
   section.w-100.flex.justify-center.center.overflow-hidden.ph5.pv6(style="background-color:#431A6B;")
     .flex.flex-row-l.flex-column-reverse.justify-center
-      .flex.w-50-l.w-100.center
-        .flex.flex-column.self-center.w-auto-l.w-100.mh0-l.center.mt0-l.mt5.js-fadein-left
-          .flex.flex-column
-            span.tl-l.white-90.f2 Nubank Account
-            span.js-fadein-left.f2.white-30 A bank account to empower.
-            .mono.f6.o-50.bg-white-10.pv2.ph3.mt4.self-start-l.mb6-l.js-fadein-left.di.white-30 Case study coming soon  
-            a.link.mono.f3.tl-l.tc.hover-left.white(href="http://nubank.com.br/nuconta" target="_blank")  Read More &#2192;&#xFE0E;
-
+      .flex.flex-column.w-50-l.w-100.justify-between
+        .flex.flex-column
+          span.tl-l.white-90.f2 Nubank Account
+          span.js-fadein-left.f2.white-30.measure-narrow A bank account to empower.
+          .mono.f6.o-50.bg-white-10.pv2.ph3.mt4.self-start-l.mb6-l.js-fadein-left.di.white-30 Case study coming soon  
+        a.link.mono.f3.tl-l.tc.hover-left.white(href= "{ include.link }" target="_blank")  Read More &#x2192;&#xFE0E;
       .flex.center.justify-center.w-50-l.w-80
         .self-center.w-50.big-shadow.overflow-hidden.br2.js-fadein-left
           img(src="./images/nuconta2.png")    
@@ -17,7 +15,6 @@
           img(src="./images/nuconta.gif")
 
   .flex.flex-row-l.flex-column
-    
     //- GOLDEN-ART
     section.w-50-l.w-100.flex.justify-center.overflow-hidden.ph5.pv6(style="background-color:#ef4f51; color: #FBBEBE")
       .flex.flex-column-l.flex-column-reverse
