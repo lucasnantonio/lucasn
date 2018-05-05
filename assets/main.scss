@@ -78,7 +78,12 @@ body{
 a{
   color: inherit;
 }
-
+a.link{
+  // line-height: 1rem;
+}
+a.link:hover{
+  text-decoration: underline;
+}
 .hover-left{
   // margin-left:0;
   transition: margin-left .2s;
