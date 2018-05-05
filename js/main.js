@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   articleOpacity();
   smoothScroll();
   fadeInLeft();
-  animateProjectsUp();
+  // animateProjectsUp();
   rotateNubankDesign();
 });
 
@@ -22,8 +22,6 @@ let skillList = [
   'write',
   'whiteboard',
   'sketch',
-  'inform',
-  'understand',
   'visualise',
 ]
 
@@ -53,7 +51,7 @@ let getDivs = function() {
   images = document.querySelectorAll('img');
 }
 
-let i = 0;
+
 
 function rotateNubankDesign() {
   TweenMax.to("#nubank-design-team", 15, {
@@ -118,14 +116,15 @@ let smoothScroll = function() {
     easing: 'easeInOutQuint'
   })
 }
-
+let skillCount = 0;
 function changeSkill() {
+
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
-    skillDiv.innerHTML = skillList[i];
+    skillDiv.innerHTML = skillList[skillCount];
     skillDiv.classList.toggle('mw0')
   }, 1000);
-  i = (i + 1) % skillList.length;
+  skillCount = (skillCount + 1) % skillList.length;
 }
 
 let revealMetadata = function(item) {
@@ -133,9 +132,7 @@ let revealMetadata = function(item) {
 }
 
 let articleOpacity = function() {
-  console.log(articles);
   articles.forEach(function(item, index) {
-    console.log(item)
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
         itemB.style.opacity="0.3";
