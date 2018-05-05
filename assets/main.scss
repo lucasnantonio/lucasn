@@ -26,7 +26,7 @@
 $base-font-family: 'Neue Plak Text Regular', Georgia, serif;
 $bold-font-family: 'Neue Plak Text Semi-Bold', Georgia, serif;
 
-$base-font-size:   18px;
+$base-font-size:   14px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.6;
@@ -39,6 +39,10 @@ $brand-color:      #404757;
 $grey-color: #333;
 $grey-color-light: #ccc;
 $grey-color-dark: #222;
+
+html{
+  font-size: $base-font-size;
+}
 
 h1, h2, h3, h4, h5, h6{
   font-family: $base-font-family;

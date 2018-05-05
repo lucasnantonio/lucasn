@@ -116,15 +116,15 @@ let smoothScroll = function() {
     easing: 'easeInOutQuint'
   })
 }
-
+let skillCount = 0;
 function changeSkill() {
-  let i = 0;
+
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
-    skillDiv.innerHTML = skillList[i];
+    skillDiv.innerHTML = skillList[skillCount];
     skillDiv.classList.toggle('mw0')
   }, 1000);
-  i = (i + 1) % skillList.length;
+  skillCount = (skillCount + 1) % skillList.length;
 }
 
 let revealMetadata = function(item) {
@@ -132,9 +132,7 @@ let revealMetadata = function(item) {
 }
 
 let articleOpacity = function() {
-  console.log(articles);
   articles.forEach(function(item, index) {
-    console.log(item)
     item.onmouseover = function() {
       articles.forEach(function(itemB, index) {
         itemB.style.opacity="0.3";
