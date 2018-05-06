@@ -2,11 +2,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 6000);
   skillClick();
-  articleOpacity();
   smoothScroll();
   fadeInLeft();
-  // animateProjectsUp();
-  rotateNubankDesign();
 });
 
 let skillList = [
@@ -51,17 +48,6 @@ let getDivs = function() {
   images = document.querySelectorAll('img');
 }
 
-
-
-function rotateNubankDesign() {
-  TweenMax.to("#nubank-design-team", 15, {
-    rotation:360,
-    repeat: -1,
-    transformOrigin:"50% 50%",
-    ease: Linear.easeNone
-  })
-}
-
 function fadeInLeft() {
   let sections = document.querySelectorAll('section');
   let controller = new ScrollMagic.Controller();
@@ -83,15 +69,6 @@ function fadeInLeft() {
       .setTween(tween)
       .addTo(controller);
   })
-}
-
-function animateProjectsUp() {
-  setTimeout(function() {
-    TweenMax.to("#hero", .5, {
-      ease: Back.easeOut.config(1),
-      height: '90vh'
-    })
-  }, 3500)
 }
 
 function isInViewport(element, offset) {
@@ -116,6 +93,7 @@ let smoothScroll = function() {
     easing: 'easeInOutQuint'
   })
 }
+
 let skillCount = 0;
 function changeSkill() {
 
@@ -125,37 +103,4 @@ function changeSkill() {
     skillDiv.classList.toggle('mw0')
   }, 1000);
   skillCount = (skillCount + 1) % skillList.length;
-}
-
-let revealMetadata = function(item) {
-  item.classList.remove('o-0', 'dn');
-}
-
-let articleOpacity = function() {
-  articles.forEach(function(item, index) {
-    item.onmouseover = function() {
-      articles.forEach(function(itemB, index) {
-        itemB.style.opacity="0.3";
-        metadata[index].classList.add('o-0', 'dn');
-      });
-      item.style.opacity="1";
-      metadata[index].classList.remove('o-0', 'dn');
-
-      if (index < articles.length - 1) {
-        item.classList.add('bb');
-        articles[index + 1].classList.remove('bt');
-      }
-    }
-
-    item.onmouseleave = function() {
-      articles.forEach(function(item) {
-        item.style.opacity="1";
-        metadata[index].classList.add('o-0', 'dn');
-      });
-      if (index < articles.length - 1) {
-        item.classList.remove('bb');
-        articles[index + 1].classList.add('bt');
-      }
-    }
-  });
 }
