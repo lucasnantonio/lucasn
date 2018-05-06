@@ -81,8 +81,8 @@ a.link:hover{
   transition: all .5s;
 }
 
-.negative-margin-5{
-  margin-left:-5rem;
+.negative-margin-left-4{
+  margin-left:-4rem;
 }
 .negative-margin-left-2{
   margin-left:-2rem;
@@ -93,6 +93,9 @@ a.link:hover{
 
 .lh-copy{
   line-height: 1.8em;
+}
+.lh0{
+  line-height: 0;
 }
 .w6 {
   width: 24rem;
