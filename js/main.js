@@ -23,7 +23,6 @@ let skillList = [
 ]
 
 let skillDiv;
-let body;
 let sections;
 let sectionTitles;
 let articles;
@@ -34,18 +33,7 @@ let nextButton;
 let imgContainers;
 
 let getDivs = function() {
-  content = document.getElementById('content')
   skillDiv = document.getElementById('skills');
-  profilePic = document.getElementById('profilePic');
-  sectionTitles = document.querySelectorAll('.section-title');
-  sectionTitleLinks = document.querySelectorAll('.section-title a h3');
-  sectionTitleBacks = document.querySelectorAll('.section-title a h4');
-  articles = document.querySelectorAll('#articleList div');
-  articleLinks = document.querySelectorAll('#articleList div a');
-  titleLucas = document.getElementById('title-lucas');
-  metadata = document.querySelectorAll('.metadata');
-  body = document.querySelector('body');
-  images = document.querySelectorAll('img');
 }
 
 function fadeInLeft() {

@@ -43,14 +43,12 @@ body{
 
 #skills{
   max-width: 17rem;
-  transition: 1s;
+  transition: .7s;
   vertical-align: bottom;
-  border-bottom: .15em dotted white;
-  line-height: 1em;
+  // line-height: 1em;
 }
-
 #skills:hover{
-  border-bottom: .15em dotted $text-color;
+  text-decoration: underline;
 }
 
 a{
