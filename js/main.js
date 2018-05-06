@@ -2,11 +2,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getDivs();
   setInterval(changeSkill, 6000);
   skillClick();
-  articleOpacity();
   smoothScroll();
   fadeInLeft();
-  animateProjectsUp();
-  rotateNubankDesign();
 });
 
 let skillList = [
@@ -22,13 +19,10 @@ let skillList = [
   'write',
   'whiteboard',
   'sketch',
-  'inform',
-  'understand',
   'visualise',
 ]
 
 let skillDiv;
-let body;
 let sections;
 let sectionTitles;
 let articles;
@@ -39,29 +33,7 @@ let nextButton;
 let imgContainers;
 
 let getDivs = function() {
-  content = document.getElementById('content')
   skillDiv = document.getElementById('skills');
-  profilePic = document.getElementById('profilePic');
-  sectionTitles = document.querySelectorAll('.section-title');
-  sectionTitleLinks = document.querySelectorAll('.section-title a h3');
-  sectionTitleBacks = document.querySelectorAll('.section-title a h4');
-  articles = document.querySelectorAll('#articleList div');
-  articleLinks = document.querySelectorAll('#articleList div a');
-  titleLucas = document.getElementById('title-lucas');
-  metadata = document.querySelectorAll('.metadata');
-  body = document.querySelector('body');
-  images = document.querySelectorAll('img');
-}
-
-let i = 0;
-
-function rotateNubankDesign() {
-  TweenMax.to("#nubank-design-team", 15, {
-    rotation:360,
-    repeat: -1,
-    transformOrigin:"50% 50%",
-    ease: Linear.easeNone
-  })
 }
 
 function fadeInLeft() {
@@ -87,15 +59,6 @@ function fadeInLeft() {
   })
 }
 
-function animateProjectsUp() {
-  setTimeout(function() {
-    TweenMax.to("#hero", .5, {
-      ease: Back.easeOut.config(1),
-      height: '90vh'
-    })
-  }, 3500)
-}
-
 function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
   var html = document.documentElement;
@@ -119,46 +82,13 @@ let smoothScroll = function() {
   })
 }
 
+let skillCount = 0;
 function changeSkill() {
+
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
-    skillDiv.innerHTML = skillList[i];
+    skillDiv.innerHTML = skillList[skillCount];
     skillDiv.classList.toggle('mw0')
   }, 1000);
-  i = (i + 1) % skillList.length;
-}
-
-let revealMetadata = function(item) {
-  item.classList.remove('o-0', 'dn');
-}
-
-let articleOpacity = function() {
-  console.log(articles);
-  articles.forEach(function(item, index) {
-    console.log(item)
-    item.onmouseover = function() {
-      articles.forEach(function(itemB, index) {
-        itemB.style.opacity="0.3";
-        metadata[index].classList.add('o-0', 'dn');
-      });
-      item.style.opacity="1";
-      metadata[index].classList.remove('o-0', 'dn');
-
-      if (index < articles.length - 1) {
-        item.classList.add('bb');
-        articles[index + 1].classList.remove('bt');
-      }
-    }
-
-    item.onmouseleave = function() {
-      articles.forEach(function(item) {
-        item.style.opacity="1";
-        metadata[index].classList.add('o-0', 'dn');
-      });
-      if (index < articles.length - 1) {
-        item.classList.remove('bb');
-        articles[index + 1].classList.add('bt');
-      }
-    }
-  });
+  skillCount = (skillCount + 1) % skillList.length;
 }

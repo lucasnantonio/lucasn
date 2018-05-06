@@ -1,33 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700|IBM+Plex+Serif:300,400,700");
+html {
+  font-size: 14px; }
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: NeuePlakText-Regular, Georgia, serif;
   font-weight: 400; }
 
 body {
-  font-family: "IBM Plex Serif", Georgia, serif;
-  font-size: 24px;
-  color: #404757; }
-
-.mono {
-  font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
-  font-weight: 200; }
-
-.serif {
-  font-family: "IBM Plex Serif", Georgia, serif; }
+  font-family: NeuePlakText-Regular, Georgia, serif;
+  font-size: 14px;
+  color: #222; }
 
 #skills {
   max-width: 17rem;
-  transition: 1s;
-  vertical-align: bottom;
-  border-bottom: .15em dotted white;
-  line-height: 1.50em; }
+  transition: .7s;
+  vertical-align: bottom; }
 
 #skills:hover {
-  border-bottom: 0.15em dotted #404757; }
+  text-decoration: underline; }
 
 a {
   color: inherit; }
 
+a.link:hover {
+  text-decoration: underline; }
+
 .hover-left {
+  margin-left: 0;
   transition: margin-left .2s; }
 
 .hover-left:hover {
@@ -44,14 +42,6 @@ a {
   box-shadow: 0px 20px 60px 5px rgba(0, 0, 0, 0.25);
   transition: all .5s; }
 
-#articleList div {
-  transition: all .2s; }
-
-#articleList div:hover {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  transition: all .2s; }
-
 .negative-margin-5 {
   margin-left: -5rem; }
 
@@ -63,9 +53,6 @@ a {
 
 .w6 {
   width: 24rem; }
-
-.mw6 {
-  max-width: 18rem; }
 
 .h4 {
   height: 6rem; }
