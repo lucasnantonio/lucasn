@@ -58,6 +58,9 @@ a.link{
 a.link:hover{
   text-decoration: underline;
 }
+a.link:hover .no-underline{
+  text-decoration: none;
+}
 .hover-left{
   margin-left:0;
   transition: margin-left .2s;
@@ -85,7 +88,6 @@ a.link:hover{
 .negative-margin-left-2{
   margin-left:-2rem;
 }
-
 
 // CUSTOM tachyons
 
