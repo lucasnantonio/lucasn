@@ -2,15 +2,12 @@
 ---
 
 @charset "utf-8";
-// $mono-font-family: "IBM Plex Mono", Helvetica, Arial, sans-serif;
-// $serif-font-family: "IBM Plex Serif", Georgia, serif;
 
-// font-family: 'Aktiv Grotesk Bold'
-// font-family: 'Aktiv Grotesk Light'
-// font-family: 'Aktiv Grotesk'
-// font-family: 'Aktiv Grotesk Medium'
+$base-font-family: 'ITC Franklin Gothic Book', NeuePlakText-Regular, Georgia, serif;
+.medium{
+  font-family:'ITC Franklin Gothic Medium'
+}
 
-$base-font-family: NeuePlakText-Regular, Georgia, serif;
 
 $base-font-size:   14px;
 $base-font-weight: 300;
@@ -39,6 +36,7 @@ body{
   font-family: $base-font-family;
   font-size: $base-font-size;
   color: $text-color;
+
 }
 
 #skills{

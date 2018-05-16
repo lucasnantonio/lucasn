@@ -84,7 +84,6 @@ let smoothScroll = function() {
 
 let skillCount = 0;
 function changeSkill() {
-
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
     skillDiv.innerHTML = skillList[skillCount];

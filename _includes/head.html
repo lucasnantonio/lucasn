@@ -13,15 +13,26 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
-	<link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="{{ site.url }}{% link assets/main.scss %}">
 
   <!-- JavaScript -->
-  <script src="js/smooth-scroll.js"></script>
+  <script src="{{ site.url }}{% link js/smooth-scroll.js %}"></script>
+  <script src="{{ site.url }}{% link js/main.js %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-	<script src="js/main.js"></script>
+
+  <script type="text/javascript">
+      (function() {
+          var trial = document.createElement('script');
+          trial.type = 'text/javascript';
+          trial.async = true;
+          trial.src = 'https://easy.myfonts.net/v2/js?sid=2387(font-family=ITC+Franklin+Gothic+Book)&sid=2390(font-family=ITC+Franklin+Gothic+Medium)&key=SIGwVqIUR5';
+          var head = document.getElementsByTagName("head")[0];
+          head.appendChild(trial);
+      })();
+  </script>
+
 
   <!-- /**
    * @license
