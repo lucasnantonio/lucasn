@@ -3,20 +3,29 @@ layout: default
 ---
   
 article
-  .mt4
-    #post-hero.w-100.vh-75.bg-purple(style="background-position:50% 50%; background-size:cover; background-image: url({{site.url}}/images/{{page.hero}}")
+  section.mt4
+    #post-hero.w-100.vh-75-l.vh-50.bg-purple(style="background-color: #8846c0; background-position:50% 50%; background-size:cover; background-image: url({{site.url}}/images/{{page.hero}}")
     .flex.flex-row-l.flex-column-reverse.ph5-l.ph4.pt6
-      .flex.flex-column.w-third-l.w-100.f3.pr6.black-30.lh-copy
-        .mv0.black {{page.place}} — {{page.year}}  
-        | {% for role in page.roles %} 
-        .mv0 {{role}} 
-        | {% endfor %}
+      .flex.flex-column.w-third-l.w-100.f4.pr6.lh-copy.js-fadein-left
+        .mb3  
+          .ttu.f5.tracked.lh-title.black-30 PLACE
+          .mv0 {{page.place}} 
+        .mb3
+          .ttu.f5.tracked.lh-title.black-30 YEAR
+          .mv0 {{page.year}}  
+        .mb0
+          .ttu.f5.tracked.lh-title.black-30 ROLE
+          | {% for role in page.roles %} 
+          .mv0 {{role}} 
+          | {% endfor %}
       .flex.flex-column.w-two-thirds-l.w-100
-        h1.f1.tracked-tight.mv0
+        h1.f1.tracked-tight.mv0.js-fadein-left
           | {{ page.title }}
-        h1.f1.tracked-tight.pb4.mv0.black-30 
+        h1.f1.tracked-tight.pb4.mv0.js-fadein-left.black-30
           | {{ page.subtitle }}
-    .ph5-l.ph4.pt3#content
+        p.f3.measure.lh-copy
+          | {{page.first-paragraph}}
+    .ph5-l.ph4.pt3#content.js-fadein-left.mt6
       | {{content}}
     
 | {% include footer %}

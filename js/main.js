@@ -70,9 +70,11 @@ function isInViewport(element, offset) {
 }
 
 function skillClick() {
+  if(skillDiv =! null && skillDiv){
   skillDiv.onclick = function() {
     changeSkill();
   }
+}
 }
 
 let smoothScroll = function() {
@@ -84,10 +86,14 @@ let smoothScroll = function() {
 
 let skillCount = 0;
 function changeSkill() {
+  if(skillDiv){
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
     skillDiv.innerHTML = skillList[skillCount];
     skillDiv.classList.toggle('mw0')
   }, 1000);
   skillCount = (skillCount + 1) % skillList.length;
+} else{
+  return;
+}
 }
