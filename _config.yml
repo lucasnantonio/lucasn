@@ -17,15 +17,20 @@ twitter_username: lucasnantonio
 github_username: lucasnantonio
 google_analytics: UA-72558910-1
 markdown: kramdown
-assets:
-  sources:
-  - fonts
 gems:
 - jekyll-feed
 - jekyll-assets
+compress_images:
+  images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
+imageoptim:
+  pngout: false
+  svgo: false
+  verbose: false
 exclude:
 - Gemfile
 - Gemfile.lock
+plugins_dir:
+  - jekyll-compress-images
 keep_files:
 - ".git"
 - ".gitignore"

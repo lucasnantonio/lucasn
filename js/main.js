@@ -31,14 +31,20 @@ let articleLinks;
 let articleContainer;
 let previousButton;
 let nextButton;
-let imgContainers;
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
 }
 
 function lazyLoad() {
-  var myLazyLoad = new LazyLoad({elements_selector: "img, .lazy"});
+  // var myLazyLoad = new LazyLoad({
+  //   elements_selector: ".lazy, img"
+  // });
+  imagesLoaded( ".lazy", {background:true}, function(){console.log('loaded')} )
+}
+
+function callBack () {
+  alert('loaded!');
 }
 
 function fadeInLeft() {
