@@ -9,20 +9,25 @@ article
     
     //- METADATA
     .flex.flex-row-l.flex-column-reverse.ph5-l.ph4.mt6-ns.mt5
-      .flex.flex-column.w-third-l.w-100.f4.pr6-l.lh-copy.js-fadein-left
+      .flex.flex-column.w-third-l.w-100.f5.pr6-l.lh-copy.js-fadein-left
         .mb3
-          .ttu.f5-ns.f6.tracked.lh-title.black-30 PLACE
+          .ttu.f5-ns.f7.tracked.lh-title.black-30 PLACE
           .mv0 {{page.place}} 
         .mb3
-          .ttu.f5-ns.f6.tracked.lh-title.black-30 YEAR
+          .ttu.f5-ns.f7.tracked.lh-title.black-30 YEAR
           .mv0 {{page.year}}  
         .mb3
-          .ttu.f5-ns.f6.tracked.lh-title.black-30 ROLE
+          .ttu.f5-ns.f7.tracked.lh-title.black-30 DESIGN TEAM
+          | {% for member in page.design-team %} 
+          .mv0 {{member}} 
+          | {% endfor %}
+        .mb3
+          .ttu.f5-ns.f7.tracked.lh-title.black-30 ROLE
           | {% for role in page.roles %} 
           .mv0 {{role}} 
           | {% endfor %}
         .mb0
-          .ttu.f5-ns.f6.tracked.lh-title.black-30 WEBSITE
+          .ttu.f5-ns.f7.tracked.lh-title.black-30 WEBSITE
           a.link.mv0(href="{{page.link-url}}" target="_blank") {{page.link-label}}
       
       //- PAGE TITLE
