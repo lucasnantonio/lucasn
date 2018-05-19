@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   smoothScroll();
   fadeInLeft();
+  lazyLoad();
 });
 
 let skillList = [
@@ -34,6 +35,10 @@ let imgContainers;
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
+}
+
+function lazyLoad() {
+  var myLazyLoad = new LazyLoad({elements_selector: "img, .lazy"});
 }
 
 function fadeInLeft() {

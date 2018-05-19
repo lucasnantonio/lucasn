@@ -74,7 +74,9 @@ a.link:hover .no-underline{
 .b0{
 	bottom: 0;
 }
-
+.loading, .loaded{
+  transition: all 2s;
+}
 .mw0{
   max-width: 1px !important;
 }
