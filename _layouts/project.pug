@@ -4,8 +4,8 @@ layout: default
   
 article
   section.mt4
-    #post-hero.w-100.vh-75-l.vh-50.bg-near-white.lazy(data-src="{{site.url}}/images/{{page.hero}}" style=" background-image:url({{site.url}}/images/{{page.hero}}); background-position:50% 50%; background-size:cover;")
-    .flex.flex-row-l.flex-column-reverse.ph5-l.ph4.pt6
+    #post-hero.w-100.vh-75-l.vh-50.bg-near-white.lazy(style="background-image:url({{site.url}}/images/{{page.hero}}); background-position:50% 50%; background-size:cover;")
+    .flex.flex-row-l.flex-column-reverse.ph5-l.ph4.mt6
       .flex.flex-column.w-third-l.w-100.f4.pr6.lh-copy.js-fadein-left
         .mb3  
           .ttu.f5.tracked.lh-title.black-30 PLACE
@@ -13,19 +13,22 @@ article
         .mb3
           .ttu.f5.tracked.lh-title.black-30 YEAR
           .mv0 {{page.year}}  
-        .mb0
+        .mb3
           .ttu.f5.tracked.lh-title.black-30 ROLE
           | {% for role in page.roles %} 
           .mv0 {{role}} 
           | {% endfor %}
+        .mb0
+          .ttu.f5.tracked.lh-title.black-30 WEBSITE
+          a.link.mv0(href="{{page.link-url}}" target="_blank") {{page.link-label}}
       .flex.flex-column.w-two-thirds-l.w-100
         h1.f1.tracked-tight.mv0.js-fadein-left
           | {{ page.title }}
         h1.f1.tracked-tight.pb4.mv0.js-fadein-left.black-30
           | {{ page.subtitle }}
-        p.f3.measure.lh-copy
+        p.f4.measure.lh-copy
           | {{page.first-paragraph}}
-    .ph5-l.ph4.pt3#content.js-fadein-left.mt6
+    .ph5-l.ph4.pt3#content.mt6
       | {{content}}
     
 | {% include footer %}

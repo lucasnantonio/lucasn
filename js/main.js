@@ -37,9 +37,9 @@ let getDivs = function() {
 }
 
 function lazyLoad() {
-  // var myLazyLoad = new LazyLoad({
-  //   elements_selector: ".lazy, img"
-  // });
+  function fadeIn() {
+    
+  }
   imagesLoaded( ".lazy", {background:true}, function(){console.log('loaded')} )
 }
 
