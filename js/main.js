@@ -88,7 +88,7 @@ function skillClick() {
 let smoothScroll = function() {
   var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
-    easing: 'easeInOutQuint'
+    easing: 'easeInOut'
   })
 }
 
