@@ -11,8 +11,8 @@ hero: nuconta-005.png
 first-paragraph: "NuConta is a unprecedented mix of current, savings, and payments accounts, all-in-one. Thanks to a one-year-long co-creative process, our team was able to design and ship a unique product that addresses customer needs in a unique way."
 ---
 
-//- section.bg-near-white
-//-   img(alt="NuConta Main Image" data-src="{{site.url}}/images/nuconta-003.png")
+
+//- IMAGE GRID
 section.bg-near-white
   img.w-100(alt="NuConta Main Image" src="{{site.url}}/images/nuconta-003.png")
   .flex
@@ -27,15 +27,18 @@ section.bg-near-white
         .self-center.lh0.w-100.big-shadow.overflow-hidden.br2.js-fadein-left
           img(src="{{site.ur}}/images/nuconta-014.png")   
   img.mt1.w-100(src="{{site.url}}/images/nuconta-017.png")
-section.flex.lh-copy.f4.mv6
-  .w-third
-  .w-two-thirds.w-100
+
+//- DISCOVERY
+section.flex.lh-copy.f4.mv6-l.mv4
+  .w-third.flex-l.dn
+  .w-two-thirds-l.w-100
     .mv5
       h2.f2.lh-title.mv0.tracked-tight Discovery
       h2.f2.lh-title.mv0.tracked-tight.black-30 Problem exploration
     p.measure We were committed to challenging our most basic assumptions about how people understand and use banking services, so our initial conversations were purposefully broad and naive. We started with a simple list of questions, but we adjusted frequently along the way.
     p.measure We ran in-depth interviews with people from different ages and backgrounds in the office, but also on public places like malls and a public university. We sat down and very informally let people talk about their financial lives, how they felt about saving, investing, transferring, and spending their money. We also experimented with some visual aids such as card-sorting and very cheap prototypes, but honestly our best feedback tools were our competitor's websites and products. We learned an incredible amount just by having people experiment with things other companies have already built.
-    
+
+//- DISCOVERY IMAGES    
 section.cf.w-100
   .fl.w-50.w-third-m.w-25-ns
     .aspect-ratio.aspect-ratio--7x5
@@ -61,12 +64,22 @@ section.cf.w-100
   .fl.w-50.w-third-m.w-25-ns
     .aspect-ratio.aspect-ratio--7x5
       img.db.bg-center.cover.aspect-ratio--object(style='background-image: url({{site.url}}/images/nuconta-013.png)')
-        
-section.flex.lh-copy.f4.mv6
-  .w-third
-  .w-two-thirds.w-100
+
+//- DEFINE
+section.flex.lh-copy.f4.mv6-l.mv4
+  .w-third.flex-l.dn
+  .w-two-thirds-l.w-100
     .mv5
       h2.f2.lh-title.mv0.tracked-tight Define
       h2.f2.lh-title.mv0.tracked-tight.black-30 Problem definition
-    p.measure We were committed to challenging our most basic assumptions about how people understand and use banking services, so our initial conversations were purposefully broad and naive. We started with a simple list of questions, but we adjusted frequently along the way.
-    p.measure We ran in-depth interviews with people from different ages and backgrounds in the office, but also on public places like malls and a public university. We sat down and very informally let people talk about their financial lives, how they felt about saving, investing, transferring, and spending their money. We also experimented with some visual aids such as card-sorting and very cheap prototypes, but honestly our best feedback tools were our competitor's websites and products. We learned an incredible amount just by having people experiment with things other companies have already built.
+    p.measure By combining the data from these interviews with others conducted in our lab, and also talking to a lot of our own employees about their finances, we were able to come up with eight personas that represent a gradient of behavior and demographic patterns.  
+
+//- PERSONAS IMAGE
+img.mt1.w-100(src="{{site.url}}/images/nuconta-019.png")
+
+section.flex.lh-copy.f4.mt6-l.mt4
+  .w-third.flex-l.dn
+  .w-two-thirds-l.w-100
+    p.measure With well-defined personas, we now had a lens through which we could look at the problem. Our initial mission, which was very broad, could now be better expressed in sentences that the whole team could agree on:
+section.flex.lh-copy.justify-center
+  p.f3.pl4.bl.bw2.measure.lh-copy.center How might we design an evolution of the current and savings accounts, for people looking for a more accessible and easy-to-use bank account.? It should be free of complexity, free of charge abusive fees, and make your money grow at a fair interest rate. Differently from big banks and other fintech pre-paid products, NuConta needs to achieve zero bureaucracy, reduce adoption friction and provide a superior user experience.
