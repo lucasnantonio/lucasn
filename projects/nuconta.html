@@ -20,6 +20,7 @@
   <script src="http://www.lucasn.com/js/smooth-scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -65,70 +66,77 @@
 
   <body>
     <main class="overflow-hidden">
-      <section class="flex pv3 ph5-l ph4 bg-white fixed w-100 z-max"><a class="link f3 w-third lh-copy pr5-l pr4 dn-ns db js-fadein-left" href="http://www.lucasn.com">Lucas N.</a><a class="link f3 w-third lh-copy pr5-l pr4 db-ns dn js-fadein-left" href="http://www.lucasn.com">Lucas Neumann</a>
-  <div class="flex w-two-thirds justify-start-l justify-end f3 black-30"><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-work">Work </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-writing">Writing </a><a class="link self-center js-fadein-left" href="http://www.lucasn.com#section-contact">Contact</a></div>
+      <section class="flex pv3 ph5-l ph4 bg-white fixed w-100 z-max"><a class="link self-center f3 w-third lh-copy pr5-l pr4 dn-ns db js-fadein-left" href="http://www.lucasn.com">Lucas&nbsp;N.</a><a class="link self-center f3 w-third lh-copy pr5-l pr4 db-ns dn js-fadein-left" href="http://www.lucasn.com">Lucas Neumann</a>
+  <div class="flex w-two-thirds justify-start-l justify-end">
+    <div class="flex f3 black-30 overflow-hidden self-center h2" id="navbar-menu-wrapper"><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-work">Work </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-writing">Writing </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-contact">Contact</a></div>
+    <div class="flex f3 black-30 overflow-hidden self-center h2" id="navbar-title-wrapper">
+      <div class="self-center js-fadein-left black pr2 flex-ns dn">Project:</div>
+      <div class="pr5-l pr3 self-center js-fadein-left" id="navbar-title">projectName</div>
+    </div>
+  </div>
 </section>
-      <article>
-  <section class="mt4">
-    <div class="w-100 vh-75-l vh-50 bg-near-white lazy" id="post-hero" style="background-image:url(http://www.lucasn.com/images/nuconta-005.png); background-position:50% 50%; background-size:cover;"></div>
-    <div class="flex flex-row-l flex-column-reverse ph5-l ph4 mt6-ns mt5">
-      <div class="flex flex-column w-third-l w-100 f5 pr6-l lh-copy js-fadein-left">
-        <div class="mb3">
-          <div class="ttu f5-ns f7 tracked lh-title black-30">PLACE</div>
-          <div class="mv0">São Paulo </div>
-        </div>
-        <div class="mb3">
-          <div class="ttu f5-ns f7 tracked lh-title black-30">YEAR</div>
-          <div class="mv0">2017—2018  </div>
-        </div>
-        <div class="mb3">
-          <div class="ttu f5-ns f7 tracked lh-title black-30">DESIGN TEAM</div> 
-          <div class="mv0">Lucas Neumann </div> 
-          <div class="mv0">Rachel Jordan </div> 
-          <div class="mv0">Erick Mazer </div> 
-          <div class="mv0">Vitor Gurgel </div>
-        </div>
-        <div class="mb3">
-          <div class="ttu f5-ns f7 tracked lh-title black-30">ROLE</div> 
-          <div class="mv0">User Research </div> 
-          <div class="mv0">Product Design </div> 
-          <div class="mv0">Copywriting </div>
-        </div>
-        <div class="mb0">
-          <div class="ttu f5-ns f7 tracked lh-title black-30">WEBSITE</div><a class="link mv0" href="http://www.nubank.com.br/nuconta" target="_blank">nubank.com.br/nuconta</a>
-        </div>
+      <article class="mt4">
+  <div class="w-100 vh-75-l vh-50 bg-near-white lazy" id="post-hero" style="background-image:url(http://www.lucasn.com/images/nuconta-005.png); background-position:50% 50%; background-size:cover;"></div>
+  <section class="flex flex-row-l flex-column-reverse ph5-l ph4 mt6-ns mt5">
+    <div class="flex flex-column w-third-l w-100 f5 pr6-l lh-copy js-fadein-left">
+      <div class="mb3">
+        <div class="ttu f5-ns f7 tracked lh-title black-30">PLACE</div>
+        <div class="mv0">São Paulo </div>
       </div>
-      <div class="flex flex-column w-two-thirds-ns w-100">
-        <h1 class="f1 tracked-tight mv0 js-fadein-left">Nubank Account</h1>
-        <h1 class="f1 tracked-tight pb4-l pb3 mv0 js-fadein-left black-30">Banking as it should be</h1>
-        <p class="f4 measure lh-copy">NuConta is a unprecedented mix of current, savings, and payments accounts, all-in-one. Thanks to a one-year-long co-creative process, our team was able to design and ship a unique product that addresses customer needs in a unique way.</p>
+      <div class="mb3">
+        <div class="ttu f5-ns f7 tracked lh-title black-30">YEAR</div>
+        <div class="mv0">2017—2018  </div>
+      </div>
+      <div class="mb3">
+        <div class="ttu f5-ns f7 tracked lh-title black-30">DESIGN TEAM</div> 
+        <div class="mv0">Lucas Neumann </div> 
+        <div class="mv0">Rachel Jordan </div> 
+        <div class="mv0">Erick Mazer </div> 
+        <div class="mv0">Vitor Gurgel </div>
+      </div>
+      <div class="mb3">
+        <div class="ttu f5-ns f7 tracked lh-title black-30">ROLE</div> 
+        <div class="mv0">User Research </div> 
+        <div class="mv0">Product Design </div> 
+        <div class="mv0">Copywriting </div>
+      </div>
+      <div class="mb0">
+        <div class="ttu f5-ns f7 tracked lh-title black-30">WEBSITE</div><a class="link mv0" href="http://www.nubank.com.br/nuconta" target="_blank">nubank.com.br/nuconta</a>
       </div>
     </div>
-    <div class="ph5-l ph4 pt3 mt6-ns mt3" id="content"><section class="bg-near-white"><img class="w-100" alt="NuConta Main Image" src="http://www.lucasn.com/images/nuconta-003.png"/>
+    <div class="flex flex-column w-two-thirds-ns w-100">
+      <h1 class="f1 tracked-tight mv0 js-fadein-left" id="project-title">Nubank Account</h1>
+      <h1 class="f1 tracked-tight pb4-l pb3 mv0 js-fadein-left black-30">Banking as it should be</h1>
+      <p class="f4 measure lh-copy js-fadein-left">NuConta is a unprecedented mix of current, savings, and payments accounts, all-in-one. Thanks to a one-year-long co-creative process, our team was able to design and ship a unique product that addresses customer needs in a unique way.</p>
+    </div>
+  </section>
+  <div class="ph5-l ph4 pt3 mt6-ns mt3" id="content"><section class="bg-near-white"><img class="w-100" alt="NuConta Main Image" data-src="http://www.lucasn.com/images/nuconta-003.png"/>
   <div class="flex flex-row-l flex-column">
     <div class="flex w-two-thirds-l w-100 justify-center overflow-hidden pv6 mr1" style="background-color:#f03a61;">
       <div class="flex center justify-center w-50-l w-80">
-        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 js-fadein-left"><img src="/images/nuconta-016.gif"/></div>
-        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="/images/nuconta-015.jpeg"/></div>
+        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 js-fadein-left"><img data-src="/images/nuconta-016.gif"/></div>
+        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img data-src="/images/nuconta-015.jpeg"/></div>
       </div>
     </div>
     <div class="flex w-third-l w-100 justify-center overflow-hidden pv6" style="background-color:#34196c;">
       <div class="flex center justify-center w-50-l w-80">
-        <div class="self-center lh0 w-100 big-shadow overflow-hidden br2 js-fadein-left"><img src="/images/nuconta-014.png"/></div>
+        <div class="self-center lh0 w-100 big-shadow overflow-hidden br2 js-fadein-left"><img data-src="/images/nuconta-014.png"/></div>
       </div>
     </div>
   </div>
+</section>
+<section> 
   <div class="flex w-100 justify-center overflow-hidden mt1" style="background-color:#0d023a;">
     <div class="flex center justify-center w-50-l w-80">
-      <div class="self-center lh0 w-100 overflow-hidden js-fadein-left"><img src="http://www.lucasn.com/images/nuconta-017.png"/></div>
+      <div class="self-center lh0 w-100 overflow-hidden js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-017.png"/></div>
     </div>
   </div>
   <div class="flex flex-row-l flex-column">
     <div class="flex w-100 justify-center overflow-hidden pv6 mr1" style="background-color:#eb4065;">
       <div class="flex center justify-center w-80-l w-100">
-        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="/images/nuconta-038.png"/></div>
-        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="/images/nuconta-039.png"/></div>
-        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="/images/nuconta-040.png"/></div>
+        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img data-src="/images/nuconta-038.png"/></div>
+        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img data-src="/images/nuconta-039.png"/></div>
+        <div class="self-center lh0 w-25-l w-30 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img data-src="/images/nuconta-040.png"/></div>
       </div>
     </div>
   </div>
@@ -137,51 +145,51 @@
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
     <div class="mv5">
-      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white">1</div>
-      <h2 class="f2 lh-title mv0 tracked-tight">Discovery</h2>
-      <h2 class="f2 lh-title mv0 tracked-tight black-30">Problem exploration</h2>
+      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white js-fadein-left">1</div>
+      <h2 class="f2 lh-title mv0 tracked-tight js-fadein-left">Discovery</h2>
+      <h2 class="f2 lh-title mv0 tracked-tight black-30 js-fadein-left">Problem exploration</h2>
     </div>
-    <p class="measure">We were committed to challenging our most basic assumptions about how people understand and use banking services, so our initial conversations were purposefully broad and naive. We started with a simple list of questions, but we adjusted frequently along the way.</p>
-    <p class="measure">We ran in-depth interviews with people from different ages and backgrounds in the office, but also on public places like malls and a public university. We sat down and very informally let people talk about their financial lives, how they felt about saving, investing, transferring, and spending their money. We also experimented with some visual aids such as card-sorting and very cheap prototypes, but honestly our best feedback tools were our competitor's websites and products. We learned an incredible amount just by having people experiment with things other companies have already built.</p>
+    <p class="measure js-fadein-left">We were committed to challenging our most basic assumptions about how people understand and use banking services, so our initial conversations were purposefully broad and naive. We started with a simple list of questions, but we adjusted frequently along the way.</p>
+    <p class="measure js-fadein-left">We ran in-depth interviews with people from different ages and backgrounds in the office, but also on public places like malls and a public university. We sat down and very informally let people talk about their financial lives, how they felt about saving, investing, transferring, and spending their money. We also experimented with some visual aids such as card-sorting and very cheap prototypes, but honestly our best feedback tools were our competitor's websites and products. We learned an incredible amount just by having people experiment with things other companies have already built.</p>
   </div>
 </section>
 <section class="cf w-100">
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-006.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-006.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-007.jpeg)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-007.jpeg"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-008.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-008.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-009.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-009.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-010.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-010.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-011.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-011.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-012.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-012.png"/></div>
   </div>
-  <div class="fl w-50 w-third-m w-25-ns">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-013.png)"/></div>
+  <div class="fl w-50 w-third-m w-25-ns js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-013.png"/></div>
   </div>
 </section>
 <section class="flex lh-copy f4 mv6-l mv4">
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
     <div class="mv5">
-      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white">2</div>
-      <h2 class="f2 lh-title mv0 tracked-tight">Define</h2>
-      <h2 class="f2 lh-title mv0 tracked-tight black-30">Problem definition</h2>
+      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white js-fadein-left js-fadein-left">2</div>
+      <h2 class="f2 lh-title mv0 tracked-tight js-fadein-left js-fadein-left">Define</h2>
+      <h2 class="f2 lh-title mv0 tracked-tight black-30 js-fadein-left js-fadein-left">Problem definition</h2>
     </div>
-    <p class="measure">By combining the data from these interviews with others conducted in our lab, and also talking to a lot of our own employees about their finances, we were able to come up with eight personas that represent a gradient of behavior and demographic patterns.  </p>
+    <p class="measure js-fadein-left js-fadein-left">By combining the data from these interviews with others conducted in our lab, and also talking to a lot of our own employees about their finances, we were able to come up with eight personas that represent a gradient of behavior and demographic patterns.  </p>
   </div>
-</section><img class="mt1 w-100" src="http://www.lucasn.com/images/nuconta-019.png"/>
+</section><img class="mt1 w-100" data-src="http://www.lucasn.com/images/nuconta-019.png"/>
 <section class="flex lh-copy f4 mt6-l mt4">
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
@@ -201,25 +209,25 @@
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
     <div class="mv5">
-      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white">3</div>
-      <h2 class="f2 lh-title mv0 tracked-tight">Develop</h2>
-      <h2 class="f2 lh-title mv0 tracked-tight black-30">Generating solutions</h2>
+      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white js-fadein-left">3</div>
+      <h2 class="f2 lh-title mv0 tracked-tight js-fadein-left">Develop</h2>
+      <h2 class="f2 lh-title mv0 tracked-tight black-30 js-fadein-left">Generating solutions</h2>
     </div>
-    <p class="measure">The first thing we do at Nubank once we have a solid problem definition is what we call a co-design session, which helps us generate ideas, better questions, surface constrains and strong stakeholder opinions.</p>
+    <p class="measure js-fadein-left">The first thing we do at Nubank once we have a solid problem definition is what we call a co-design session, which helps us generate ideas, better questions, surface constrains and strong stakeholder opinions.</p>
   </div>
 </section>
 <section class="cf w-100">
-  <div class="fl w-50">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-020.png)"/></div>
+  <div class="fl w-50 js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-020.png"/></div>
   </div>
-  <div class="fl w-50">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-021.jpeg)"/></div>
+  <div class="fl w-50 js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-021.jpeg"/></div>
   </div>
-  <div class="fl w-50">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-022.png)"/></div>
+  <div class="fl w-50 js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-022.png"/></div>
   </div>
-  <div class="fl w-50">
-    <div class="aspect-ratio aspect-ratio--7x5"><img class="db bg-center cover aspect-ratio--object" style="background-image: url(http://www.lucasn.com/images/nuconta-023.png)"/></div>
+  <div class="fl w-50 js-fadein-left">
+    <div class="aspect-ratio aspect-ratio--7x5"><img class="lazy db bg-center cover aspect-ratio--object" data-src="http://www.lucasn.com/images/nuconta-023.png"/></div>
   </div>
 </section>
 <section class="flex lh-copy f4 mv6-l mv4">
@@ -228,33 +236,33 @@
     <p class="measure">Based on the ideas generated by the team, we started the deepest dive I’ve ever taken on product design exploration. In many ways, both from a technical and a product perspective, NuConta does not fit squarely into a checking, savings or investment account “box”, so we found it a real challenge to align the interface with a user’s pre-existing mental models about money management. A new paradigm for how the money was going to be kept and used required a lot of hard thinking about accounting and how to best represent it on a screen. Given this potential complexity, we spent most of this time collaborating at the white-board without touching a digital design tool.</p>
     <p class="measure">Only after extensive discussion and brainstorming we felt ready to start wireframes and pixel pushing: we tried dozens of versions of the UI of onboarding flows, empty states, investment simulators, charts (OMG so many charts), financial goals, investment streaks, etc. We allowed ourselves to go quite crazy in the beginning, bypassing many rules of our current design system, an then adjusted as we got closer to the final result.</p>
   </div>
-</section><img class="mt1 w-100" src="http://www.lucasn.com/images/nuconta-024.png"/>
+</section><img class="mt1 w-100" data-src="http://www.lucasn.com/images/nuconta-024.png"/>
 <section class="flex lh-copy f4 mb6-l mb4">
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
-    <p class="f2">Prototyping</p>
-    <p class="measure">We made every kind of prototype you could imagine when exploring solutions for NuConta. We made cheap paper prototypes to test copywriting and general information architecture. We made quick Keynote animations to show engineers the vision for a specific interaction. We built screens and flows on Principle to test signup flows and empty states. Some prototypes even had fake branding and visuals so we could go outside the building and show it around in stealth mode.</p>
-    <p class="measure">Starting with simpler, lower fidelity prototypes allowed us to trim the rough edges of the product overall concept, until we eventually hit a level of complexity in the tests that required a more high fidelity, versatile prototype. So we decided to invest in a month long project to create a full-blown Framer + Javascript prototype that passed variables around, reacted to the user’s financial data, and let them simulate deposits. This was of course not just the work of our design team but a coordinated effort with the technical team to support us not only in programming the prototype but also in user-testing it and iterating on the results.</p>
+    <p class="f2 js-fadein-left">Prototyping</p>
+    <p class="measure js-fadein-left">We made every kind of prototype you could imagine when exploring solutions for NuConta. We made cheap paper prototypes to test copywriting and general information architecture. We made quick Keynote animations to show engineers the vision for a specific interaction. We built screens and flows on Principle to test signup flows and empty states. Some prototypes even had fake branding and visuals so we could go outside the building and show it around in stealth mode.</p>
+    <p class="measure js-fadein-left">Starting with simpler, lower fidelity prototypes allowed us to trim the rough edges of the product overall concept, until we eventually hit a level of complexity in the tests that required a more high fidelity, versatile prototype. So we decided to invest in a month long project to create a full-blown Framer + Javascript prototype that passed variables around, reacted to the user’s financial data, and let them simulate deposits. This was of course not just the work of our design team but a coordinated effort with the technical team to support us not only in programming the prototype but also in user-testing it and iterating on the results.</p>
   </div>
 </section>
 <section class="flex flex-column justify-center">
-  <div class="w-80-l w-100 center"><img src="http://www.lucasn.com/images/nuconta-025.png"/></div>
-  <div class="w-80-l w-100 center"><img src="http://www.lucasn.com/images/nuconta-027.gif"/></div>
+  <div class="w-80-l w-100 center"><img data-src="http://www.lucasn.com/images/nuconta-025.png"/></div>
+  <div class="w-80-l w-100 center"><img data-src="http://www.lucasn.com/images/nuconta-027.gif"/></div>
 </section>
 <section class="flex lh-copy f4 mv6-l mv4">
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
     <div class="mv5">
-      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white">4</div>
-      <h2 class="f2 lh-title mv0 tracked-tight">Deliver</h2>
-      <h2 class="f2 lh-title mv0 tracked-tight black-30">Documenting the MVP </h2>
+      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white js-fadein-left">4</div>
+      <h2 class="f2 lh-title mv0 tracked-tight js-fadein-left">Deliver</h2>
+      <h2 class="f2 lh-title mv0 tracked-tight black-30 js-fadein-left">Documenting the MVP </h2>
     </div>
-    <p class="f2">Designing for transparency, with transparency</p>
-    <p class="measure">One key component of the speed and quality of our workflow in this project was to use Figma in the early stages of the UI design process, because of the high level of collaboration and transparency it allows. Just like our live streamed user tests, Figma makes it frictionless for stakeholders to watch, participate, and gain empathy for the design process in real time.</p>
+    <p class="f2 js-fadein-left">Designing for transparency, with transparency</p>
+    <p class="measure js-fadein-left">One key component of the speed and quality of our workflow in this project was to use Figma in the early stages of the UI design process, because of the high level of collaboration and transparency it allows. Just like our live streamed user tests, Figma makes it frictionless for stakeholders to watch, participate, and gain empathy for the design process in real time.</p>
   </div>
 </section>
 <section class="flex flex-column justify-center">
-  <div class="w-80-l w-100 center"><img src="http://www.lucasn.com/images/nuconta-028.png"/></div>
+  <div class="w-80-l w-100 center"><img data-src="http://www.lucasn.com/images/nuconta-028.png"/></div>
 </section>
 <section class="flex lh-copy f4 mv6-l mv4">
   <div class="w-third flex-l dn"></div>
@@ -264,30 +272,29 @@
   </div>
 </section>
 <section class="flex flex-column justify-center">
-  <div class="w-80-l w-100 center"><img src="http://www.lucasn.com/images/nuconta-029.png"/></div>
+  <div class="w-80-l w-100 center"><img data-src="http://www.lucasn.com/images/nuconta-029.png"/></div>
 </section>
 <section class="flex lh-copy f4 mt6-l mt4">
   <div class="w-third flex-l dn"></div>
   <div class="w-two-thirds-l w-100">
     <div class="mv5">
-      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white">5</div>
-      <h2 class="f2 lh-title mv0 tracked-tight">Results</h2>
-      <h2 class="f2 lh-title mv0 tracked-tight black-30">It's just day one. </h2>
-      <p class="measure">Defining NuConta’s purpose took a lot of work, and we’re happy to see that after a year-long design process, we have shipped an initial product that meets all the goals we set. </p>
-      <p class="measure">It is currently in controlled rollout for more than three million users, and will soon be available for hundreds of millions of Brazilians.</p>
-      <p class="measure">Here's a demo of the love we got from users:</p>
+      <div class="f3 tc w3 h3 dib mb5 pa3 bg-black white js-fadein-left">5</div>
+      <h2 class="f2 lh-title mv0 tracked-tight js-fadein-left">Results</h2>
+      <h2 class="f2 lh-title mv0 tracked-tight black-30 js-fadein-left">It's just day one. </h2>
+      <p class="measure js-fadein-left">Defining NuConta’s purpose took a lot of work, and we’re happy to see that after a year-long design process, we have shipped an initial product that meets all the goals we set. </p>
+      <p class="measure js-fadein-left">It is currently in controlled rollout for more than three million users, and will soon be available for hundreds of millions of Brazilians.</p>
+      <p class="measure js-fadein-left">Here's a demo of the love we got from users:</p>
     </div>
   </div>
 </section>
-<div class="w-80 center flex flex-wrap justify-center mb6">
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-030.png"/></div>
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-031.png"/></div>
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-032.png"/></div>
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-033.png"/></div>
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-034.png"/></div>
-  <div class="measure pa2"><img src="http://www.lucasn.com/images/nuconta-035.png"/></div>
-</div></div>
-  </section>
+<section class="w-80 center flex flex-wrap justify-center mb6">
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-030.png"/></div>
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-031.png"/></div>
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-032.png"/></div>
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-033.png"/></div>
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-034.png"/></div>
+  <div class="measure pa2 js-fadein-left"><img data-src="http://www.lucasn.com/images/nuconta-035.png"/></div>
+</section></div>
 </article><section class="flex ph5-l ph4" id="section-contact" style="background-color:#222; color:#fff">
   <div class="flex-l dn w-third pr5"></div>
   <div class="flex w-two-thirds-l w-100 flex-column pv6 justify-center center">

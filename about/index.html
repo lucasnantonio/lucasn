@@ -20,6 +20,7 @@
   <script src="http://www.lucasn.com/js/smooth-scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -65,8 +66,14 @@
 
   <body>
     <main class="overflow-hidden">
-      <section class="flex pv3 ph5-l ph4 bg-white fixed w-100 z-max"><a class="link f3 w-third lh-copy pr5-l pr4 dn-ns db js-fadein-left" href="http://www.lucasn.com">Lucas N.</a><a class="link f3 w-third lh-copy pr5-l pr4 db-ns dn js-fadein-left" href="http://www.lucasn.com">Lucas Neumann</a>
-  <div class="flex w-two-thirds justify-start-l justify-end f3 black-30"><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-work">Work </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-writing">Writing </a><a class="link self-center js-fadein-left" href="http://www.lucasn.com#section-contact">Contact</a></div>
+      <section class="flex pv3 ph5-l ph4 bg-white fixed w-100 z-max"><a class="link self-center f3 w-third lh-copy pr5-l pr4 dn-ns db js-fadein-left" href="http://www.lucasn.com">Lucas&nbsp;N.</a><a class="link self-center f3 w-third lh-copy pr5-l pr4 db-ns dn js-fadein-left" href="http://www.lucasn.com">Lucas Neumann</a>
+  <div class="flex w-two-thirds justify-start-l justify-end">
+    <div class="flex f3 black-30 overflow-hidden self-center h2" id="navbar-menu-wrapper"><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-work">Work </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-writing">Writing </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://www.lucasn.com#section-contact">Contact</a></div>
+    <div class="flex f3 black-30 overflow-hidden self-center h2" id="navbar-title-wrapper">
+      <div class="self-center js-fadein-left black pr2 flex-ns dn">Project:</div>
+      <div class="pr5-l pr3 self-center js-fadein-left" id="navbar-title">projectName</div>
+    </div>
+  </div>
 </section>
       <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
 
