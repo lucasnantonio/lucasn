@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   fadeInLeft();
   lazyLoad();
   greet();
+  navBarTitle();
 });
 
 let skillList = [
@@ -46,7 +47,36 @@ function greet () {
     greeting.innerHTML = "Hi there, " + visitor + "! <br /> It's nice to have you here."
     presentation.innerHTML = "I am a product designer at Nubank."
   }
+}
 
+function navBarTitle () {
+  let isProject = window.location.pathname.indexOf('project');
+  if(isProject != -1){
+
+    let navBarMenuWrapper = document.getElementById('navbar-menu-wrapper');
+    let navBarTitleWrapper = document.getElementById('navbar-title-wrapper');
+    let navBarTitle = document.getElementById('navbar-title');
+    let postTitle = document.getElementById('project-title');
+
+    navBarTitle.innerHTML = postTitle.innerHTML;
+
+    navBarTitleWrapper.style.maxWidth = 0;
+
+    let timeline = new TimelineMax();
+    let tween1 = new TweenMax.to(navBarMenuWrapper, .01, {maxWidth: 0});
+    let tween2 = new TweenMax.to(navBarTitleWrapper, .01, {maxWidth: 3000});
+    timeline
+        .add(tween1)
+        .add(tween2);
+    let controller2 = new ScrollMagic.Controller();
+    let scene2 = new ScrollMagic.Scene({
+      triggerElement: '#project-title'
+    })
+    .addIndicators()
+    .addTo(controller2)
+    .setTween(timeline)
+
+}
 }
 
 function lazyLoad() {
