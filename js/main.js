@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   smoothScroll();
   fadeInLeft();
-  // lazyLoad();
+  lazyLoad();
 });
 
 let skillList = [
