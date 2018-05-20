@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   smoothScroll();
   fadeInLeft();
   lazyLoad();
+  greet();
 });
 
 let skillList = [
@@ -36,8 +37,20 @@ let getDivs = function() {
   skillDiv = document.getElementById('skills');
 }
 
+function greet () {
+    let greeting = document.getElementById('greeting')
+    let presentation = document.getElementById('presentation')
+    let visitor = window.location.search.split("?")[1];
+    if (visitor){
+    presentation.classList.toggle("black-30")
+    greeting.innerHTML = "Hi there, " + visitor + "! <br /> It's nice to have you here."
+    presentation.innerHTML = "I am a product designer at Nubank."
+  }
+
+}
+
 function lazyLoad() {
-  var myLazyLoad = new LazyLoad();
+  var myLazyLoad = new LazyLoad({});
 }
 
 function callBack () {
