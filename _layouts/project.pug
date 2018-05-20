@@ -2,44 +2,44 @@
 layout: default
 ---
   
-article
-  section.mt4
-    //- POST HERO
-    #post-hero.w-100.vh-75-l.vh-50.bg-near-white.lazy(style="background-image:url({{site.url}}/images/{{page.hero}}); background-position:50% 50%; background-size:cover;")
+article.mt4
+  //- POST HERO
+  #post-hero.w-100.vh-75-l.vh-50.bg-near-white.lazy(style="background-image:url({{site.url}}/images/{{page.hero}}); background-position:50% 50%; background-size:cover;")
+  
+  //- METADATA
+  
+  section.flex.flex-row-l.flex-column-reverse.ph5-l.ph4.mt6-ns.mt5
+    .flex.flex-column.w-third-l.w-100.f5.pr6-l.lh-copy.js-fadein-left
+      .mb3
+        .ttu.f5-ns.f7.tracked.lh-title.black-30 PLACE
+        .mv0 {{page.place}} 
+      .mb3
+        .ttu.f5-ns.f7.tracked.lh-title.black-30 YEAR
+        .mv0 {{page.year}}  
+      .mb3
+        .ttu.f5-ns.f7.tracked.lh-title.black-30 DESIGN TEAM
+        | {% for member in page.design-team %} 
+        .mv0 {{member}} 
+        | {% endfor %}
+      .mb3
+        .ttu.f5-ns.f7.tracked.lh-title.black-30 ROLE
+        | {% for role in page.roles %} 
+        .mv0 {{role}} 
+        | {% endfor %}
+      .mb0
+        .ttu.f5-ns.f7.tracked.lh-title.black-30 WEBSITE
+        a.link.mv0(href="{{page.link-url}}" target="_blank") {{page.link-label}}
     
-    //- METADATA
-    .flex.flex-row-l.flex-column-reverse.ph5-l.ph4.mt6-ns.mt5
-      .flex.flex-column.w-third-l.w-100.f5.pr6-l.lh-copy.js-fadein-left
-        .mb3
-          .ttu.f5-ns.f7.tracked.lh-title.black-30 PLACE
-          .mv0 {{page.place}} 
-        .mb3
-          .ttu.f5-ns.f7.tracked.lh-title.black-30 YEAR
-          .mv0 {{page.year}}  
-        .mb3
-          .ttu.f5-ns.f7.tracked.lh-title.black-30 DESIGN TEAM
-          | {% for member in page.design-team %} 
-          .mv0 {{member}} 
-          | {% endfor %}
-        .mb3
-          .ttu.f5-ns.f7.tracked.lh-title.black-30 ROLE
-          | {% for role in page.roles %} 
-          .mv0 {{role}} 
-          | {% endfor %}
-        .mb0
-          .ttu.f5-ns.f7.tracked.lh-title.black-30 WEBSITE
-          a.link.mv0(href="{{page.link-url}}" target="_blank") {{page.link-label}}
-      
-      //- PAGE TITLE
-      .flex.flex-column.w-two-thirds-ns.w-100
-        h1.f1.tracked-tight.mv0.js-fadein-left
-          | {{ page.title }}
-        h1.f1.tracked-tight.pb4-l.pb3.mv0.js-fadein-left.black-30
-          | {{ page.subtitle }}
-        p.f4.measure.lh-copy
-          | {{page.first-paragraph}}
-          
-    .ph5-l.ph4.pt3#content.mt6-ns.mt3
-      | {{content}}
-    
+    //- PAGE TITLE
+    .flex.flex-column.w-two-thirds-ns.w-100
+      h1.f1.tracked-tight.mv0.js-fadein-left
+        | {{ page.title }}
+      h1.f1.tracked-tight.pb4-l.pb3.mv0.js-fadein-left.black-30
+        | {{ page.subtitle }}
+      p.f4.measure.lh-copy.js-fadein-left
+        | {{page.first-paragraph}}
+        
+  .ph5-l.ph4.pt3#content.mt6-ns.mt3
+    | {{content}}
+  
 | {% include footer %}

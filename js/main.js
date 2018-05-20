@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   smoothScroll();
   fadeInLeft();
-  lazyLoad();
+  // lazyLoad();
 });
 
 let skillList = [
@@ -50,6 +50,9 @@ function fadeInLeft() {
 
   sections.forEach(function(section) {
     let sectionItems = section.querySelectorAll('.js-fadein-left')
+    sectionItems.forEach(function(item){
+      item.style.opacity = 0;
+    })
     let tween = new TweenMax.staggerFromTo(sectionItems, .7, {
         transform: "translateX(-50px)",
         opacity: 0,
@@ -60,7 +63,7 @@ function fadeInLeft() {
       0.2);
     let scene = new ScrollMagic.Scene({
         triggerElement: section,
-        offset: 0 // start scene after scrolling for 100px
+        offset: -400 // start scene after scrolling for 100px
       })
       .setTween(tween)
       .addTo(controller);
