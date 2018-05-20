@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   smoothScroll();
   fadeInLeft();
+  lazyLoad();
 });
 
 let skillList = [
@@ -30,10 +31,17 @@ let articleLinks;
 let articleContainer;
 let previousButton;
 let nextButton;
-let imgContainers;
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
+}
+
+function lazyLoad() {
+  var myLazyLoad = new LazyLoad();
+}
+
+function callBack () {
+  alert('loaded!');
 }
 
 function fadeInLeft() {
@@ -70,25 +78,30 @@ function isInViewport(element, offset) {
 }
 
 function skillClick() {
+  if(skillDiv =! null && skillDiv){
   skillDiv.onclick = function() {
     changeSkill();
   }
+}
 }
 
 let smoothScroll = function() {
   var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
-    easing: 'easeInOutQuint'
+    easing: 'easeInOut'
   })
 }
 
 let skillCount = 0;
 function changeSkill() {
-
+  if(skillDiv){
   skillDiv.classList.toggle('mw0')
   setTimeout(function() {
     skillDiv.innerHTML = skillList[skillCount];
     skillDiv.classList.toggle('mw0')
   }, 1000);
   skillCount = (skillCount + 1) % skillList.length;
+} else{
+  return;
+}
 }

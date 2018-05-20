@@ -10,19 +10,22 @@
 
   <link rel="canonical" href="http://localhost:4000/">
   <link rel="alternate" type="application/rss+xml" title="Lucas Neumann" href="/feed.xml">
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" type="image/png" href="http://localhost:4000/favicon.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
-	<link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="http://localhost:4000/assets/main.css">
 
   <!-- JavaScript -->
-  <script src="js/smooth-scroll.js"></script>
+  <script src="http://localhost:4000/js/smooth-scroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-	<script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="http://localhost:4000/js/main.js"></script>
+
+
 
   <!-- /**
    * @license
@@ -46,7 +49,7 @@
   */
 
   -->
-  <link rel="stylesheet" type="text/css" href="./fonts/MyFontsWebfontsKit.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:4000/fonts/MyFontsWebfontsKit.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72558910-1"></script>
@@ -61,68 +64,76 @@
 </head>
 
   <body>
-    <main class="overflow-hidden"><div id="content">
-  <section class="flex pv2 ph5-l ph4 bg-white fixed w-100 z-max">
-  <h1 class="f3 w-third lh-copy pr5-l pr4">Lucas&nbsp;N<span class="dib-l dn">eumann</span></h1>
-  <div class="flex w-two-thirds justify-start-l justify-end f3"><a class="pr5-l pr3 link self-center" href="#section-work">Work </a><a class="pr5-l pr3 link self-center" href="#section-writing">Writing </a><a class="link self-center" href="#section-contact">Contact</a></div>
+    <main class="overflow-hidden">
+      <section class="flex pv3 ph5-l ph4 bg-white fixed w-100 z-max"><a class="link f3 w-third lh-copy pr5-l pr4 dn-ns db js-fadein-left" href="http://localhost:4000">Lucas N.</a><a class="link f3 w-third lh-copy pr5-l pr4 db-ns dn js-fadein-left" href="http://localhost:4000">Lucas Neumann</a>
+  <div class="flex w-two-thirds justify-start-l justify-end f3 black-30"><a class="pr5-l pr3 link self-center js-fadein-left" href="http://localhost:4000#section-work">Work </a><a class="pr5-l pr3 link self-center js-fadein-left" href="http://localhost:4000#section-writing">Writing </a><a class="link self-center js-fadein-left" href="http://localhost:4000#section-contact">Contact</a></div>
 </section>
-  <section class="ph5-l ph4 flex" id="hero" style="height:90vh;">
+      <section class="ph5-l ph4 flex" id="hero" style="height:90vh;">
   <div class="spacer w-third pr5 flex-l dn"></div>
   <div class="flex w-two-thirds-l w-100 flex-column h-100 justify-center">
     <div class="mb3 js-fadein-left">
-      <h1 class="tl f2-l f3 lh-title measure-narrow"><span>Product designer at Nubank.</span><br/><span class="black-30">I help teams
+      <h1 class="tl f2-l f3 lh-title measure-narrow tracked-tight"><span class="display">Product designer at Nubank.</span><br/><span class="black-30">I help teams
           <dib class="nowrap"><span class="black-30 dib overflow-x-hidden pointer" id="skills">design </span></dib><span> financial services that fight complexity & empower&nbsp;people.</span></span></h1>
     </div>
-    <h4 class="f3-l f4 mono js-fadein-left">👨🏻‍💻 <span class="black-30">Currently unavailable to full-time or freelance work.</span></h4>
   </div>
 </section>
-  <div class="flex flex-wrap ph5-l ph4" id="section-work">
+<section class="flex flex-wrap ph5-l ph4" id="section-work">
   <div class="flex flex-column w-third-l w-100 pr5-l pr0 mb5">
     <section class="flex justify-center overflow-hidden pa5" style="background-color:#ef4f51;">
       <div class="flex center justify-center">
-        <div class="self-center lh0 w-80 big-shadow overflow-hidden br2 js-fadein-left z-999"><img src="./images/goldenart/goldenart-001.png"/></div>
-        <div class="self-center lh0 w-80 big-shadow overflow-hidden br2 negative-margin-left-4 js-fadein-left"><img src="./images/goldenart/goldenart-002.png"/></div>
+        <div class="self-center lh0 w-80 big-shadow overflow-hidden br2 js-fadein-left z-999"><img src="./images/goldenart-001.png"/></div>
+        <div class="self-center lh0 w-80 big-shadow overflow-hidden br2 negative-margin-left-4 js-fadein-left"><img src="./images/goldenart-002.png"/></div>
       </div>
     </section><div class="flex justify-between mt4">
-  <div class="flex flex-column w-70"><span class="tl-l f3 lh-copy">GoldenArt website</span><span class="js-fadein-left black-50 f3 lh-title">Updating a 30-year-old company's web presence.</span></div>          
+  <div class="flex flex-column w-70">
+    <div class="tl-l f3 lh-copy display">GoldenArt website</div>
+    <div class="js-fadein-left black-50 f3 lh-title">Updating a 30-year-old company's web presence.</div>
+  </div>          
   <div class="f6 o-50 bg-near-white pv2 ph3 self-start js-fadein-left lh-copy">Case&nbsp;study&nbsp;soon      </div>
 </div>
-  </div>
-  <div class="flex flex-column w-two-thirds-l w-100 mb5">
+  </div><a class="link flex flex-column w-two-thirds-l w-100 mb5" href="http://localhost:4000/projects/nuconta.html">
     <section class="flex justify-center overflow-hidden pv6" style="background-color:#431A6B;">
       <div class="flex center justify-center w-50-l w-80">
-        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 js-fadein-left"><img src="./images/nubank/nuconta/nuconta-002.png"/></div>
-        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="./images/nubank/nuconta/nuconta-001.gif"/></div>
+        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 js-fadein-left"><img src="./images/nuconta-002.png"/></div>
+        <div class="self-center lh0 w-50 big-shadow overflow-hidden br2 negative-margin-left-2 js-fadein-left"><img src="./images/nuconta-001.gif"/></div>
       </div>
     </section><div class="flex justify-between mt4">
-  <div class="flex flex-column w-70"><span class="tl-l f3 lh-copy">Nubank Account</span><span class="js-fadein-left black-50 f3 lh-title">A bank account to empower.</span></div>          
-  <div class="f6 o-50 bg-near-white pv2 ph3 self-start js-fadein-left lh-copy">Case&nbsp;study&nbsp;soon      </div>
-</div>
+  <div class="flex flex-column w-70">
+    <div class="tl-l f3 lh-copy display">Nubank Account</div>
+    <div class="js-fadein-left black-50 f3 lh-title">A bank account to empower.</div>
   </div>
-  <div class="flex flex-column w-60-l w-100 pr5-l pr0 mb5">   
+</div></a>
+  <div class="flex flex-column w-60-l w-100 pr5-l pr0 mb5 js-fadein-left">
     <section class="flex justify-center overflow-hidden pv5" style="background-color:#ebebeb;">
       <div class="flex center justify-center">
-        <div class="self-center lh0 overflow-hidden br2 js-fadein-left"><img src="./images/kano/kano-002.png"/></div>
+        <div class="self-center lh0 overflow-hidden br2 js-fadein-left"><img src="./images/kano-002.png"/></div>
       </div>
     </section><div class="flex justify-between mt4">
-  <div class="flex flex-column w-70"><span class="tl-l f3 lh-copy">Kano Computing</span><span class="js-fadein-left black-50 f3 lh-title">UX for a computer that teaches children to code.</span></div>          
+  <div class="flex flex-column w-70">
+    <div class="tl-l f3 lh-copy display">Kano Computing</div>
+    <div class="js-fadein-left black-50 f3 lh-title">UX for a computer that teaches children to code.</div>
+  </div>          
   <div class="f6 o-50 bg-near-white pv2 ph3 self-start js-fadein-left lh-copy">Case&nbsp;study&nbsp;soon      </div>
 </div>
   </div>
-  <div class="flex flex-column w-40-l w-100 mb5">   
+  <div class="flex flex-column w-40-l w-100 mb5">
     <section class="flex justify-center overflow-hidden pa5" style="background-color:#f5f5f5;">
       <div class="flex center justify-center">
-        <div class="self-center lh0 overflow-hidden js-fadein-left"><img src="./images/basile/basile-001.png"/></div>
+        <div class="self-center lh0 overflow-hidden js-fadein-left"><img src="./images/basile-001.png"/></div>
       </div>
     </section><div class="flex justify-between mt4">
-  <div class="flex flex-column w-70"><span class="tl-l f3 lh-copy">Basile Candles identity</span><span class="js-fadein-left black-50 f3 lh-title">Identity and packaging for natural, home-made candles.</span></div>
+  <div class="flex flex-column w-70">
+    <div class="tl-l f3 lh-copy display">Basile Candles identity</div>
+    <div class="js-fadein-left black-50 f3 lh-title">Identity and packaging for natural, home-made candles.</div>
+  </div>          
+  <div class="f6 o-50 bg-near-white pv2 ph3 self-start js-fadein-left lh-copy">Case&nbsp;study&nbsp;soon      </div>
 </div>
   </div>
-</div>
-  <section class="flex ph5-l ph4 w-100" id="section-writing">
+</section>
+<section class="flex ph5-l ph4 w-100" id="section-writing">
   <div class="flex-l w-third pr5 dn"></div>
   <div class="flex w-two-thirds-l w-100 flex-column justify-center">
-    <p class="f2-l f3 mv6">Writing</p>
+    <p class="f2-l f3 mv6 display">Writing</p>
     <div class="w-100 flex flex-column justify-center" id="articleList">
       <div class="bt b--black-10 pv4 js-fadein-left flex justify-between"><a class="link bn f3" href="https://nubank.design/nuconta-part-ii-685b446addc6" target="_blank"><span class="hover-left">How we designed our Bank Account — NuConta Part II</span></a><span class="f3 black-30">7 min. read  </span></div>
       <div class="bt b--black-10 pv4 js-fadein-left flex justify-between"><a class="link bn f3" href="https://nubank.design/first-steps-for-better-ux-research-6fd863af7c6d" target="_blank"><span class="hover-left">First steps for better UX research</span></a><span class="f3 black-30">8 min. read </span></div>
@@ -132,7 +143,7 @@
     </div><a class="link f3 mt6 js-fadein-left mb6" href="http://medium.com/@lucasnantonio" target="_blank"> <span class="hover-left">Follow me on Medium </span></a>
   </div>
 </section> 
-  <section class="flex ph5-l ph4" id="section-contact" style="background-color:#222; color:#fff">
+<section class="flex ph5-l ph4" id="section-contact" style="background-color:#222; color:#fff">
   <div class="flex-l dn w-third pr5"></div>
   <div class="flex w-two-thirds-l w-100 flex-column pv6 justify-center center">
     <p class="f3">Get in touch</p>
@@ -141,6 +152,6 @@
     </div>
   </div>
 </section>
-</div></main>
+    </main>
   </body>
 </html>

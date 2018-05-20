@@ -1,12 +1,15 @@
+.medium {
+  font-family: "ITC Franklin Gothic Medium"; }
+
 html {
   font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: NeuePlakText-Regular, Georgia, serif;
+  font-family: "ITC Franklin Gothic Book", NeuePlakText-Regular, Georgia, serif;
   font-weight: 400; }
 
 body {
-  font-family: NeuePlakText-Regular, Georgia, serif;
+  font-family: "ITC Franklin Gothic Book", NeuePlakText-Regular, Georgia, serif;
   font-size: 14px;
   color: #222; }
 
@@ -24,6 +27,9 @@ a {
 a.link:hover {
   text-decoration: underline; }
 
+a.link:hover .no-underline {
+  text-decoration: none; }
+
 .hover-left {
   margin-left: 0;
   transition: margin-left .2s; }
@@ -34,6 +40,12 @@ a.link:hover {
 
 .b0 {
   bottom: 0; }
+
+.loading {
+  background-image: none; }
+
+.loading, .loaded {
+  transition: all 2s; }
 
 .mw0 {
   max-width: 1px !important; }
