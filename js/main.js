@@ -70,9 +70,9 @@ function navBarTitle () {
         .add(tween2);
     let controller2 = new ScrollMagic.Controller();
     let scene2 = new ScrollMagic.Scene({
-      triggerElement: '#project-title'
+      triggerElement: '#project-title',
+      offset: 400,
     })
-    .addIndicators()
     .addTo(controller2)
     .setTween(timeline)
 
