@@ -15,7 +15,7 @@ first-paragraph: "This project is a very simple catalog, but I'm proud of it bec
 
 img.mt6(data-src="{{site.ur}}/images/goldenart-008.png")
 
-section.mt4
+section.mt4-ns.mt0
   .flex.w-100.justify-center.overflow-hidden.m4.pa5-l.pa2(style="background-color:#ebeceb;")
     .flex.center.justify-center.w-80
       .self-center.lh0.w-100.overflow-hidden.js-fadein-left
@@ -27,17 +27,17 @@ section.mt4
       .self-center.tc.lh0.w-100.overflow-hidden.js-fadein-left
           img(data-src="{{site.url}}/images/goldenart-011.gif")
 
-section.flex.lh-copy.f4
-  .w-third.flex-l.dn
-  .w-two-thirds-l.w-100
+section.flex.lh-copy.f4.mv4
+  .w-third.flex-ns.dn
+  .w-two-thirds-ns.w-80-m.w-100.mh0-l.center
     .mt5
-      h2.f2.lh-title.mv0.tracked-tight.js-fadein-left Problems with the old version
-    p.measure.js-fadein-left The client and I walked through the old website together and listed main issues that needed a fix. Visually, they felt like the website was too dark, and that functionally it was clunky, had many bugs, and was hard to maintain and update. The product pages opened in a lightbox, which made it difficult for users to save and share specific pages. Also, the website was not responsive, which increased a high mobile bounce rate.
+      h2.f2.lh-title.mv0.tracked-tight.js-fadein Problems with the old version
+    p.measure.js-fadein The client and I walked through the old website together and listed main issues that needed a fix. Visually, they felt like the website was too dark, and that functionally it was clunky, had many bugs, and was hard to maintain and update. The product pages opened in a lightbox, which made it difficult for users to save and share specific pages. Also, the website was not responsive, which increased a high mobile bounce rate.
 
-section.flex.flex-row-l.flex-column.lh-copy.f4.mt5
-  .w-60-l.w-100.mr5-l
+section.flex.flex-row-ns.flex-column.lh-copy.f4.mt5
+  .w-two-thirds-ns.w-100.mr5-ns
     img(data-src="{{site.ur}}/images/goldenart-006.png")
-  .w-40-l.w-100
+  .w-third-ns.w-100.mt0-ns.mt5
     ol.measure-narrow.list.custom-counter
       li We found various legibility problems with the colors used in some fields.
       li Submenus and links were added with time on top of the original structure, which created a very questionable information architecture.
@@ -45,37 +45,35 @@ section.flex.flex-row-l.flex-column.lh-copy.f4.mt5
       li The bottom menu was fixed, which occupied too much real estate.
       li The client had little control over the order in which the products were displayed.
 
-section.flex.lh-copy.f4
-  .w-third.flex-l.dn
-  .w-two-thirds-l.w-100
-    .mt5
-      h2.f2.lh-title.mv0.tracked-tight.js-fadein-left Backend
-    p.measure.js-fadein-left GoldenArt has over 500 products in their catalog. The old Wordpress website was painful because it required the company to keep the CMS up-to-date with their in-house catalog system, which was an Excel spreadsheet. In researching solutions to this problem, I found Airtable, and the client and I fell in love with it. 
-    p.measure.js-fadein-left It is a very friendly platform, and it became the internal source of truth for all the information about the product lines, which gets shared with their partners and clients. As they change the info on Airtable, the website is updated in real-time.
+section.flex.lh-copy.f4.mv6
+  .w-third.flex-ns.dn
+  .w-two-thirds-ns.w-80-m.w-100.mh0-l.center
+    h2.f2.lh-title.mv0.tracked-tight.js-fadein Backend
+    p.measure.js-fadein GoldenArt has over 500 products in their catalog. The old Wordpress website was painful because it required the company to keep the CMS up-to-date with their in-house catalog system, which was an Excel spreadsheet. In researching solutions to this problem, I found Airtable, and the client and I fell in love with it. 
+    p.measure.js-fadein It is a very friendly platform, and it became the internal source of truth for all the information about the product lines, which gets shared with their partners and clients. As they change the info on Airtable, the website is updated in real-time.
 
-section.mt4
-  .flex.w-100.justify-center.overflow-hidden.m4.pa5-l.pa2(style="background-color:#ebeceb;")
+section.mv5
+  .flex.w-100.justify-center.overflow-hidden.pa5-l.pa2(style="background-color:#ebeceb;")
     .flex.center.justify-center.w-80
       .self-center.lh0.w-100.overflow-hidden.js-fadein-left
           img(data-src="{{site.url}}/images/goldenart-010.gif") 
 
-section.flex.lh-copy.f4.mv4
-  .w-third.flex-l.dn
-  .w-two-thirds-l.w-100
-    .mt5
-      h2.f2.lh-title.mv0.tracked-tight.js-fadein-left Logo
-    p.measure.js-fadein-left The client and I also talked about how the fresh look the company was looking for didn't match their current logo. The last update had been in 2013, and we decided to simplify it by removing the tagline, the dash. We also changed the style of the typeface from art-deco to grotesk, to make it look contemporary.
-
-section  
-  .flex.w-100.justify-center.overflow-hidden.mt6(style="background-color:#f9f9f9;")
-    .flex.center.justify-center.w-50-l.w-80
-      .self-center.lh0.w-100.overflow-hidden.js-fadein-left
-        img(data-src="{{site.url}}/images/goldenart-012.png")
+//- section.flex.lh-copy.f4.mv4
+//-   .w-third.flex-l.dn
+//-   .w-two-thirds-ns.w-80-m.w-100.mh0-l.center
+//-     .mt5
+//-       h2.f2.lh-title.mv0.tracked-tight.js-fadein Logo
+//-     p.measure.js-fadein The client and I also talked about how the fresh look the company was looking for didn't match their current logo. The last update had been in 2013, and we decided to simplify it by removing the tagline, the dash. We also changed the style of the typeface from art-deco to grotesk, to make it look contemporary.
+//- 
+//- section  
+//-   .flex.w-100.justify-center.overflow-hidden.mt6(style="background-color:#f9f9f9;")
+//-     .flex.center.justify-center.w-50-l.w-80
+//-       .self-center.lh0.w-100.overflow-hidden.js-fadein
+//-         img(data-src="{{site.url}}/images/goldenart-012.png")
 
 section.flex.lh-copy.f4.mv6
-  .w-third.flex-l.dn
-  .w-two-thirds-l.w-100
-    .mt5
-      h2.f2.lh-title.mv0.tracked-tight.js-fadein-left Results
-    p.measure.js-fadein-left The new website has a much more coherent structure, with products divided by line and type. This makes it easier for a user, such as an architect, to find the kind of product they're looking for. It's easier for the client to add and change details about each product, attach technical drawings and 3D files, and now each product has dedicated shareable page.
-    p.measure.js-fadein-left To me, this was a challenging and fulfilling side project that quickly elevated my knowledge of web design and development. After working long hours to ship the website and after the multiple times I accidentally took it down, I'm now much more comfortable having technical discussions with folks in the product teams at work.
+  .w-third.flex-ns.dn
+  .w-two-thirds-ns.w-80-m.w-100.mh0-l.center
+    h2.f2.lh-title.mv0.tracked-tight.js-fadein Results
+    p.measure.js-fadein The new website has a much more coherent structure, with products divided by line and type. This makes it easier for a user, such as an architect, to find the kind of product they're looking for. It's easier for the client to add and change details about each product, attach technical drawings and 3D files, and now each product has dedicated shareable page.
+    p.measure.js-fadein To me, this was a challenging and fulfilling side project that quickly elevated my knowledge of web design and development. After working long hours to ship the website and after the multiple times I accidentally took it down, I'm now much more comfortable having technical discussions with folks in the product teams at work.
