@@ -38,13 +38,17 @@ let getDivs = function() {
   skillDiv = document.getElementById('skills');
 }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function greet () {
     let greeting = document.getElementById('greeting')
     let presentation = document.getElementById('presentation')
     let visitor = window.location.search.split("?")[1];
-    if (visitor){
+    if (visitor && atob(visitor)){
     presentation.classList.toggle("black-30")
-    greeting.innerHTML = "Hi there, " + visitor + "! <br /> It's nice to have you here."
+    greeting.innerHTML = "Hi there, " + capitalizeFirstLetter(atob(visitor)) + "! <br /> It's nice to have you here."
     presentation.innerHTML = "I am a product designer at Nubank."
   }
 }
