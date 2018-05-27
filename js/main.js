@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   skillClick();
   smoothScroll();
   fadeInLeft();
+  fadeIn();
   lazyLoad();
   greet();
   navBarTitle();
@@ -116,6 +117,31 @@ function fadeInLeft() {
       .addTo(controller);
   })
 }
+
+function fadeIn() {
+  let sections = document.querySelectorAll('section');
+  let controller = new ScrollMagic.Controller();
+
+  sections.forEach(function(section) {
+    let sectionItems = section.querySelectorAll('.js-fadein')
+    sectionItems.forEach(function(item){
+      item.style.opacity = 0;
+    })
+    let tween = new TweenMax.staggerFromTo(sectionItems, .7, {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      },
+      0.2);
+    let scene = new ScrollMagic.Scene({
+        triggerElement: section,
+        offset: -300 // start scene after scrolling for 100px
+      })
+      .setTween(tween)
+      .addTo(controller);
+  })
+}
+
 
 function isInViewport(element, offset) {
   var rect = element.getBoundingClientRect();
