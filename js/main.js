@@ -49,6 +49,7 @@ function greet () {
     let visitor = window.location.search.split("?")[1];
     if (visitor && atob(visitor)){
     presentation.classList.toggle("black-30")
+    presentation.classList.remove("regular")
     greeting.innerHTML = "Hi there, " + capitalizeFirstLetter(atob(visitor)) + "! <br /> It's nice to have you here."
     presentation.innerHTML = "I am a product designer at Nubank."
   }

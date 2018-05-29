@@ -1,17 +1,17 @@
-.medium {
-  font-family: "ITC Franklin Gothic Medium"; }
+.regular {
+  font-family: NeuePlakText-Regular, sans-serif; }
 
 html {
   font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "ITC Franklin Gothic Book", NeuePlakText-Regular, Georgia, serif;
+  font-family: NeuePlakText-Light, sans-serif;
   font-weight: 400; }
 
 body {
-  font-family: "ITC Franklin Gothic Book", NeuePlakText-Regular, Georgia, serif;
+  font-family: NeuePlakText-Light, sans-serif;
   font-size: 14px;
-  color: #222; }
+  color: #333; }
 
 #skills {
   max-width: 17rem;

@@ -1,21 +1,21 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3575829, 2018-05-06T11:39:40-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
- * Webfont: NeuePlakText-Regular by Monotype 
+ *
+ * Webfont: NeuePlakText-Regular by Monotype
  * URL: https://www.myfonts.com/fonts/mti/neue-plak/text-regular/
  * Copyright: Copyright &#x00A9; 2018 Monotype Imaging Inc. All rights reserved.
  * Licensed pageviews: 250,000
- * 
- * 
+ *
+ *
  * License: https://www.myfonts.com/viewlicense?type=web&buildid=3575829
- * 
+ *
  * © 2018 MyFonts Inc
 */
 
@@ -23,6 +23,32 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/369015");
 
-  
+
 @font-face {font-family: 'NeuePlakText-Regular';src: url('webfonts/369015_0_0.eot');src: url('webfonts/369015_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/369015_0_0.woff2') format('woff2'),url('webfonts/369015_0_0.woff') format('woff'),url('webfonts/369015_0_0.ttf') format('truetype');}
- 
+
+/**
+* @license
+* MyFonts Webfont Build ID 3588243, 2018-05-28T21:24:24-0400
+*
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are
+* explicitly restricted from using the Licensed Webfonts(s).
+*
+* You may obtain a valid license at the URLs below.
+*
+* Webfont: NeuePlakText-Light by Monotype
+* URL: https://www.myfonts.com/fonts/mti/neue-plak/text-light/
+* Copyright: Copyright &#x00A9; 2018 Monotype Imaging Inc. All rights reserved.
+* Licensed pageviews: 10
+*
+*
+* License: https://www.myfonts.com/viewlicense?type=web&buildid=3588243
+*
+* © 2018 MyFonts Inc
+*/
+
+
+
+
+
+@font-face {font-family: 'NeuePlakText-Light';src: url('webfonts/36C093_0_0.eot');src: url('webfonts/36C093_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/36C093_0_0.woff2') format('woff2'),url('webfonts/36C093_0_0.woff') format('woff'),url('webfonts/36C093_0_0.ttf') format('truetype');}
