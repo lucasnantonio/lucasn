@@ -52,13 +52,20 @@
   //-   | {% include component-project-title title="Mapa Daqui" subtitle="Open-source platform for collaborative urban wayfinding." link="http://nubank.com.br/nuconta" soon=true %}            
 
 
-  
+  //- BOSSY
+  a.link.flex.flex-column.w-40-l.w-100.mb5.pr5-l.pr0(href="https://www.fastcompany.com/3028572/this-simple-tool-will-help-you-stop-working-ridiculous-hours" target='_blank' )
+    img(data-src="./images/bossy-001.png")    
+    | {% include component-project-title title="Bossy" subtitle="A smart assistant to help balance work & life." link="http://nubank.com.br/nuconta" soon=false %} 
+
   //- NOSSAS
-  a.link.flex.flex-column.w-100.mb5(href="{{site.url}}/projects/ourcities.html")
+  a.link.flex.flex-column.w-60-l.w-100.mb5(href="{{site.url}}/projects/ourcities.html")
     section.flex.justify-center.overflow-hidden.pa5(style="background-color:#f94c53;")
       .flex.center.justify-center
-        .self-center.lh0.overflow-hidden.js-fadein-left.big-shadow.br2.w-10-l.w-20
+        .self-center.lh0.overflow-hidden.js-fadein-left.big-shadow.br2.w-20-l.w-30
           img(data-src="./images/nossas-002.png")                 
-        .self-center.lh0.overflow-hidden.js-fadein-left.big-shadow.negative-margin-left-2.w-50-l.w-80
+        .self-center.lh0.overflow-hidden.js-fadein-left.big-shadow.negative-margin-left-2.w-70-l.w-90
           img(data-src="./images/nossas-001.png")    
     | {% include component-project-title title="Our Cities Network" subtitle="A CMS for activists and causes." link="http://nubank.com.br/nuconta" soon=false %} 
+    
+
+  //- #post-hero.w-100.vh-75-l.vh-50.bg-near-white.lazy(style="background-image:url({{site.url}}/images/{{page.hero}}); background-position:50% 50%; background-size:cover;")
