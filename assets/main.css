@@ -25,11 +25,8 @@ a {
   color: inherit;
   outline: 0 !important; }
 
-a.link:hover {
+a:hover h3 {
   text-decoration: underline; }
-
-a.link:hover .no-underline {
-  text-decoration: none; }
 
 .hover-left {
   margin-left: 0;
