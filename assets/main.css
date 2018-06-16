@@ -13,6 +13,9 @@ body {
   font-size: 14px;
   color: #333; }
 
+.black {
+  color: #333; }
+
 #skills {
   max-width: 17rem;
   transition: .7s;
@@ -28,6 +31,16 @@ a {
 
 a:hover h3 {
   text-decoration: underline; }
+
+.icon-case-study {
+  opacity: 0;
+  margin-bottom: -2rem;
+  transition: .2s all; }
+
+a:hover .icon-case-study {
+  opacity: 1;
+  margin-bottom: 0rem;
+  transition: .2s all; }
 
 .hover-left {
   margin-left: 0;
