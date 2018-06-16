@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   lazyLoad();
   greet();
   navBarTitle();
+  toggleCaseStudyIcons();
 });
 
 let skillList = [
@@ -34,10 +35,30 @@ let articleLinks;
 let articleContainer;
 let previousButton;
 let nextButton;
+let caseStudyIcons;
 
 let getDivs = function() {
   skillDiv = document.getElementById('skills');
+  caseStudyIcons = document.querySelectorAll('.icon-case-study');
+  projects = document.querySelectorAll('.project')
 }
+
+function showCaseStudyIcon () {
+  caseStudyIcons.forEach(function(item){
+    item.classList.remove('o-0');
+  })
+}
+
+function hideCaseStudyIcon () {
+  caseStudyIcons.forEach(function(item){
+    item.classList.add('o-0');
+  })
+}
+
+function toggleCaseStudyIcons () {
+
+}
+
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
