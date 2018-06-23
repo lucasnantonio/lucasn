@@ -1,0 +1,170 @@
+---
+---
+
+@charset "utf-8";
+
+$base-font-family: NeuePlakText-Light, sans-serif;
+
+.regular{
+  font-family:NeuePlakText-Regular, sans-serif;
+}
+
+
+$base-font-size:   14px;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
+
+$spacing-unit:     0px;
+
+$text-color:       #333;
+$background-color: #FFF;
+$brand-color:      #404757;
+$grey-color: #333;
+$grey-color-light: #ccc;
+$grey-color-dark: #222;
+
+html{
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $base-font-family;
+  font-weight: 400;
+}
+
+body{
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $text-color;
+
+}
+.black{
+  color: $text-color;
+}
+#skills{
+  max-width: 17rem;
+  transition: .7s;
+  vertical-align: bottom;
+  overflow-y: auto;
+  // line-height: 1em;
+}
+#skills:hover{
+  text-decoration: underline;
+}
+
+a{
+  color: inherit;
+  outline: 0 !important;
+}
+
+a:hover h3{
+    text-decoration: underline;
+}
+
+.icon-case-study{
+  opacity: 0;
+  margin-bottom: -2rem;
+  transition: .2s all;
+}
+a:hover .icon-case-study{
+  opacity: 1;
+  margin-bottom: 0rem;
+  transition: .2s all;
+}
+
+.hover-left{
+  margin-left:0;
+  transition: margin-left .2s;
+}
+.hover-left:hover{
+  margin-left: .5rem;
+  transition: margin-left .2s;
+}
+.b0{
+	bottom: 0;
+}
+.loading{
+  background-image: none ;
+}
+.loading, .loaded{
+  transition: all 2s;
+}
+.mw0{
+  max-width: 1px !important;
+}
+
+.big-shadow{
+  box-shadow: 0px 20px 60px 5px rgba(0, 0, 0, 0.25);
+  transition: all .5s;
+}
+
+.negative-margin-left-4{
+  margin-left:-4rem;
+}
+.negative-margin-left-2{
+  margin-left:-2rem;
+}
+
+// CUSTOM tachyons
+
+.lh-copy{
+  line-height: 1.8em;
+}
+.lh0{
+  line-height: 0;
+}
+.h0{
+  height: 0;
+  overflow:hidden;
+}
+.w6 {
+  width: 24rem;
+}
+.h4{
+  height:6rem;
+}
+
+@media screen and (min-width: 60em){
+.h4-l {
+    height: 6rem;
+}
+}
+
+@media screen and (min-width: 64em){
+.vh-section{
+  height: calc(100vh - 12rem);
+}
+.vh-section-first{
+  height: calc(100vh - 12rem);
+}
+.mw6-l {
+  width: 24rem;
+}
+}
+
+.custom-counter {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.custom-counter li {
+  counter-increment: step-counter;
+  margin-bottom: 3rem;
+}
+
+.custom-counter li::before {
+  display: block;
+   margin-bottom: 1rem;
+  width: .7rem;
+  height: .7rem;
+  line-height: .8rem;
+  text-align: center;
+  content: counter(step-counter);
+  font-size: 1rem;
+  background-color: rgb(0,0,0);
+  color: rgb(251,247,247);
+  padding: .8rem;
+  border-radius: 100%;
+}

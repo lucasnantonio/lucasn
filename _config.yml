@@ -1,0 +1,39 @@
+---
+title: Lucas Neumann
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: lucasneumann.fau@gmail.com
+description: Lucas Neumann. I juggle research, product design and some code @ Nubank
+  Brasil. Co-founder @ projetofeito.
+baseurl: ''
+url: www.lucasn.com
+twitter_username: lucasnantonio
+github_username: lucasnantonio
+google_analytics: UA-72558910-1
+markdown: kramdown
+gems:
+- jekyll-feed
+- jekyll-assets
+compress_images:
+  images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
+imageoptim:
+  pngout: false
+  svgo: false
+  verbose: false
+exclude:
+- Gemfile
+- Gemfile.lock
+plugins_dir:
+  - jekyll-compress-images
+keep_files:
+- ".git"
+- ".gitignore"
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"

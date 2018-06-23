@@ -1,0 +1,15 @@
+.flex.justify-between.mt4
+  .flex.flex-column.w-70
+    h3.tl-l.f3-ns.f4.lh-copy.display.regular.lh-title.mv0
+      | {{ include.title }}
+    h2.js-fadein-left.black-50.f3-ns.f4.lh-title.mv0
+      | {{ include.subtitle }}
+  | {% if include.label == 'Read case study' %}
+  | {% include project-case-study-icon label="Read case study" %}
+  | {% else if include.label == 'Read media coverage' %}
+  | {% include project-case-study-icon label="Read media coverage" %}
+  | {% else if include.label == 'See live' %}
+  | {% include project-case-study-icon label="See live" %}
+  | {% else %}
+  | {% include project-case-study-icon label="Case study soon" %}
+  | {% endif %}
