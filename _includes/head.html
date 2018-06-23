@@ -9,21 +9,21 @@
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{site.url}}/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
-  <link rel="stylesheet" href="{{ site.url }}{% link assets/main.scss %}">
+  <link rel="stylesheet" href="{{ site.baseurl }}{% link assets/main.scss %}">
 
   <!-- JavaScript -->
-  <script src="{{ site.url }}{% link js/smooth-scroll.js %}"></script>
+  <script src="{{ site.baseurl }}{% link js/smooth-scroll.js %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="{{ site.url }}{% link js/main.js %}"></script>
+  <script src="{{ site.baseurl }}{% link js/main.js %}"></script>
 
   <!-- /**
    * @license
@@ -47,7 +47,7 @@
   */
 
   -->
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}{% link fonts/MyFontsWebfontsKit.css %}">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link fonts/MyFontsWebfontsKit.css %}">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72558910-1"></script>
