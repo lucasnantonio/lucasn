@@ -1,0 +1,6 @@
+{
+  "alias": "lucasn.com",
+  "static": {
+    "public": "_sass"
+  }
+}
